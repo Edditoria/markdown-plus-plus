@@ -10,7 +10,7 @@ This project provides a very simple user-defined language file for Notepad++ tha
 Notepad++ allows you to add new languages by adding language definitions to a userDefineLang.xml file. Add the Markdown definition like this:
 
 1. Download the Markdown language definition file 
-   [userDefineLang.xml](https://github.com/alderete-sfdc/markdown_npp/blob/master/userDefineLang.xml)
+   [userDefineLang.xml](https://github.com/thomsmits/markdown_npp/blob/master/userDefineLang.xml)
    from GitHub to your computer.
 2. Click Start > Run, and type (or paste in) `%APPDATA%\Notepad++`, then click OK.
    This will open the settings directory for Notepad++.
