@@ -11,7 +11,7 @@
             <Keywords name="Folder-"></Keywords>
             <Keywords name="Operators">+</Keywords>
             <Keywords name="Comment">1 2 0# 0## 0### 0#### 0#####</Keywords>
-            <Keywords name="Words1">http:// (http:// (/ /</Keywords>
+            <Keywords name="Words1">http:// (http:// https:// (https:// (/ /</Keywords>
             <Keywords name="Words2">** * -</Keywords>
             <Keywords name="Words3">====== -------</Keywords>
             <Keywords name="Words4">&gt;</Keywords>
