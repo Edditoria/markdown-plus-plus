@@ -2,28 +2,26 @@
 
 ## Overview
 
-This project provides a very simple user defined language file for Notepad++ that does some basic syntax highlighting for markdown texts.
+This project provides a very simple user-defined language file for Notepad++ that does some basic syntax highlighting for Markdown texts. It does **not** render text from Markdown into HTML (but there are scripts that can do that, too, Google is your friend).
 
 
 ## Usage
 
-Installation instructions (taken from Notepad++ Web site [1]):
+Notepad++ allows you to add new languages by adding language definitions to a userDefineLang.xml file. Add the Markdown definition like this:
 
-1. Download the user-defined language to your computer
-2. Open the file with your favourite text editor (such as notepad++ or
-   notepad)
-3. Click start, run, type (or paste in) %APPDATA%\Notepad++ then click ok
-4. Open userDefineLang.xml with a text editor
-5. If this is the first userdefined language you are adding, copy/paste the
-   entire first file (which you downloaded) into the userDefineLang.xml, 
-   replacing all that was there. If this is the second or more language you 
-   add, simply copy everything from the first file starting at <UserLang...> 
-   to </UserLang> and paste it at the end of the userDefineLang.xml right 
-   before </NotepadPlus>
-6. Save the newly improved userDefineLang.xml
-
-
-[1]: http://notepad-plus.sourceforge.net/uk/site.htm
+1. Download the Markdown language definition file 
+   [userDefineLang.xml](https://github.com/thomsmits/markdown_npp/blob/master/userDefineLang.xml)
+   from GitHub to your computer.
+2. Click Start > Run, and type (or paste in) `%APPDATA%\Notepad++`, then click OK.
+   This will open the settings directory for Notepad++.
+3. If it does not already exist, copy the downloaded `userDefineLang.xml` 
+   file into the Notepad++ settings directory. Skip to step 7.
+4. If it _does_ exist, open the active `userDefineLang.xml` with a text editor.
+5. Copy the contents of the Markdown definition file between the 
+   `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right 
+   before `</NotepadPlus>`.
+6. Save `userDefineLang.xml`.
+7. Restart Notepad++.
 
 
 ## Copyright and License
