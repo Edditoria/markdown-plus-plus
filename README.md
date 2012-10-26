@@ -4,9 +4,9 @@ Default or Zenburn, your choice! :)
 
 By default, Notepad++ doesn't provide syntax highlighting for Markdown.  
 I use them everyday, and I'm using a dark theme called Zenburn.  
-So, I make one for myself, and share with the world!
+So, I make one for myself, and share with the world.
 
-If you are a Notepad++ and Markdown user, you may like it.
+If you are a Notepad++ and Markdown user, you may like it!
 
 ## Screenshot
 
@@ -19,7 +19,7 @@ If you are a Notepad++ and Markdown user, you may like it.
 You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.  
 
 1. Download the Markdown language definition file
-     - **Zenburn Theme** : (not ready.... stay tune)
+     - **Zenburn Theme** : [userDefineLang.xml][zenburn_xml]
      - **Default Theme** : [userDefineLang.xml][default_xml]
 2. Find out your Notepad++ program folder/directory.
 3. There may be a file called `userDefineLang.xml`
