@@ -1,32 +1,48 @@
-# markdown_npp
+# Markdown Syntax Highlighting for Notepad++
 
-## Overview
+Default or Zenburn, your choice! :)
 
-This project provides a very simple user-defined language file for Notepad++ that does some basic syntax highlighting for Markdown texts. It does **not** render text from Markdown into HTML (but there are scripts that can do that, too, Google is your friend).
+By default, Notepad++ doesn't provide syntax highlighting for Markdown.  
+I use them everyday, and I'm using a dark theme called Zenburn.  
+So, I make one for myself, and share with the world!
 
+If you are a Notepad++ and Markdown user, you may like it.
 
-## Usage
+## Screenshot
 
-Notepad++ allows you to add new languages by adding language definitions to a userDefineLang.xml file. Add the Markdown definition like this:
-
-1. Download the Markdown language definition file 
-   [userDefineLang.xml](https://github.com/thomsmits/markdown_npp/blob/master/userDefineLang.xml)
-   from GitHub to your computer.
-2. Click Start > Run, and type (or paste in) `%APPDATA%\Notepad++`, then click OK.
-   This will open the settings directory for Notepad++.
-3. If it does not already exist, copy the downloaded `userDefineLang.xml` 
-   file into the Notepad++ settings directory. Skip to step 7.
-4. If it _does_ exist, open the active `userDefineLang.xml` with a text editor.
-5. Copy the contents of the Markdown definition file between the 
-   `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right 
-   before `</NotepadPlus>`.
-6. Save `userDefineLang.xml`.
-7. Restart Notepad++.
+![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
+![Markdown in Default Theme of Notepad++][screen_default]
 
 
-## Copyright and License
+## How to Use?
 
-Copyright (c) 2010 Thomas Smits
+You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.  
+
+1. Download the Markdown language definition file
+     - **Zenburn Theme** : (not ready.... stay tune)
+     - **Default Theme** : [userDefineLang.xml][default_xml]
+2. Find out your Notepad++ program folder/directory.
+3. There may be a file called `userDefineLang.xml`
+     - If it does _not_ already exist, copy the XML file to the folder.
+     - If it _does_ exist, you need to edit your xml file manually:
+       - open the active `userDefineLang.xml` with a text editor.
+       - Copy the contents of the Markdown definition file between the `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right before `</NotepadPlus>`.
+       - Save `userDefineLang.xml`.
+4. Restart Notepad++.
+
+**Enjoy!!**
+
+## Please Comment
+
+If bugs occurs or you have problems, please report the issue.
+
+If you have any suggestion, feel free to connect me [@Edditoria][twitter] | [facebook][fb] | [G+][gplus].
+
+## Copyright Notice
+
+This repository is forked from [thomsmits][tomes]
+
+*You may take it, use it, modify it, but you should not sell it.*
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -45,3 +61,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+[tomes]: https://github.com/thomsmits/markdown_npp
+[screen_zenburn]: /Edditoria/markdown_npp_zenburn/raw/master/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_default]: /Edditoria/markdown_npp_zenburn/raw/master/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
+[zenburn_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
+[default_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
+[twitter]: http://twitter.com/Edditoria
+[fb]: http://www.facebook.com/Edditoria
+[gplus]: https://plus.google.com/109579889772726782010/about
