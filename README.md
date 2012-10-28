@@ -13,7 +13,6 @@ If you are a Notepad++ and Markdown user, you may like it!
 ![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
 ![Markdown in Default Theme of Notepad++][screen_default]
 
-
 ## How to Use?
 
 You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.  
@@ -37,6 +36,11 @@ You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.
 If bugs occurs or you have problems, please report the issue.
 
 If you have any suggestion, feel free to connect me [@Edditoria][twitter] | [facebook][fb] | [G+][gplus].
+
+## Note to Original Settings from @thomsmits
+
+I'd revised all the XML codes, including the default theme. If you don't feel good in my settings, please comment. I'll try my best to improve,  
+Or, use his current repo :)
 
 ## Copyright Notice
 
@@ -63,9 +67,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 [tomes]: https://github.com/thomsmits/markdown_npp
-[screen_zenburn]: /Edditoria/markdown_npp_zenburn/raw/master/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_default]: /Edditoria/markdown_npp_zenburn/raw/master/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
+[screen_zenburn]: /Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_default]: /Edditoria/markdown_npp_zenburn/raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
+[zenburn_xml]: /Edditoria/markdown_npp_zenburn/blob/master/zenburn_theme/userDefineLang.xml
 [default_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria

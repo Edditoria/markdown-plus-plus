@@ -8,13 +8,13 @@
         </Settings>
         <KeywordLists>
             <Keywords name="Comments" id="0">00# 01 02 03&lt;!-- 04--&gt;</Keywords>
-            <Keywords name="Operators1" id="1">&lt; &gt;</Keywords>
-            <Keywords name="Operators2" id="2">* - +</Keywords>
-            <Keywords name="Keywords1" id="3">http:// (http:// https:// (https:// (/ /</Keywords>
-            <Keywords name="Keywords2" id="4">==== ----</Keywords>
-            <Keywords name="Keywords3" id="5">** __</Keywords>
-            <Keywords name="Keywords4" id="6">* _</Keywords>
-            <Keywords name="Delimiters" id="7">00[ 01 02] 03` 04 05`</Keywords>
+            <Keywords name="Operators1" id="5">&lt; &gt;</Keywords>
+            <Keywords name="Operators2" id="6">* - +</Keywords>
+            <Keywords name="Keywords1" id="16">http:// (http:// https:// (https:// (/ /</Keywords>
+            <Keywords name="Keywords2" id="17">==== ----</Keywords>
+            <Keywords name="Keywords3" id="18">** __</Keywords>
+            <Keywords name="Keywords4" id="19">* _</Keywords>
+            <Keywords name="Delimiters" id="24">00[ 01 02] 03` 04 05`</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" styleID="0" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
@@ -25,9 +25,9 @@
             <WordsStyle name="KEYWORDS2" styleID="5" fgColor="FF8040" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS3" styleID="6" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS4" styleID="7" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
-            <WordsStyle name="OPERATORS" styleID="8" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="DELIMITERS1" styleID="9" fgColor="408080" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
-            <WordsStyle name="DELIMITERS2" styleID="10" fgColor="CEDF99" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="OPERATORS" styleID="12" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS1" styleID="16" fgColor="408080" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="DELIMITERS2" styleID="17" fgColor="CEDF99" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
         </Styles>
     </UserLang>
 </NotepadPlus>
