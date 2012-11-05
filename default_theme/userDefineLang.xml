@@ -3,7 +3,7 @@
         <!-- Modified by Edditoria, originally created by thomsmits @ git,
         see https://github.com/Edditoria/markdown_npp_zenburn for latest version -->
         <Settings>
-            <Global caseIgnored="yes" />
+            <Global caseIgnored="yes" forceLineCommentsAtBOL="yes" />
             <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" />
         </Settings>
         <KeywordLists>
