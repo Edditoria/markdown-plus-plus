@@ -8,13 +8,13 @@
         </Settings>
         <KeywordLists>
             <Keywords name="Comments" id="0">00# 01 02 03&lt;!-- 04--&gt;</Keywords>
-            <Keywords name="Operators1" id="5">&lt; &gt;</Keywords>
+            <Keywords name="Operators1" id="5">&lt; &gt; \` \#</Keywords>
             <Keywords name="Operators2" id="6">* - +</Keywords>
             <Keywords name="Keywords1" id="16">http:// (http:// https:// (https:// (/ /</Keywords>
             <Keywords name="Keywords2" id="17">==== ----</Keywords>
             <Keywords name="Keywords3" id="18">** __</Keywords>
             <Keywords name="Keywords4" id="19">* _</Keywords>
-            <Keywords name="Delimiters" id="24">00[ 01 02] 03` 04 05`</Keywords>
+            <Keywords name="Delimiters" id="24">00[ 01 02] 03` 04\ 05`</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" styleID="0" fgColor="333333" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
