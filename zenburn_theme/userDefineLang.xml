@@ -4,17 +4,15 @@
         see https://github.com/Edditoria/markdown_npp_zenburn for latest version -->
         <Settings>
             <Global caseIgnored="yes" forceLineCommentsAtBOL="yes" />
-            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" />
+            <Prefix Keywords1="yes" Keywords2="yes" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments" id="0">00# 01 02 03&lt;!-- 04--&gt;</Keywords>
-            <Keywords name="Operators1" id="5">&lt; &gt;</Keywords>
+            <Keywords name="Operators1" id="5">&lt; &gt; \` \#</Keywords>
             <Keywords name="Operators2" id="6">* - +</Keywords>
             <Keywords name="Keywords1" id="16">http:// (http:// https:// (https:// (/ /</Keywords>
             <Keywords name="Keywords2" id="17">==== ----</Keywords>
-            <Keywords name="Keywords3" id="18">** __</Keywords>
-            <Keywords name="Keywords4" id="19">* _</Keywords>
-            <Keywords name="Delimiters" id="24">00[ 01 02] 03` 04 05`</Keywords>
+            <Keywords name="Delimiters" id="24">00[ 01 02] 03` 04\ 05` 06** 07 08** 09* 10 11* 12__ 13 14__ 15_ 16 17_ 18~~ 19 20~~ 21 22 23</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" styleID="0" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
@@ -23,11 +21,14 @@
             <WordsStyle name="NUMBERS" styleID="3" fgColor="8CD0D3" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS1" styleID="4" fgColor="408080" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" styleID="5" fgColor="FF8040" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS3" styleID="6" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS4" styleID="7" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="OPERATORS" styleID="12" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="DELIMITERS1" styleID="16" fgColor="408080" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="DELIMITERS2" styleID="17" fgColor="CEDF99" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" styleID="6" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS4" styleID="7" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="DELIMITERS5" styleID="6" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS6" styleID="7" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="CC9393" bgColor="3F3F3F" fontName="" fontStyle="5" nesting="0" />
         </Styles>
     </UserLang>
 </NotepadPlus>
