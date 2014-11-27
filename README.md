@@ -26,13 +26,8 @@ You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.
 1. Download the Markdown language definition file
      - **Zenburn Theme** : [userDefineLang.xml][zenburn_xml]
      - **Default Theme** : [userDefineLang.xml][default_xml]
-2. Find out your Notepad++ program folder/directory.
-3. There may be a file called `userDefineLang.xml`
-     - If it does _not_ already exist, copy the XML file to the folder.
-     - If it _does_ exist, you need to edit your xml file manually:
-       - open the active `userDefineLang.xml` with a text editor.
-       - Copy the contents of the Markdown definition file between the `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right before `</NotepadPlus>`.
-       - Save `userDefineLang.xml`.
+2. Open the user defined language dialog (Language / Define your language)
+3. Import the XML definition file
 4. Restart Notepad++.
 
 **Enjoy!!**
@@ -76,10 +71,10 @@ THE SOFTWARE.
 
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [tomes]: https://github.com/thomsmits/markdown_npp
-[screen_zenburn]: /Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_default]: /Edditoria/markdown_npp_zenburn/raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: /Edditoria/markdown_npp_zenburn/blob/master/zenburn_theme/userDefineLang.xml
-[default_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
+[screen_zenburn]: ../../raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_default]: ../../raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
+[zenburn_xml]: ../../blob/master/zenburn_theme/userDefineLang.xml
+[default_xml]: ../../blob/master/default_theme/userDefineLang.xml
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
 [gplus]: https://plus.google.com/109579889772726782010/about
