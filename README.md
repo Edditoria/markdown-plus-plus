@@ -10,8 +10,11 @@ If you are a Notepad++ and Markdown user, you may like it!
 
 ## Screenshot
 
-![Markdown in Zenburn Theme of Notepad++](./zenburn_theme/markdown_npp_zenburn_screenshot.png)
+**Default Theme:**
 ![Markdown in Default Theme of Notepad++](./default_theme/markdown_npp_default_theme_screenshot.png)
+
+**Zenburn Theme:**
+![Markdown in Zenburn Theme of Notepad++](./zenburn_theme/markdown_npp_zenburn_screenshot.png)
 
 Supports file extensions: `.markdown` and `.md`  
 Tested: Notepad++ v6.2 (Windows)
