@@ -1,14 +1,14 @@
 <NotepadPlus>
-    <UserLang name="Markdown" ext="md markdown" udlVersion="2.0">
+    <UserLang name="Markdown" ext="md markdown" udlVersion="2.1">
         <!-- Modified by Edditoria, originally created by thomsmits @ git,
         see https://github.com/Edditoria/markdown_npp_zenburn for latest version -->
         <Settings>
-            <Global caseIgnored="yes" forceLineCommentsAtBOL="yes" />
+            <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="1" decimalSeparator="0" />
             <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments" id="0">00# 01 02 03&lt;!-- 04--&gt;</Keywords>
-            <Keywords name="Operators1" id="5">&lt; &gt;</Keywords>
+            <Keywords name="Operators1" id="5">&lt; &gt; \\ \` \* \_ \{ \} \[ \] \( \) \# \+ \- \. \!</Keywords>
             <Keywords name="Operators2" id="6">* - +</Keywords>
             <Keywords name="Keywords1" id="16">http:// (http:// https:// (https:// (/ /</Keywords>
             <Keywords name="Keywords2" id="17">==== ----</Keywords>

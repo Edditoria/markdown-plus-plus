@@ -10,12 +10,11 @@ If you are a Notepad++ and Markdown user, you may like it!
 
 ## Screenshot
 
-![Markdown in Zenburn Theme of Notepad++](zenburn_theme/markdown_npp_zenburn_screenshot.png)
-
-![Markdown in Default Theme of Notepad++](default_theme/markdown_npp_default_theme_screenshot.png)
+![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
+![Markdown in Default Theme of Notepad++][screen_default]
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v6.8.8 (Windows)
+Tested: Notepad++ v6.8.8 (Windows 7)
 
 I also created *Coffeescript syntax highlighting*:  
 [link][coffeescript] (only Zenburn)
@@ -25,19 +24,21 @@ I also created *Coffeescript syntax highlighting*:
 You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.  
 
 1. Download the Markdown language definition file
-     - **Zenburn Theme** : [userDefineLang.xml](zenburn_theme/userDefineLang.xml)
-     - **Default Theme** : [userDefineLang.xml](default_theme/userDefineLang.xml)
-2. Find out your Notepad++ program folder/directory.
      - **Zenburn Theme** : [userDefineLang.xml][zenburn_xml]
      - **Default Theme** : [userDefineLang.xml][default_xml]
-3. Copy the file to %AppData%/Notepad++.
-4. There may be a file called `userDefineLang.xml`
+2. Find out your Notepad++ app data directory. You can open it by
+  ```
+  cd %APPDATA%\Notepad++
+
+  explorer .
+  ```
+3. There may be a file called `userDefineLang.xml`
      - If it does _not_ already exist, copy the XML file to the folder.
      - If it _does_ exist, you need to edit your xml file manually:
        - open the active `userDefineLang.xml` with a text editor.
        - Copy the contents of the Markdown definition file between the `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right before `</NotepadPlus>`.
        - Save `userDefineLang.xml`.
-5. Restart Notepad++.
+4. Restart Notepad++.
 
 **Enjoy!!**
 
@@ -80,10 +81,10 @@ THE SOFTWARE.
 
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [tomes]: https://github.com/thomsmits/markdown_npp
-[screen_zenburn]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_default]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/userDefineLang.xml
-[default_xml]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/default_theme/userDefineLang.xml
+[screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_default]: /default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
+[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/zenburn_theme/userDefineLang.xml
+[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/default_theme/userDefineLang.xml
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
 [gplus]: https://plus.google.com/109579889772726782010/about
