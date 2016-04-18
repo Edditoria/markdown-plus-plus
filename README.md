@@ -77,10 +77,10 @@ THE SOFTWARE.
 
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [tomes]: https://github.com/thomsmits/markdown_npp
-[screen_zenburn]: /Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_default]: /Edditoria/markdown_npp_zenburn/raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: /Edditoria/markdown_npp_zenburn/blob/master/zenburn_theme/userDefineLang.xml
-[default_xml]: /Edditoria/markdown_npp_zenburn/blob/master/default_theme/userDefineLang.xml
+[screen_zenburn]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_default]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
+[zenburn_xml]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/zenburn_theme/userDefineLang.xml
+[default_xml]: https://github.com/Edditoria/markdown_npp_zenburn/raw/master/default_theme/userDefineLang.xml
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
 [gplus]: https://plus.google.com/109579889772726782010/about
