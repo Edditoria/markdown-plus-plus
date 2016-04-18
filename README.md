@@ -15,7 +15,7 @@ If you are a Notepad++ and Markdown user, you may like it!
 ![Markdown in Default Theme of Notepad++](default_theme/markdown_npp_default_theme_screenshot.png)
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v6.2 (Windows)
+Tested: Notepad++ v6.8.8 (Windows)
 
 I also created *Coffeescript syntax highlighting*:  
 [link][coffeescript] (only Zenburn)
@@ -28,13 +28,16 @@ You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.
      - **Zenburn Theme** : [userDefineLang.xml](zenburn_theme/userDefineLang.xml)
      - **Default Theme** : [userDefineLang.xml](default_theme/userDefineLang.xml)
 2. Find out your Notepad++ program folder/directory.
-3. There may be a file called `userDefineLang.xml`
+     - **Zenburn Theme** : [userDefineLang.xml][zenburn_xml]
+     - **Default Theme** : [userDefineLang.xml][default_xml]
+3. Copy the file to %AppData%/Notepad++.
+4. There may be a file called `userDefineLang.xml`
      - If it does _not_ already exist, copy the XML file to the folder.
      - If it _does_ exist, you need to edit your xml file manually:
        - open the active `userDefineLang.xml` with a text editor.
        - Copy the contents of the Markdown definition file between the `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right before `</NotepadPlus>`.
        - Save `userDefineLang.xml`.
-4. Restart Notepad++.
+5. Restart Notepad++.
 
 **Enjoy!!**
 
