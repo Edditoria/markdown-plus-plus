@@ -14,10 +14,9 @@ If you are a Notepad++ and Markdown user, you may like it!
 ![Markdown in Default Theme of Notepad++][screen_default]
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v6.8.8 (Windows 7)
+Tested: Notepad++ v6.9.1 (Windows 7)
 
-p\.s\. I also created *Coffeescript syntax highlighting*:  
-[link][coffeescript] (for Zenburn theme only)
+I also created *Coffeescript syntax highlighting*: [link][coffeescript] (for Zenburn theme only)
 
 ## How to Use?
 
@@ -27,7 +26,7 @@ p\.s\. I also created *Coffeescript syntax highlighting*:
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
 4. Restart Notepad++.
-5. Open and test with a CoffeeScript file e.g. [test.md][test_file]
+5. Open and test with a Markdown file e.g. [test.md][test_file]
 
 **Enjoy!!**
 
@@ -73,7 +72,7 @@ THE SOFTWARE.
 [screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_default]: /default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
 [zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
-[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/default_theme/userDefineLang.xml
+[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/default_theme/userDefineLang_markdown.xml
 [test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/test.md
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
