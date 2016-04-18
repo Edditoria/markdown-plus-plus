@@ -16,29 +16,18 @@ If you are a Notepad++ and Markdown user, you may like it!
 Supports file extensions: `.markdown` and `.md`  
 Tested: Notepad++ v6.8.8 (Windows 7)
 
-I also created *Coffeescript syntax highlighting*:  
-[link][coffeescript] (only Zenburn)
+p\.s\. I also created *Coffeescript syntax highlighting*:  
+[link][coffeescript] (for Zenburn theme only)
 
 ## How to Use?
 
-You need to modify a file `userDefineLang.xml` in your Notepad++ program folder.  
-
 1. Download the Markdown language definition file
-     - **Zenburn Theme** : [userDefineLang.xml][zenburn_xml]
-     - **Default Theme** : [userDefineLang.xml][default_xml]
-2. Find out your Notepad++ app data directory. You can open it by
-  ```
-  cd %APPDATA%\Notepad++
-
-  explorer .
-  ```
-3. There may be a file called `userDefineLang.xml`
-     - If it does _not_ already exist, copy the XML file to the folder.
-     - If it _does_ exist, you need to edit your xml file manually:
-       - open the active `userDefineLang.xml` with a text editor.
-       - Copy the contents of the Markdown definition file between the `<UserLang...></UserLang>` tags into the active `userDefineLang.xml`, at the end right before `</NotepadPlus>`.
-       - Save `userDefineLang.xml`.
+     - **Zenburn Theme** : [userDefineLang_markdown_zenburn.xml][zenburn_xml]
+     - **Default Theme** : [userDefineLang_markdown.xml][default_xml]
+2. In Notepad++ menu, click `Language` and select `Define your language...` .
+3. In User Defined Language windows, click `Import` then open the xml file.
 4. Restart Notepad++.
+5. Open and test with a CoffeeScript file e.g. [test.md][test_file]
 
 **Enjoy!!**
 
@@ -83,8 +72,9 @@ THE SOFTWARE.
 [tomes]: https://github.com/thomsmits/markdown_npp
 [screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_default]: /default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/zenburn_theme/userDefineLang.xml
+[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
 [default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/default_theme/userDefineLang.xml
+[test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/test.md
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
 [gplus]: https://plus.google.com/109579889772726782010/about
