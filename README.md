@@ -34,7 +34,7 @@ I also created *Coffeescript syntax highlighting*: [link][coffeescript] (for Zen
 
 Need your input to solve the following problems:
 
-- `*em text*` only parse the first word
+- `*em text*` only parse the first word because it will screw up unorder list
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
 
 ## Please Comment
