@@ -1,9 +1,29 @@
 # Markdown Syntax Highlighting for Notepad++
 
+> **Important Notice:**
+> 
+> This URL of this repo is renamed! If you had forked this repo to your local machine, please update the remote:
+> 
+> ```shell
+> # Check if my name exists
+> git remote -v
+> # e.g. origin https://github.com/Edditoria/markdown_npp_zenburn
+> # If yes, please do:
+> git remote set-url origin https://github.com/Edditoria/markdown_npp.git
+> # Check if it is correct
+> git remote -v
+> ```
+> 
+> If you had shared this repo in social networks and web, please kindly **update the URL** to:
+> 
+> <https://github.com/Edditoria/markdown_npp>
+> 
+> Thanks!
+
 Default or Zenburn, your choice! :)
 
 By default, Notepad++ doesn't provide syntax highlighting for Markdown.  
-I use them everyday, and I'm using a dark theme called Zenburn.  
+I use Markdown everyday, and I'm using a dark theme called Zenburn.  
 So, I make one for myself, and share to the world.
 
 If you are a Notepad++ and Markdown user, you may like it!
@@ -43,44 +63,28 @@ If bugs occurs or you have problems, please report the issue.
 
 If you have any suggestion, feel free to connect me [@Edditoria][twitter] | [facebook][fb] | [G+][gplus].
 
-## Note to Original Repo from @thomsmits
+## Note to Original Repo from [@thomsmits][thomsmits_npp]
 
 Basically I revised the original repo from scratch.  
 If you don't feel good in my settings, please comment.  
 I'll try my best to improve.  
-Or, use his current repo :)
+Or, use Thomsmits' current repo :)
 
-## Copyright Notice
+## License
 
-This repository is forked from [thomsmits][tomes]
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2017.
 
-*You may take it, use it, modify it, but you should not sell it.*
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
+[this_repo]: https://github.com/Edditoria/markdown_npp
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
-[tomes]: https://github.com/thomsmits/markdown_npp
+[thomsmits]: https://github.com/thomsmits/markdown_npp
+[thomsmits_npp]: https://github.com/thomsmits/markdown_npp
 [screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_default]: /default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
-[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
-[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/default_theme/userDefineLang_markdown.xml
-[test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp_zenburn/master/test.md
+[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
+[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/default_theme/userDefineLang_markdown.xml
+[test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/test.md
 [twitter]: http://twitter.com/Edditoria
 [fb]: http://www.facebook.com/Edditoria
 [gplus]: https://plus.google.com/109579889772726782010/about
