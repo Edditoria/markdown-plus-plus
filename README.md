@@ -32,6 +32,7 @@ If you are a Notepad++ and Markdown user, you may like it!
 
 ![Markdown in Default Theme of Notepad++][screen_default]
 ![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
+![Markdown in Blackboard Theme of Notepad++][screen_blackboard]
 ![Markdown in Deep Black Theme of Notepad++][screen_deep_black]
 
 Supports file extensions: `.markdown` and `.md`  
@@ -44,6 +45,7 @@ I also created *Coffeescript syntax highlighting*: [link][coffeescript] (for Zen
 1. Download the Markdown language definition file
   - **Default Theme** : [userDefineLang_markdown.xml][default_xml]
   - **Zenburn Theme** : [userDefineLang_markdown_zenburn.xml][zenburn_xml]
+  - **Blackboard Theme** : [userDefineLang_markdown_blackboard.xml][blackboard_xml] :new:
   - **Deep Black Theme** : [userDefineLang_markdown_deep_black.xml][deep_black_xml] :new:
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
@@ -84,9 +86,11 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [thomsmits_npp]: https://github.com/thomsmits/markdown_npp
 [screen_default]: /default_theme/markdown_npp_default_theme_screenshot.png "Markdown in Default Theme of Notepad++"
 [screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_blackboard]: /blackboard_theme/markdown_npp_blackboard_screenshot.png "Markdown in Blackboard Theme of Notepad++"
 [screen_deep_black]: /deep_black_theme/markdown_npp_deep_black_screenshot.png "Markdown in Deep Black Theme of Notepad++"
 [default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/default_theme/userDefineLang_markdown.xml
 [zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
+[blackboard_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/blackboard_theme/userDefineLang_markdown_blackboard.xml
 [deep_black_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/deep_black_theme/userDefineLang_markdown_deep_black.xml
 [test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/test.md
 [twitter]: http://twitter.com/Edditoria
