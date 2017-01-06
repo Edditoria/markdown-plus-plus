@@ -1,0 +1,28 @@
+{
+  "themeName": "Blackboard",
+  "default": {
+    "fgColor": "F8F8F8",
+    "bgColor": "0C1021"
+  },
+  "header": {
+    "fgColor": "FF6400"
+  },
+  "emphasis": {
+    "fgColor": "A9A64F"
+  },
+  "orderedList": {
+    "fgColor": "D8FA3C"
+  },
+  "unorderedList": {
+    "fgColor": "FBDE2D"
+  },
+  "code": {
+    "fgColor": "61CE3C"
+  },
+  "link": {
+    "fgColor": "8DA6CE"
+  },
+  "comment": {
+    "fgColor": "AEAEAE"
+  }
+}
