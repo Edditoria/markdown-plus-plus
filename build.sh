@@ -13,7 +13,11 @@ else
   themeName="$1"
   dataFile="./${themeName}_theme/${themeName}_data.json"
   templateFile="./build_template.xml"
-  outputFile="./userDefineLang_markdown_${themeName}.xml"
+  if [ $1 == "default" ]; then
+    outputFile="./userDefineLang_markdown.xml"
+  else
+    outputFile="./userDefineLang_markdown_${themeName}.xml"
+  fi
 
   mustache $dataFile $templateFile > $outputFile
 fi
