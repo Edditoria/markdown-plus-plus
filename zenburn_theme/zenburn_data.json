@@ -1,0 +1,28 @@
+{
+  "themeName": "Markdown (Zenburn)",
+  "default": {
+    "fgColor": "DCDCCC",
+    "bgColor": "3F3F3F"
+  },
+  "header": {
+    "fgColor": "FF8040"
+  },
+  "emphasis": {
+    "fgColor": "CC9393"
+  },
+  "orderedList": {
+    "fgColor": "8CD0D3"
+  },
+  "unorderedList": {
+    "fgColor": "DFC47D"
+  },
+  "code": {
+    "fgColor": "CEDF99"
+  },
+  "link": {
+    "fgColor": "408080"
+  },
+  "comment": {
+    "fgColor": "7F9F7F"
+  }
+}
