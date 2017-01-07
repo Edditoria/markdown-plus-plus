@@ -8,7 +8,7 @@
 > # Check if my name exists
 > git remote -v
 > # e.g. origin https://github.com/Edditoria/markdown_npp_zenburn
-> # If yes, please do:
+> # If yes, please do: (replace origin if need, e.g. upstream)
 > git remote set-url origin https://github.com/Edditoria/markdown_npp.git
 > # Check if it is correct
 > git remote -v
@@ -61,11 +61,13 @@ Need your input to solve the following problems:
 - `*em text*` only parse the first word because it will screw up unorder list
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
 
-## Please Comment
+## Contribution
 
-If bugs occurs or you have problems, please report the issue.
+*tl;tr* For pull request, please do check **Allow edits from maintainers**, and merge from **your new branch** into **my master branch**; Or, propose a file change in Github directly; Or, hit me a message via issue page or my social contacts.
 
-If you have any suggestion, feel free to connect me [@Edditoria][twitter] | [facebook][fb] | [G+][gplus].
+For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
+
+:beer: Thank you so much! :pray:
 
 ## Note to Original Repo from [@thomsmits][thomsmits_npp]
 
@@ -93,6 +95,4 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [blackboard_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/blackboard_theme/userDefineLang_markdown_blackboard.xml
 [deep_black_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/deep_black_theme/userDefineLang_markdown_deep_black.xml
 [test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/test.md
-[twitter]: http://twitter.com/Edditoria
-[fb]: http://www.facebook.com/Edditoria
-[gplus]: https://plus.google.com/109579889772726782010/about
+
