@@ -1,0 +1,28 @@
+{
+  "themeName": "Markdown (theme_name)",
+  "default": {
+    "fgColor": "",
+    "bgColor": ""
+  },
+  "header": {
+    "fgColor": ""
+  },
+  "emphasis": {
+    "fgColor": ""
+  },
+  "orderedList": {
+    "fgColor": ""
+  },
+  "unorderedList": {
+    "fgColor": ""
+  },
+  "code": {
+    "fgColor": ""
+  },
+  "link": {
+    "fgColor": ""
+  },
+  "comment": {
+    "fgColor": ""
+  }
+}
