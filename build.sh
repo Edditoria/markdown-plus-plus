@@ -23,6 +23,7 @@ else
   theme_name="$1"
   data_file="./${theme_name}_theme/${theme_name}_data.json"
   template_file="./build/build_template.xml"
+  template_data="./build/build_data_template.json"
   if [ $1 == "default" ]; then
     output_file="./userDefineLang_markdown.xml"
   else
@@ -32,9 +33,22 @@ else
   # main part of this script
   if [ ! -f $data_file ]; then
     # when $data_file is missing
-    echo "Error: cannot find the source or folder."
+    echo "Cannot find the source or directory."
     echo ""
-    print_help
+    read -p "Are you going to create a new color scheme \"${theme_name}\"? [y|N] " answer
+    if [[ $answer =~ ^(Y|y|Yes|yes) ]]; then
+      printf "Creating folder..."
+      mkdir ./${theme_name}_theme
+      echo "[done]"
+      printf "Creating template json file..."
+      cp ${template_data} ${data_file}
+      echo "[done]"
+      echo ""
+    else
+      echo "Aborted."
+      echo ""
+      print_help
+    fi
   elif [ -f $output_file ]; then
     # when output file is already existed
     read -p "File already existed. Overwrite? [y|N] " answer
