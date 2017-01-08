@@ -5,24 +5,24 @@
     "bgColor": "FFFFFF"
   },
   "header": {
-    "fgColor": "FF8040"
+    "fgColor": "FF8000"
   },
   "emphasis": {
-    "fgColor": "400080"
+    "fgColor": "000080"
   },
   "orderedList": {
-    "fgColor": "4078F2"
+    "fgColor": "0080FF"
   },
   "unorderedList": {
-    "fgColor": "0000FF"
+    "fgColor": "8080FF"
   },
   "code": {
-    "fgColor": "FF80C0"
+    "fgColor": "008000"
   },
   "link": {
-    "fgColor": "408080"
+    "fgColor": "8000FF"
   },
   "comment": {
-    "fgColor": "C0C0C0"
+    "fgColor": "808080"
   }
 }

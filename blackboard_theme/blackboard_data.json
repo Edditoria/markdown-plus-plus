@@ -8,7 +8,7 @@
     "fgColor": "FF6400"
   },
   "emphasis": {
-    "fgColor": "A9A64F"
+    "fgColor": "8DA6CE"
   },
   "orderedList": {
     "fgColor": "D8FA3C"
@@ -20,7 +20,7 @@
     "fgColor": "61CE3C"
   },
   "link": {
-    "fgColor": "8DA6CE"
+    "fgColor": "7F90AA"
   },
   "comment": {
     "fgColor": "AEAEAE"
