@@ -36,11 +36,9 @@ If you are a Notepad++ and Markdown user, you may like it!
 ![Markdown in Deep Black Theme of Notepad++][screen_deep_black]
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v6.9.1 (Windows 7)
+Tested: Notepad++ v7.2.2 (Windows 10)
 
-I also created *Coffeescript syntax highlighting*: [link][coffeescript] (for Zenburn theme only)
-
-## How to Use?
+## Usage
 
 1. Download the Markdown language definition file
   - **Default Theme** : [userDefineLang_markdown.xml][default_xml]

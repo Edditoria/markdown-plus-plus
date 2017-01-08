@@ -1,25 +1,29 @@
-# Heading
+# Headings (\# \#\# \#\#\# etc.)
 
-Heading 1
+Alt Heading 1 (Headings need 4 = or -)
 ====
 
-(headings need 4 = or -)
-
-Heading 2
+Alt Heading 2 (Headings need 4 = or -)
 ----
 
-Normal text and **bold** then *italic* !!
+Normal text **bold** then *italic*.
+Escape \* \` \< \_ \# \\ & more.
 
 1. Order list
-* Unorder list ( * , + or - )
+- Unorder list ( - or + )
+
+code: `a === a`
 
 > blockquote
 
-URL: [Edditoria][1]
-[1]: https://edditoria.blogspot.com
+URL: [Edditoria][1] | image: ![2][]
 
-code: `a === a`
+[1]: https://edditoria.blogspot.com
+[2]: https://avatars0.githubusercontent.com/u/2234073?v=3&s=40
 
 <!-- please comment -->
 
 # Enjoy! :)
+
+
+
