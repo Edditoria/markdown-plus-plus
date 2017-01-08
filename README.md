@@ -1,32 +1,48 @@
-# Markdown Syntax Highlighting for Notepad++
+# [beta] Markdown Syntax Highlighting for Notepad++
 
-> **Important Notice:**
-> 
-> This URL of this repo is renamed! If you had forked this repo to your local machine, please update the remote:
-> 
-> ```shell
-> # Check if my name exists
-> git remote -v
-> # e.g. origin https://github.com/Edditoria/markdown_npp_zenburn
-> # If yes, please do: (replace origin if need, e.g. upstream)
-> git remote set-url origin https://github.com/Edditoria/markdown_npp.git
-> # Check if it is correct
-> git remote -v
-> ```
-> 
-> If you had shared this repo in social networks and web, please kindly **update the URL** to:
-> 
-> <https://github.com/Edditoria/markdown_npp>
-> 
-> Thanks!
+> :warning: **Warning, Warning!**
+>
+> This branch `feature/emphasis-multiple-words` is still in beta.
+> If you want trouble-free that do not mess up your existing markdown color schemes, please stick to [master branch][this_repo] as stable version.
 
-Default or Zenburn, your choice! :)
+This beta version will fix a limitation of *multiple em words*
 
-By default, Notepad++ doesn't provide syntax highlighting for Markdown.  
-I use Markdown everyday, and I'm using a dark theme called Zenburn.  
-So, I make one for myself, and share to the world.
+However, due to limitation in UDL of Notepad++, it need to sacrifice bullet points by \* (asterisks) keyword.
 
-If you are a Notepad++ and Markdown user, you may like it!
+I still need time to confirm if **this version will mess up other things?** Please kindly evaluate it. :)
+
+In short:
+
+|   | Stable | This Beta |
+|---|---|---|
+| \*multiple em words\* | only parse the first word | parse ALL words |
+| \* bullet points | fully support | not support (use \- or \+ instead) |
+
+## Test and Vote
+
+Stable (master branch):
+
+![stable](/test_stable_master.png)
+
+Beta (This branch):
+
+![beta](/test_beta_feature.png)
+
+file: [test_beta.md](test_beta.md)
+
+Which one do you prefer?
+
+> If you like, welcome to vote in [this post @ Google+ NPP community](https://plus.google.com/+Edditoria/posts/J3gmNNMnJWB?sfc=true).
+
+## Fix and PR
+
+If you can fix all the problem, or if you have an idea, please rise an issue for discussion.
+
+For pull request, please do to this branch instead of master (which will stay in stable release).
+
+Thanks!
+
+-----------
 
 ## Screenshot
 
