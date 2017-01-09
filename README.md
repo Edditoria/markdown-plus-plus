@@ -1,6 +1,6 @@
 # [beta] Markdown Syntax Highlighting for Notepad++
 
-> :warning: **Warning, Warning!**
+> :warning: **Warning**
 >
 > This branch `feature/emphasis-multiple-words` is still in beta.
 > If you want trouble-free that do not mess up your existing markdown color schemes, please stick to [master branch][this_repo] as stable version.
@@ -13,28 +13,26 @@ I still need time to confirm if **this version will mess up other things?** Plea
 
 In short:
 
-|   | Stable | This Beta |
+|   | Stable (master branch) | Beta (this branch) |
 |---|---|---|
 | \*multiple em words\* | only parse the first word | parse ALL words |
 | \* bullet points | fully support | not support (use \- or \+ instead) |
 
 ## Test and Vote
 
-Stable (master branch):
+| Stable (master branch) | Beta (this branch) |
+| --- | --- |
+| ![stable](/test_stable_master.png) | ![beta](/test_beta_feature.png) |
 
-![stable](/test_stable_master.png)
-
-Beta (This branch):
-
-![beta](/test_beta_feature.png)
-
-file: [test_beta.md](test_beta.md)
+- Each "theme" directory contains a XML file. The **filename and scheme name are same as that in master branch**.
+- Make sure to re-open Notepad++ to take effect.
+- In this branch, here is a file for testing: [test_beta.md](test_beta.md)
 
 Which one do you prefer?
 
-> If you like, welcome to vote in [this post @ Google+ NPP community](https://plus.google.com/+Edditoria/posts/J3gmNNMnJWB?sfc=true).
+> If you like, welcome to vote in [this post @ Google+ NPP community](https://plus.google.com/+Edditoria/posts/dhgfRS3B7j4?sfc=true).
 
-## Fix and PR
+## Fix and Pull Request
 
 If you can fix all the problem, or if you have an idea, please rise an issue for discussion.
 
@@ -43,37 +41,6 @@ For pull request, please do to this branch instead of master (which will stay in
 Thanks!
 
 -----------
-
-## Screenshot
-
-![Markdown in Default Theme of Notepad++][screen_default]
-![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
-![Markdown in Blackboard Theme of Notepad++][screen_blackboard]
-![Markdown in Deep Black Theme of Notepad++][screen_deep_black]
-
-Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v7.2.2 (Windows 10)
-
-## Usage
-
-1. Download the Markdown language definition file
-  - **Default Theme** : [userDefineLang_markdown.xml][default_xml]
-  - **Zenburn Theme** : [userDefineLang_markdown_zenburn.xml][zenburn_xml]
-  - **Blackboard Theme** : [userDefineLang_markdown_blackboard.xml][blackboard_xml] :new:
-  - **Deep Black Theme** : [userDefineLang_markdown_deep_black.xml][deep_black_xml] :new:
-2. In Notepad++ menu, click `Language` and select `Define your language...` .
-3. In User Defined Language windows, click `Import` then open the xml file.
-4. Restart Notepad++.
-5. Open and test with a Markdown file e.g. [test.md][test_file]
-
-**Enjoy!!**
-
-## Limitations
-
-Need your input to solve the following problems:
-
-- `*em text*` only parse the first word because it will screw up unorder list
-- `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
 
 ## Build Script for Developers
 
