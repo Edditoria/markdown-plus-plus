@@ -30,10 +30,12 @@ If you are a Notepad++ and Markdown user, you may like it!
 
 ## Screenshot
 
-![Markdown in Default Theme of Notepad++][screen_default]
-![Markdown in Zenburn Theme of Notepad++][screen_zenburn]
-![Markdown in Blackboard Theme of Notepad++][screen_blackboard]
-![Markdown in Deep Black Theme of Notepad++][screen_deep_black]
+| Your | Taste! |
+|:----:|:------:|
+| ![Markdown in Default Theme of Notepad++][screen_default] | ![Markdown in Zenburn Theme of Notepad++][screen_zenburn] |
+| Default | Zenburn |
+| ![Markdown in Blackboard Theme of Notepad++][screen_blackboard] | ![Markdown in Deep Black Theme of Notepad++][screen_deep_black] |
+| Blackboard | Deep Black |
 
 Supports file extensions: `.markdown` and `.md`  
 Tested: Notepad++ v7.2.2 (Windows 10)
@@ -58,6 +60,22 @@ Need your input to solve the following problems:
 
 - `*em text*` only parse the first word because it will screw up unorder list
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
+
+## **\[NEW\]** Beta Is Available For Testing
+
+A complete new version of color scheme is available in branch `feature/emphasis-multiple-words`.
+
+It is going to solve the limitation: Parse *more than one em word*
+
+However, if you use the new UDL file, you will need to change your habbit: **No more \* unordered list**, but you still can use \- or \+ instead.
+
+> :warning: Alert:
+>
+> The file name and UDL name are same with original. If you overwrite existing file, please download and import to NPP from this (master) branch.
+
+Link: [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown_npp/tree/feature/emphasis-multiple-words)
+
+Welcome any comment and suggestion!
 
 ## Build Script for Developers
 
