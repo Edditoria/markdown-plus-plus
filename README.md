@@ -9,14 +9,14 @@
 > git remote -v
 > # e.g. origin https://github.com/Edditoria/markdown_npp_zenburn
 > # If yes, please do: (replace origin if need, e.g. upstream)
-> git remote set-url origin https://github.com/Edditoria/markdown_npp.git
+> git remote set-url origin https://github.com/Edditoria/markdown-plus-plus.git
 > # Check if it is correct
 > git remote -v
 > ```
 > 
 > If you had shared this repo in social networks and web, please kindly **update the URL** to:
 > 
-> <https://github.com/Edditoria/markdown_npp>
+> <https://github.com/Edditoria/markdown-plus-plus>
 > 
 > Thanks!
 
@@ -73,7 +73,7 @@ However, if you use the new UDL file, you will need to change your habbit: **No 
 >
 > The file name and UDL name are same with original. If you overwrite existing file, please download and import to NPP from this (master) branch.
 
-Link: [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown_npp/tree/feature/emphasis-multiple-words)
+Link: [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown-plus-plus/tree/feature/emphasis-multiple-words)
 
 Welcome any comment and suggestion!
 
@@ -143,16 +143,16 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [screen_zenburn]: /zenburn_theme/markdown_npp_zenburn_screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_blackboard]: /blackboard_theme/markdown_npp_blackboard_screenshot.png "Markdown in Blackboard Theme of Notepad++"
 [screen_deep_black]: /deep_black_theme/markdown_npp_deep_black_screenshot.png "Markdown in Deep Black Theme of Notepad++"
-[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/default_theme/userDefineLang_markdown.xml
-[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
-[blackboard_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/blackboard_theme/userDefineLang_markdown_blackboard.xml
-[deep_black_xml]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/deep_black_theme/userDefineLang_markdown_deep_black.xml
+[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/default_theme/userDefineLang_markdown.xml
+[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/zenburn_theme/userDefineLang_markdown_zenburn.xml
+[blackboard_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/blackboard_theme/userDefineLang_markdown_blackboard.xml
+[deep_black_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/deep_black_theme/userDefineLang_markdown_deep_black.xml
 
-[this_repo]: https://github.com/Edditoria/markdown_npp
+[this_repo]: https://github.com/Edditoria/markdown-plus-plus
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [thomsmits]: https://github.com/thomsmits/markdown_npp
 [thomsmits_npp]: https://github.com/thomsmits/markdown_npp
-[test_file]: https://raw.githubusercontent.com/Edditoria/markdown_npp/master/test.md
+[test_file]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/test.md
 
 [build_screen]: /build/build_script_screenshot.png "A Build Script To Help You Build Color Scheme"
 [build_screen_2]: /build/build_script_screenshot_2.png "Build script demo step 2"
