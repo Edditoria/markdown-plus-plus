@@ -37,7 +37,7 @@
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="COMMENTS" fgColor="7F9F7F" bgColor="3F3F3F" fontName="" fontStyle="2" nesting="0" />
-            <WordsStyle name="LINE COMMENTS" fgColor="FF8040" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="FF8040" bgColor="3F3F3F" fontName="" fontStyle="5" nesting="0" />
             <WordsStyle name="NUMBERS" fgColor="8CD0D3" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS1" fgColor="EDD6ED" bgColor="3F3F3F" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="FF8040" bgColor="3F3F3F" fontName="" fontStyle="1" nesting="0" />
