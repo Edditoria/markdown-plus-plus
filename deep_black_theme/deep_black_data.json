@@ -17,7 +17,8 @@
     "fgColor": "339999"
   },
   "code": {
-    "fgColor": "66FF00"
+    "fgColor": "66FF00",
+    "fontName": "Consolas"
   },
   "link": {
     "fgColor": "999966"
