@@ -7,6 +7,9 @@
   "header": {
     "fgColor": ""
   },
+  "section": {
+    "fgColor": ""
+  },
   "emphasis": {
     "fgColor": ""
   },
@@ -17,6 +20,9 @@
     "fgColor": ""
   },
   "code": {
+    "fgColor": ""
+  },
+  "quote": {
     "fgColor": ""
   },
   "link": {

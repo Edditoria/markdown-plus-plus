@@ -1,14 +1,14 @@
 {
   "themeName": "Markdown",
   "default": {
-    "fgColor": "333333",
+    "fgColor": "000000",
     "bgColor": "FFFFFF"
   },
   "header": {
     "fgColor": "FF8000"
   },
   "emphasis": {
-    "fgColor": "000080"
+    "fgColor": "000000"
   },
   "orderedList": {
     "fgColor": "0080FF"
@@ -17,12 +17,15 @@
     "fgColor": "8080FF"
   },
   "code": {
-    "fgColor": "008000"
+    "fgColor": "804040"
+  },
+  "quote": {
+    "fgColor": "808080"
   },
   "link": {
     "fgColor": "8000FF"
   },
   "comment": {
-    "fgColor": "808080"
+    "fgColor": "008000"
   }
 }

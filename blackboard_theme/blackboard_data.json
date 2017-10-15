@@ -19,6 +19,9 @@
   "code": {
     "fgColor": "61CE3C"
   },
+  "quote": {
+    "fgColor": "808080"
+  },
   "link": {
     "fgColor": "7F90AA"
   },
