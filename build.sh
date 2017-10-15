@@ -25,9 +25,9 @@ else
   template_file="./build/build_template.xml"
   template_data="./build/build_data_template.json"
   if [ $1 == "default" ]; then
-    output_file="./userDefineLang_markdown.xml"
+    output_file="./${theme_name}_theme/userDefineLang_markdown.xml"
   else
-    output_file="./userDefineLang_markdown_${theme_name}.xml"
+    output_file="./${theme_name}_theme/userDefineLang_markdown_${theme_name}.xml"
   fi
   
   # main part of this script
