@@ -1,23 +1,13 @@
 # Markdown Syntax Highlighting for Notepad++
 
-> **Important Notice:**
+> :star: **Notice for Coming Updates** (Nov/2017) :star:
 > 
-> This URL of this repo is renamed! If you had forked this repo to your local machine, please update the remote:
+> It is time to activate some updates for this repo. In the coming updates, it will focus on:
+> 1. Migrate existing stable build (master branch) to `v2.0beta` (branch [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown-plus-plus/tree/feature/emphasis-multiple-words))
+> 1. Explore UDL 2.1 and seek for improvement (imply that it may not compatible to older Notepad++)
+> 1. Will keep 2 channels: (1) Modern build (which is in beta) (2) Classic build (the current one)
 > 
-> ```shell
-> # Check if my name exists
-> git remote -v
-> # e.g. origin https://github.com/Edditoria/markdown_npp_zenburn
-> # If yes, please do: (replace origin if need, e.g. upstream)
-> git remote set-url origin https://github.com/Edditoria/markdown-plus-plus.git
-> # Check if it is correct
-> git remote -v
-> ```
-> 
-> If you had shared this repo in social networks and web, please kindly **update the URL** to:
-> 
-> <https://github.com/Edditoria/markdown-plus-plus>
-> 
+> If you have any concern, please hit a message in [Issues](https://github.com/Edditoria/markdown-plus-plus/issues) or in Twitter [@edditoria](https://twitter.com/edditoria).
 > Thanks!
 
 Default or Zenburn, your choice! :)
