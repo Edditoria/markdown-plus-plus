@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function print_help {
-  echo "Usage: source build.sh [theme_name]"
+  echo "Usage: source build.sh [theme-name]"
   echo "Build UDL xml file in root directory of this repo."
   echo ""
-  echo "Example      : . build.sh deep_black"
+  echo "Example      : . build.sh deep-black"
   echo "Display help : . build.sh help"
   echo ""
   echo "* This script requires mustache.js (npm install -g mustache)"
@@ -21,15 +21,11 @@ if [ $# -eq 0 ] || [[ $1 =~ ^("help"|"--help"|"-h"|"h") ]]; then
 else
   # setup variables
   theme_name="$1"
-  data_file="./${theme_name}_theme/${theme_name}_data.json"
-  template_file="./build/build_template.xml"
-  template_data="./build/build_data_template.json"
-  if [ $1 == "default" ]; then
-    output_file="./userDefineLang_markdown.xml"
-  else
-    output_file="./userDefineLang_markdown_${theme_name}.xml"
-  fi
-  
+  data_file="./theme-${theme_name}/data.${theme_name}.json"
+  template_file="./build/userDefinedLang-markdown.template.classic.xml"
+  template_data="./build/data.template.json"
+  output_file="./userDefinedLang-markdown.${theme_name}.classic.xml"
+
   # main part of this script
   if [ ! -f $data_file ]; then
     # when $data_file is missing
@@ -38,7 +34,7 @@ else
     read -p "Are you going to create a new color scheme \"${theme_name}\"? [y|N] " answer
     if [[ $answer =~ ^(Y|y|Yes|yes) ]]; then
       printf "Creating folder..."
-      mkdir ./${theme_name}_theme
+      mkdir "./theme-${theme_name}"
       echo "[done]"
       printf "Creating template json file..."
       cp ${template_data} ${data_file}
@@ -61,4 +57,3 @@ else
     make_file
   fi
 fi
-
