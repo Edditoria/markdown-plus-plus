@@ -15,7 +15,7 @@ If you are going to create a new theme, new feature or fix a bug, please follow 
   - `git checkout -b hotfix/{fix-a-bug} {master}` to fix a bug on current codes.
   - `git checkout -b feature/{awesome-feature} {master}` to create awesome features.
 1. Work on your codes... (Thanks!!)
-1. Before `commit -am`, please make some manual test, e.g. use the `test.md` file.
+1. Before `commit -am`, please make some manual test, e.g. use the `test.classic.md` file.
 1. Push to your Github `git push origin feature/{awesome-feature}`
 1. In Github, go to my [markdown-plus-plus repo](https://github.com/Edditoria/markdown-plus-plus/)
 1. Click the nice **Compare & pull request** button
