@@ -3,9 +3,9 @@
 > :star: **Notice for Coming Updates** (Nov/2017) :star:
 >
 > It is time to activate some updates for this repo. In the coming updates, it will focus on:
-> 1. Migrate existing stable build (master branch) to `v2.0beta` (branch [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown-plus-plus/tree/feature/emphasis-multiple-words))
-> 1. Explore UDL 2.1 and seek for improvement (imply that it may not compatible to older Notepad++)
-> 1. Will keep 2 channels: (1) Modern build (which is in beta) (2) Classic build (the current one)
+> - [ ] Migrate existing stable build (master branch) to `v2.0-beta`
+> - [ ] Explore UDL 2.1 and seek for improvement (imply that it may not compatible to older Notepad++)
+> - [ ] Will keep 2 channels: (1) Modern build (which is in beta) (2) Classic build (the current one)
 >
 > If you have any concern, please hit a message in [Issues](https://github.com/Edditoria/markdown-plus-plus/issues) or in Twitter [@edditoria](https://twitter.com/edditoria).
 > Thanks!
@@ -30,6 +30,21 @@ If you are a Notepad++ and Markdown user, you may like it!
 Supports file extensions: `.markdown` and `.md`  
 Tested: Notepad++ v7.2.2 (Windows 10)
 
+# [beta] Markdown Syntax Highlighting for Notepad++
+
+This beta version will fix a limitation of *multiple em words*
+
+However, due to limitation in UDL of Notepad++, it need to sacrifice bullet points by \* (asterisks) keyword.
+
+I still need time to confirm if **this version will mess up other things?** Please kindly evaluate it. :)
+
+In short:
+
+|   | Stable (master branch) | Beta (this branch) |
+|---|---|---|
+| \*multiple em words\* | only parse the first word | parse ALL words |
+| \* bullet points | fully support | not support (use \- or \+ instead) |
+
 ## Usage
 
 1. Download the Markdown language definition file
@@ -50,22 +65,6 @@ Need your input to solve the following problems:
 
 - `*em text*` only parse the first word because it will screw up unorder list
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
-
-## **\[NEW\]** Beta Is Available For Testing
-
-A complete new version of color scheme is available in branch `feature/emphasis-multiple-words`.
-
-It is going to solve the limitation: Parse *more than one em word*
-
-However, if you use the new UDL file, you will need to change your habbit: **No more \* unordered list**, but you still can use \- or \+ instead.
-
-> :warning: Alert:
->
-> The file name and UDL name are same with original. If you overwrite existing file, please download and import to NPP from this (master) branch.
-
-Link: [feature/emphasis-multiple-words](https://github.com/Edditoria/markdown-plus-plus/tree/feature/emphasis-multiple-words)
-
-Welcome any comment and suggestion!
 
 ## Build Script for Developers
 
