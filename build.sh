@@ -22,9 +22,15 @@ else
   # setup variables
   theme_name="$1"
   data_file="./theme-${theme_name}/data.${theme_name}.json"
+  # classic build #todo
   template_file="./build/userDefinedLang-markdown.template.classic.xml"
   template_data="./build/data.template.json"
   output_file="./userDefinedLang-markdown.${theme_name}.classic.xml"
+  # =======
+  # modern build #todo
+  # template_file="./build/userDefinedLang-markdown.template.modern.xml"
+  # template_data="./build/data.template.json"
+  # output_file="./userDefinedLang-markdown.${theme_name}.modern.xml"
 
   # main part of this script
   if [ ! -f $data_file ]; then
