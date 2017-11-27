@@ -6,6 +6,7 @@
 > - [ ] Migrate existing stable build (master branch) to `v2.0-beta`
 > - [ ] Explore UDL 2.1 and seek for improvement (imply that it may not compatible to older Notepad++)
 > - [ ] Will keep 2 channels: (1) Modern build (which is in beta) (2) Classic build (the current one)
+> - [ ] I'd forgot to create a new branch for migration. This master branch will change a lot in these days. Sorry for any inconvenience
 >
 > If you have any concern, please hit a message in [Issues](https://github.com/Edditoria/markdown-plus-plus/issues) or in Twitter [@edditoria](https://twitter.com/edditoria).
 > Thanks!
@@ -28,30 +29,39 @@ If you are a Notepad++ and Markdown user, you may like it!
 | Blackboard | Deep Black |
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v7.2.2 (Windows 10)
+Tested: Notepad++ v7.5.1 (Windows 10)
 
-# [beta] Markdown Syntax Highlighting for Notepad++
+## Step Zero: Pick Your Side
 
-This beta version will fix a limitation of *multiple em words*
+In this latest release, there are 2 types of builds:
 
-However, due to limitation in UDL of Notepad++, it need to sacrifice bullet points by \* (asterisks) keyword.
+- **modern** build: The new build having better highlighting; restriction(s) on how you write Markdown.
+- **classic** build: Long living in this repo since day 1 (v1.x); no restriction.
 
-I still need time to confirm if **this version will mess up other things?** Please kindly evaluate it. :)
+> *Note for current user*:
+>
+> You are probably using the "classic" build. The new "modern" build is trying to fix the limitation of *multiple em words*. If you have lots of docs using the following syntax, you may stick to "classic" build.
 
-In short:
+Difference between "modern" and "classic" builds:
 
-|   | Stable (master branch) | Beta (this branch) |
+|   | modern build | classic build |
 |---|---|---|
-| \*multiple em words\* | only parse the first word | parse ALL words |
-| \* bullet points | fully support | not support (use \- or \+ instead) |
+| comes from | formerly `beta` branch | formerly `master` branch |
+| \*multiple em words\* | parse ALL words | only parse the first word |
+| \* asterisk-style bullet points | not support (use \- or \+ instead) | fully support |
+| preview | ![modern build preview](/test-modern.png) | ![classic build preview](/test-modern-md-using-classic-UDL.png) |
 
 ## Usage
 
-1. Download the Markdown language definition file
-  - **Default Theme** : [userDefinedLang-markdown.default.classic.xml][default_xml]
-  - **Zenburn Theme** : [userDefinedLang-markdown.zenburn.classic.xml][zenburn_xml]
-  - **Blackboard Theme** : [userDefinedLang-markdown.blackboard.classic.xml][blackboard_xml] :new:
-  - **Deep Black Theme** : [userDefinedLang-markdown.deep-black.classic.xml][deep_black_xml] :new:
+1. Choose one of the following Markdown language definition files. You can directly download using "save as":
+
+	| Theme | modern | classic |
+	|-------|:------:|:-------:|
+	| Default | [userDefinedLang-markdown.default.modern.xml][default_modern_xml] | [userDefinedLang-markdown.default.classic.xml][default_classic_xml] |
+	| Zenburn | [userDefinedLang-markdown.zenburn.modern.xml][zenburn_modern_xml] | [userDefinedLang-markdown.zenburn.classic.xml][zenburn_classic_xml] |
+	| Blackboard | [userDefinedLang-markdown.blackboard.modern.xml][blackboard_modern_xml] | [userDefinedLang-markdown.blackboard.classic.xml][blackboard_classic_xml] |
+	| Deep Black | [userDefinedLang-markdown.deep-black.modern.xml][deep_black_modern_xml] | [userDefinedLang-markdown.deep-black.classic.xml][deep_black_classic_xml] |
+
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
 4. Restart Notepad++.
@@ -63,7 +73,8 @@ In short:
 
 Need your input to solve the following problems:
 
-- `*em text*` only parse the first word because it will screw up unorder list
+- In modern build, `*em text*` only parse the first word because it will screw up unorder list
+- In classic build, you can not use the asterisk-style bullet points (`* a bullet point`)
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
 
 ## Build Script for Developers
@@ -138,10 +149,15 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [screen_zenburn]: /theme-zenburn/markdown-plus-plus-zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_blackboard]: /theme-blackboard/markdown-plus-plus-blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
 [screen_deep_black]: /theme-deep-black/markdown-plus-plus-deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
-[default_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.classic.xml
-[zenburn_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-zenburn/userDefinedLang-markdown.zenburn.classic.xml
-[blackboard_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.classic.xml
-[deep_black_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.classic.xml
+
+[default_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.modern.xml
+[default_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.classic.xml
+[zenburn_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-zenburn/userDefinedLang-markdown.zenburn.modern.xml
+[zenburn_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-zenburn/userDefinedLang-markdown.zenburn.classic.xml
+[blackboard_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.modern.xml
+[blackboard_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.classic.xml
+[deep_black_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.modern.xml
+[deep_black_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.classic.xml
 
 [this_repo]: https://github.com/Edditoria/markdown-plus-plus
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
