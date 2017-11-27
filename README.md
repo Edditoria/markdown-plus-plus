@@ -68,9 +68,7 @@ Need your input to solve the following problems:
 
 ## Build Script for Developers
 
-In v1.1, a build script is provided for your convenience. It will follow the naming convention. It requires `bash` and `mustache.js` to run.
-
-![A Build Script To Help You Build Color Scheme][build_screen_1]
+From v1.1, a build script is provided for your convenience. It will follow the naming convention, and requires `bash` and `mustache.js` to run.
 
 When you run at the first time:
 
@@ -82,29 +80,37 @@ mustache -v
 source build.sh --help
 ```
 
+![A Build Script To Help You Build Color Scheme][build_screen_1]
+
 Build workflow:
 
 1. Build a new color scheme: `source build.sh [new-name]` (no space, e.g. awesome-dark)
 1. The script will create a new json file in a new folder:
 
-  ![Build script demo step 2][build_screen_2]
+	![Build script demo step 2][build_screen_2]
 
 1. In the json file:
-  - Change the name according to the theme, e.g. "Markdown (Awesome Dark)"
-  - Add your prefered colors in the empty strings, e.g. "FFFFFF"
+	- Change the name according to the theme, e.g. "Awesome Dark"
+	- This name will be parsed into definition name in 2 XML files:
+		- "Markdown (Awesome Dark)" for modern build
+		- "Markdown [Awesome Dark]" for classic build
+	- Add your prefered colors in the empty strings, e.g. "FFFFFF"
 
-  ![Build script demo step 3][build_screen_3]
+	![Build script demo step 3][build_screen_3]
 
-1. Build a XML file: `source build.sh [new-name]`
+1. Build XML files using the same command: `source build.sh [new-name]`
 
-  > tips: Press :arrow_up: to show your previous command.
+	> tips: Press :arrow_up: to show your previous command.
 
-1. A new XML file is ready to serve in the root directory of this repo.
-1. Import in Notepad++ for testing. It's cool, right?
+1. It builds 2 XML files in root directory of this repo.
 
-  > tips: Since the old XML is not overwritten, you can prepare two files in NPP.
+	![Build script demo step 4][build_screen_4]
 
-1. Move the XML file into the corresponding theme folder. Done!
+1. Import the XML files in Notepad++ for testing. It's cool, right?
+
+	> tips: Since the old XML is not overwritten, you can import and compare two files in NPP.
+
+1. Move the XML files into the corresponding theme folder. Done!
 
 ## Contribution
 
@@ -146,3 +152,4 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [build_screen_1]: /build/markdown-plus-plus-build-screenshot-1.png "A Build Script To Help You Build Color Scheme"
 [build_screen_2]: /build/markdown-plus-plus-build-screenshot-2.png "Build script demo step 2"
 [build_screen_3]: /build/markdown-plus-plus-build-screenshot-3.png "Build script demo step 3"
+[build_screen_4]: /build/markdown-plus-plus-build-screenshot-4.png "Build script demo step 4"
