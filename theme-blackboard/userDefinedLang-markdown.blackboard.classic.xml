@@ -1,5 +1,5 @@
 <NotepadPlus>
-    <UserLang name="Markdown (Blackboard)" ext="md markdown" udlVersion="2.1">
+    <UserLang name="Markdown [Blackboard]" ext="md markdown" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="no" allowFoldOfComments="no" foldCompact="no" forcePureLC="2" decimalSeparator="0" />
             <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" Keywords5="yes" Keywords6="no" Keywords7="no" Keywords8="no" />
