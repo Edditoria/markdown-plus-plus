@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function print_help {
-  echo "Usage: source build.sh [theme-name]"
+  echo "Usage: source build.sh [modern | classic] [theme-name]"
   echo "Build UDL xml file in root directory of this repo."
   echo ""
-  echo "Example      : . build.sh deep-black"
-  echo "Display help : . build.sh help"
+  echo "Examples: . build.sh modern awesome-black"
+  echo "          . build.sh classic lite-default"
   echo ""
   echo "* This script requires mustache.js (npm install -g mustache)"
   echo ""
@@ -20,17 +20,12 @@ if [ $# -eq 0 ] || [[ $1 =~ ^("help"|"--help"|"-h"|"h") ]]; then
   print_help
 else
   # setup variables
-  theme_name="$1"
+  build_version="$1"
+  theme_name="$2"
   data_file="./theme-${theme_name}/data.${theme_name}.json"
-  # classic build #todo
-  template_file="./build/userDefinedLang-markdown.template.classic.xml"
   template_data="./build/data.template.json"
-  output_file="./userDefinedLang-markdown.${theme_name}.classic.xml"
-  # =======
-  # modern build #todo
-  # template_file="./build/userDefinedLang-markdown.template.modern.xml"
-  # template_data="./build/data.template.json"
-  # output_file="./userDefinedLang-markdown.${theme_name}.modern.xml"
+  template_file="./build/userDefinedLang-markdown.template.${build_version}.xml"
+  output_file="./userDefinedLang-markdown.${theme_name}.${build_version}.xml"
 
   # main part of this script
   if [ ! -f $data_file ]; then
