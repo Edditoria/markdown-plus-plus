@@ -1,28 +1,28 @@
 {
-  "themeName": "Theme Name",
-  "default": {
-    "fgColor": "",
-    "bgColor": ""
-  },
-  "header": {
-    "fgColor": ""
-  },
-  "emphasis": {
-    "fgColor": ""
-  },
-  "orderedList": {
-    "fgColor": ""
-  },
-  "unorderedList": {
-    "fgColor": ""
-  },
-  "code": {
-    "fgColor": ""
-  },
-  "link": {
-    "fgColor": ""
-  },
-  "comment": {
-    "fgColor": ""
-  }
+	"themeName": "Theme Name",
+	"default": {
+		"fgColor": "",
+		"bgColor": ""
+	},
+	"header": {
+		"fgColor": ""
+	},
+	"emphasis": {
+		"fgColor": ""
+	},
+	"orderedList": {
+		"fgColor": ""
+	},
+	"unorderedList": {
+		"fgColor": ""
+	},
+	"code": {
+		"fgColor": ""
+	},
+	"link": {
+		"fgColor": ""
+	},
+	"comment": {
+		"fgColor": ""
+	}
 }
