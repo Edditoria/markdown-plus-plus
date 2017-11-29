@@ -49,7 +49,7 @@ Difference between "modern" and "classic" builds:
 | comes from | formerly `beta` branch | formerly `master` branch |
 | \*multiple em words\* | parse ALL words | only parse the first word |
 | \* asterisk-style bullet points | not support (use \- or \+ instead) | fully support |
-| preview | ![modern build preview](/test-modern.png) | ![classic build preview](/test-modern-md-using-classic-UDL.png) |
+| preview | ![modern build preview](docs/images/test-modern.png) | ![classic build preview](docs/images/test-modern-md-using-classic-UDL.png) |
 
 ## Usage
 
@@ -121,4 +121,4 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [thomsmits]: https://github.com/thomsmits/markdown_npp
 [thomsmits_npp]: https://github.com/thomsmits/markdown_npp
-[test_classic_file]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/test.classic.md
+[test_classic_file]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/test/test.classic.md
