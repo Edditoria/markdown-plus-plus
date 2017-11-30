@@ -1,23 +1,12 @@
 # Markdown Syntax Highlighting for Notepad++
 
-> :star: **Notice for Coming Updates** (Nov/2017) :star:
->
-> It is time to activate some updates for this repo. In the coming updates, it will focus on:
-> - [ ] Migrate existing stable build (master branch) to `v2.0-beta`
-> - [ ] Explore UDL 2.1 and seek for improvement (imply that it may not compatible to older Notepad++)
-> - [ ] Will keep 2 channels: (1) Modern build (which is in beta) (2) Classic build (the current one)
-> - [ ] I'd forgot to create a new branch for migration. This master branch will change a lot in these days. Sorry for any inconvenience
->
-> If you have any concern, please hit a message in [Issues](https://github.com/Edditoria/markdown-plus-plus/issues) or in Twitter [@edditoria](https://twitter.com/edditoria).
-> Thanks!
+Writing docs in Markdown is common today, but Notepad++ doesn't provide syntax highlighting for Markdown by default. That's why this repo exists.
 
-Default or Zenburn, your choice! :)
+This repo `markdown-plus-plus` is a **collection of User Defined Language XML files for Markdown syntax highlighting in Notepad++**. You download a file that matches your favorite theme, import in Notepad++, and then you are good to go.
 
-By default, Notepad++ doesn't provide syntax highlighting for Markdown.  
-I use Markdown everyday, and I'm using a dark theme called Zenburn.  
-So, I make one for myself, and share to the world.
+Thanks for encouragements and comments. This repo is not only for myself anymore. It's for everyone.
 
-If you are a Notepad++ and Markdown user, you may like it!
+If you are a Notepad++ and Markdown user, this is made for you.
 
 ## Screenshot
 
@@ -103,10 +92,10 @@ Copyright for portions of [this repository][this_repo] are held by Thomas Smits,
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
 
-[screen_default]: /theme-default/markdown-plus-plus-default-screenshot.png "Markdown in Default Theme of Notepad++"
-[screen_zenburn]: /theme-zenburn/markdown-plus-plus-zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_blackboard]: /theme-blackboard/markdown-plus-plus-blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
-[screen_deep_black]: /theme-deep-black/markdown-plus-plus-deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
+[screen_default]: theme-default/markdown-plus-plus-default-screenshot.png "Markdown in Default Theme of Notepad++"
+[screen_zenburn]: theme-zenburn/markdown-plus-plus-zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_blackboard]: theme-blackboard/markdown-plus-plus-blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
+[screen_deep_black]: theme-deep-black/markdown-plus-plus-deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
 
 [default_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.modern.xml
 [default_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.classic.xml
