@@ -62,9 +62,9 @@ Difference between "modern" and "classic" builds:
 
 Need your input to solve the following problems:
 
-- In modern build, `*em text*` only parse the first word because it will screw up unorder list
-- In classic build, you can not use the asterisk-style bullet points (`* a bullet point`)
 - `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
+- In modern build, you can not use the asterisk-style bullet points (`* a bullet point`)
+- In classic build, `*em text*` only parse the first word because it will screw up unorder list
 
 ## Build Script for Developers
 
