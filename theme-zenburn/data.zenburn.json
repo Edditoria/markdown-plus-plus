@@ -2,7 +2,8 @@
 	"themeName": "Zenburn",
 	"default": {
 		"fgColor": "DCDCCC",
-		"bgColor": "3F3F3F"
+		"bgColor": "3F3F3F",
+		"transparentBg": false
 	},
 	"header": {
 		"fgColor": "FF8040"

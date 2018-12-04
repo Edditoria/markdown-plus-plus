@@ -2,7 +2,8 @@
 	"themeName": "Deep Black",
 	"default": {
 		"fgColor": "FFFFFF",
-		"bgColor": "000000"
+		"bgColor": "000000",
+		"transparentBg": false
 	},
 	"header": {
 		"fgColor": "FF6600"
