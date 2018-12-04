@@ -81,7 +81,7 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Note to Original Repo from [@thomsmits][thomsmits_npp]
 
 Basically I revised the original repo from scratch.  
-If you don't feel good in my settings, please comment.  
+If you don't feel good about my settings, please comment.  
 I'll try my best to improve.  
 ~~Or, use Thomsmits' current repo :)~~
 
