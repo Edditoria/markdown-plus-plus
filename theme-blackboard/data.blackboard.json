@@ -2,7 +2,8 @@
 	"themeName": "Blackboard",
 	"default": {
 		"fgColor": "F8F8F8",
-		"bgColor": "0C1021"
+		"bgColor": "0C1021",
+		"transparentBg": false
 	},
 	"header": {
 		"fgColor": "FF6400"

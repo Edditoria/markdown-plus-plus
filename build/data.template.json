@@ -2,7 +2,8 @@
 	"themeName": "Theme Name",
 	"default": {
 		"fgColor": "",
-		"bgColor": ""
+		"bgColor": "",
+		"transparentBg": false
 	},
 	"header": {
 		"fgColor": ""
