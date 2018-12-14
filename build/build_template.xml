@@ -2,7 +2,7 @@
     <UserLang name="Markdown" ext="md markdown" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="2" decimalSeparator="0" />
-            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" Keywords5="yes" Keywords6="no" Keywords7="no" Keywords8="no" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments">00# 01 02((EOL)) 03&lt;!-- 04--&gt;</Keywords>
@@ -26,9 +26,9 @@
             <Keywords name="Folders in comment, close"></Keywords>
             <Keywords name="Keywords1">http:// (http:// https:// (https:// mailto: (mailto: ftp:// (ftp:// ftps:// (ftps:// (/ /</Keywords>
             <Keywords name="Keywords2">==== ----</Keywords>
-            <Keywords name="Keywords3">---</Keywords>
-            <Keywords name="Keywords4"></Keywords>
-            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords3">*** ___</Keywords>
+            <Keywords name="Keywords4">** __</Keywords>
+            <Keywords name="Keywords5">* _</Keywords>
             <Keywords name="Keywords6"></Keywords>
             <Keywords name="Keywords7"></Keywords>
             <Keywords name="Keywords8"></Keywords>
@@ -39,11 +39,11 @@
             <WordsStyle name="COMMENTS" fgColor="{{comment.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="LINE COMMENTS" fgColor="{{header.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="NUMBERS" fgColor="{{orderedList.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS1" fgColor="{{link.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="{{link.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="{{header.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS3" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS4" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS5" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="KEYWORDS6" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS7" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS8" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" fontName="" fontStyle="0" nesting="0" />
