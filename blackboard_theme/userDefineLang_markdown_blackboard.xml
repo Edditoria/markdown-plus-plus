@@ -1,8 +1,8 @@
 <NotepadPlus>
-    <UserLang name="Markdown" ext="md markdown" udlVersion="2.1">
+    <UserLang name="Markdown (Blackboard)" ext="md markdown" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="2" decimalSeparator="0" />
-            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+            <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" Keywords5="yes" Keywords6="no" Keywords7="no" Keywords8="no" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments">00# 01 02((EOL)) 03&lt;!-- 04--&gt;</Keywords>
@@ -13,7 +13,7 @@
             <Keywords name="Numbers, suffix1">.</Keywords>
             <Keywords name="Numbers, suffix2">.</Keywords>
             <Keywords name="Numbers, range"></Keywords>
-            <Keywords name="Operators1">@ &lt; &gt; \~ \` \* \_ \{ \} \[ \] \( \) \# \+ \- \. \! \&lt; \&gt; | : \</Keywords>
+            <Keywords name="Operators1">@ &lt; &gt; \&lt; \&gt; \\ \` \* \_ \{ \} \[ \] \( \) \# \+ \- \. \! \~ :|: |: :| | \|</Keywords>
             <Keywords name="Operators2">- +</Keywords>
             <Keywords name="Folders in code1, open"></Keywords>
             <Keywords name="Folders in code1, middle"></Keywords>
@@ -26,24 +26,24 @@
             <Keywords name="Folders in comment, close"></Keywords>
             <Keywords name="Keywords1">http:// (http:// https:// (https:// mailto: (mailto: ftp:// (ftp:// ftps:// (ftps:// (/ /</Keywords>
             <Keywords name="Keywords2">==== ----</Keywords>
-            <Keywords name="Keywords3">---</Keywords>
-            <Keywords name="Keywords4"></Keywords>
-            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords3">*** ___</Keywords>
+            <Keywords name="Keywords4">** __</Keywords>
+            <Keywords name="Keywords5">* _</Keywords>
             <Keywords name="Keywords6"></Keywords>
             <Keywords name="Keywords7"></Keywords>
             <Keywords name="Keywords8"></Keywords>
-            <Keywords name="Delimiters">00((![ [)) 01\ 02] 03``` 03` 03~~~ 04\ 05``` 05((EOL `)) 05~~~ 06&gt; 07\ 08((EOL)) 09___ 09*** 10\ 11((EOL ___)) 11((EOL ***)) 12_ 12* 12~~ 13\ 14((EOL _)) 14((EOL *)) 14((EOL ~~)) 15 16 17 18 19 20 21 22 23</Keywords>
+            <Keywords name="Delimiters">00![ 00[ 01\ 02] 02] 03``` 03` 03~~~ 04\ 05``` 05((EOL `)) 05~~~ 06*** 07\ 08((EOL ***)) 09** 10\ 11((EOL **)) 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="COMMENTS" fgColor="AEAEAE" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="LINE COMMENTS" fgColor="FF6400" bgColor="0C1021" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="NUMBERS" fgColor="D8FA3C" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS1" fgColor="7F90AA" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="7F90AA" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="FF6400" bgColor="0C1021" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS3" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS4" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS5" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="3" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="KEYWORDS6" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS7" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS8" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
@@ -51,11 +51,11 @@
             <WordsStyle name="FOLDER IN CODE1" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN CODE2" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN COMMENT" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS1" fgColor="FBDE2D" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="7F90AA" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
             <WordsStyle name="DELIMITERS2" fgColor="61CE3C" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS3" fgColor="808080" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
-            <WordsStyle name="DELIMITERS4" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="3" nesting="0" />
-            <WordsStyle name="DELIMITERS5" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="2" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="3" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="8DA6CE" bgColor="0C1021" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS6" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS7" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS8" fgColor="F8F8F8" bgColor="0C1021" fontName="" fontStyle="0" nesting="0" />
