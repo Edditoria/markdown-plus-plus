@@ -43,10 +43,10 @@ Tested: Notepad++ v7.2.2 (Windows 10)
 ## Usage
 
 1. Download the Markdown language definition file
-  - **Default Theme** : [userDefineLang_markdown.xml][default_xml]
-  - **Zenburn Theme** : [userDefineLang_markdown_zenburn.xml][zenburn_xml]
-  - **Blackboard Theme** : [userDefineLang_markdown_blackboard.xml][blackboard_xml] :new:
-  - **Deep Black Theme** : [userDefineLang_markdown_deep_black.xml][deep_black_xml] :new:
+	- **Default Theme** : [userDefineLang_markdown.xml][default_xml]
+	- **Zenburn Theme** : [userDefineLang_markdown_zenburn.xml][zenburn_xml]
+	- **Blackboard Theme** : [userDefineLang_markdown_blackboard.xml][blackboard_xml] :new:
+	- **Deep Black Theme** : [userDefineLang_markdown_deep_black.xml][deep_black_xml] :new:
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
 4. Restart Notepad++.
@@ -98,23 +98,23 @@ Build workflow:
 1. Build a new color scheme: `source build.sh [new_name]` (no space, e.g. awesome_dark)
 1. The script will create a new json file in a new folder:
 
-  ![Build script demo step 2][build_screen_2]
+	![Build script demo step 2][build_screen_2]
 
 1. In the json file:
-  - Change the name according to the theme, e.g. "Markdown (Awesome Dark)"
-  - Add your prefered colors in the empty strings, e.g. "FFFFFF"
-  
-  ![Build script demo step 3][build_screen_3]
-  
+	- Change the name according to the theme, e.g. "Markdown (Awesome Dark)"
+	- Add your prefered colors in the empty strings, e.g. "FFFFFF"
+
+	![Build script demo step 3][build_screen_3]
+
 1. Build a XML file: `source build.sh [new_name]`
 
-  > tips: Press :arrow_up: to show your previous command.
-  
+	> tips: Press :arrow_up: to show your previous command.
+
 1. A new XML file is ready to serve in the root directory of this repo.
 1. Import in Notepad++ for testing. It's cool, right?
 
-  > tips: Since the old XML is not overwritten, you can prepare two files in NPP.
-  
+	> tips: Since the old XML is not overwritten, you can prepare two files in NPP.
+
 1. Move the XML file into the corresponding theme folder. Done!
 
 ## Contribution

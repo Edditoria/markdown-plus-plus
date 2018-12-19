@@ -1,28 +1,28 @@
 {
-  "themeName": "Markdown (Blackboard)",
-  "default": {
-    "fgColor": "F8F8F8",
-    "bgColor": "0C1021"
-  },
-  "header": {
-    "fgColor": "FF6400"
-  },
-  "emphasis": {
-    "fgColor": "8DA6CE"
-  },
-  "orderedList": {
-    "fgColor": "D8FA3C"
-  },
-  "unorderedList": {
-    "fgColor": "FBDE2D"
-  },
-  "code": {
-    "fgColor": "61CE3C"
-  },
-  "link": {
-    "fgColor": "7F90AA"
-  },
-  "comment": {
-    "fgColor": "AEAEAE"
-  }
+	"themeName": "Markdown (Blackboard)",
+	"default": {
+		"fgColor": "F8F8F8",
+		"bgColor": "0C1021"
+	},
+	"header": {
+		"fgColor": "FF6400"
+	},
+	"emphasis": {
+		"fgColor": "8DA6CE"
+	},
+	"orderedList": {
+		"fgColor": "D8FA3C"
+	},
+	"unorderedList": {
+		"fgColor": "FBDE2D"
+	},
+	"code": {
+		"fgColor": "61CE3C"
+	},
+	"link": {
+		"fgColor": "7F90AA"
+	},
+	"comment": {
+		"fgColor": "AEAEAE"
+	}
 }

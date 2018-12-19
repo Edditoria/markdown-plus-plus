@@ -7,23 +7,23 @@
 If you are going to create a new theme, new feature or fix a bug, please follow the "fork and pull" model:
 
 1. Before writing codes, as you know:
-  1. Click the nice **fork** button in <https://github.com/Edditoria/markdown-plus-plus>
-  2. In Power Shell / Command Prompt, `git clone https://github.com/{your.username}/markdown-plus-plus.git`
-  3. `git remote add upstream https://github.com/Edditoria/markdown-plus-plus.git` for fetch and merge in future
+	1. Click the nice **fork** button in <https://github.com/Edditoria/markdown-plus-plus>
+	2. In Power Shell / Command Prompt, `git clone https://github.com/{your.username}/markdown-plus-plus.git`
+	3. `git remote add upstream https://github.com/Edditoria/markdown-plus-plus.git` for fetch and merge in future
 1. Create a new branch according to what you've gotta do:
-  - `git checkout -b theme/{theme-name} {master}` to create a new color scheme for a theme.
-  - `git checkout -b hotfix/{fix-a-bug} {master}` to fix a bug on current codes.
-  - `git checkout -b feature/{awesome-feature} {master}` to create awesome features.
+	- `git checkout -b theme/{theme-name} {master}` to create a new color scheme for a theme.
+	- `git checkout -b hotfix/{fix-a-bug} {master}` to fix a bug on current codes.
+	- `git checkout -b feature/{awesome-feature} {master}` to create awesome features.
 1. Work on your codes... (Thanks!!)
 1. Before `commit -am`, please make some manual test, e.g. use the `test.md` file.
 1. Push to your Github `git push origin feature/{awesome-feature}`
 1. In Github, go to my [markdown-plus-plus repo](https://github.com/Edditoria/markdown-plus-plus/)
 1. Click the nice **Compare & pull request** button
 1. :warning: Remember to pull to **master branch**. Make sure:
-  - [ ] "base fork: Edditoria/markdown-plus-plus" and "base: master"
-  - [ ] "head fork: {your.name}/markdown-plus-plus" and "compare: {awesome-feature}"
-  - [ ] In the the right sidebar of your pull request, select **Allow edits from maintainers**.
-  - [ ] Leave a comment to me. Click "Create pull request".
+	- [ ] "base fork: Edditoria/markdown-plus-plus" and "base: master"
+	- [ ] "head fork: {your.name}/markdown-plus-plus" and "compare: {awesome-feature}"
+	- [ ] In the the right sidebar of your pull request, select **Allow edits from maintainers**.
+	- [ ] Leave a comment to me. Click "Create pull request".
 
 In general case, I will:
 

@@ -1,28 +1,28 @@
 {
-  "themeName": "Markdown (Deep Black)",
-  "default": {
-    "fgColor": "FFFFFF",
-    "bgColor": "000000"
-  },
-  "header": {
-    "fgColor": "FF6600"
-  },
-  "emphasis": {
-    "fgColor": "FFFF00"
-  },
-  "orderedList": {
-    "fgColor": "99CC99"
-  },
-  "unorderedList": {
-    "fgColor": "339999"
-  },
-  "code": {
-    "fgColor": "66FF00"
-  },
-  "link": {
-    "fgColor": "999966"
-  },
-  "comment": {
-    "fgColor": "00FF00"
-  }
+	"themeName": "Markdown (Deep Black)",
+	"default": {
+		"fgColor": "FFFFFF",
+		"bgColor": "000000"
+	},
+	"header": {
+		"fgColor": "FF6600"
+	},
+	"emphasis": {
+		"fgColor": "FFFF00"
+	},
+	"orderedList": {
+		"fgColor": "99CC99"
+	},
+	"unorderedList": {
+		"fgColor": "339999"
+	},
+	"code": {
+		"fgColor": "66FF00"
+	},
+	"link": {
+		"fgColor": "999966"
+	},
+	"comment": {
+		"fgColor": "00FF00"
+	}
 }
