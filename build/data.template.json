@@ -3,6 +3,7 @@
 	"default": {
 		"fgColor": "",
 		"bgColor": "",
+		"extraHighlight": false,
 		"transparentBg": false
 	},
 	"header": {
