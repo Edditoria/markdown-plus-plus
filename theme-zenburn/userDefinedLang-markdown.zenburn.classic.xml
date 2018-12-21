@@ -7,8 +7,8 @@
         <KeywordLists>
             <Keywords name="Comments">00# 01 02((EOL)) 03&lt;!-- 04--&gt;</Keywords>
             <Keywords name="Numbers, prefix1"></Keywords>
-            <Keywords name="Numbers, prefix2">0x</Keywords>
-            <Keywords name="Numbers, extras1">A B C D E F</Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
             <Keywords name="Numbers, extras2"></Keywords>
             <Keywords name="Numbers, suffix1">.</Keywords>
             <Keywords name="Numbers, suffix2">.</Keywords>
