@@ -18,7 +18,7 @@ If you are a Notepad++ and Markdown user, this is made for you.
 | Blackboard | Deep Black |
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v7.5.1 (Windows 10)
+Tested: Notepad++ v7.6.1 x86 (Windows 10 x64)
 
 ## Step Zero: Pick Your Side
 
@@ -26,10 +26,6 @@ In this latest release, there are 2 types of builds:
 
 - **modern** build: The new build having better highlighting; restriction(s) on how you write Markdown.
 - **classic** build: Long living in this repo since day 1 (v1.x); no restriction.
-
-> *Note for current user*:
->
-> You are probably using the "classic" build. The new "modern" build is trying to fix the limitation of *multiple em words*. If you have lots of docs using the following syntax, you may stick to "classic" build.
 
 Difference between "modern" and "classic" builds:
 
@@ -70,6 +66,17 @@ Need your input to solve the following problems:
 
 From v1.1, a build script is provided for your convenience. For details, please read the document: [build-workflow.md](docs/build-workflow.md)
 
+## Options :new:
+
+In v2.1.0, the build script adds supports of extra stuff besides Markdown:
+
+- **"extraHighlight":** Will highlight HEX value. It is not a Markdown syntax but eye candy.
+- **"transparentBg":** In original theme, each text has background of a specific color. `"transparentBg": true` will take out the background color. Good for customized theme.
+
+You can change their value in json files. Then run the build script to produce the XML file you need.
+
+As usual, you need npm to run the build script. Feel free to contact me if you need help.
+
 ## Contribution
 
 *tl;tr* For pull request, please do check **Allow edits from maintainers**, and merge from **your new branch** into **my master branch**; Or, propose a file change in Github directly; Or, hit me a message via issue page or my social contacts.
@@ -78,16 +85,9 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 :beer: Thank you so much! :pray:
 
-## Note to Original Repo from [@thomsmits][thomsmits_npp]
-
-Basically I revised the original repo from scratch.  
-If you don't feel good about my settings, please comment.  
-I'll try my best to improve.  
-~~Or, use Thomsmits' current repo :)~~
-
 ## License
 
-Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2017.
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2018.
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
