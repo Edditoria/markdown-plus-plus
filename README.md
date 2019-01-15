@@ -87,7 +87,7 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2018.
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2019.
 
 See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 
