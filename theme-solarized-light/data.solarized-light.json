@@ -10,7 +10,7 @@
 		"fgColor": "CB4B16"
 	},
 	"emphasis": {
-		"fgColor": "657B83"
+		"fgColor": "586E75"
 	},
 	"orderedList": {
 		"fgColor": "268BD2"
@@ -25,6 +25,6 @@
 		"fgColor": "719E07"
 	},
 	"comment": {
-		"fgColor": "586E75"
+		"fgColor": "93A1A1"
 	}
 }
