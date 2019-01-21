@@ -13,16 +13,16 @@
 		"fgColor": "93A1A1"
 	},
 	"orderedList": {
-		"fgColor": "268BD2"
-	},
-	"unorderedList": {
-		"fgColor": "268BD2"
-	},
-	"code": {
 		"fgColor": "2AA198"
 	},
-	"link": {
+	"unorderedList": {
+		"fgColor": "2AA198"
+	},
+	"code": {
 		"fgColor": "719E07"
+	},
+	"link": {
+		"fgColor": "268BD2"
 	},
 	"comment": {
 		"fgColor": "586E75"
