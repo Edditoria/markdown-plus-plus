@@ -16,9 +16,15 @@ If you are a Notepad++ and Markdown user, this is made for you.
 | Default | Zenburn |
 | ![Markdown in Blackboard Theme of Notepad++][screen_blackboard] | ![Markdown in Deep Black Theme of Notepad++][screen_deep_black] |
 | Blackboard | Deep Black |
+| ![Markdown in Solarized Theme of Notepad++][screen_solarized] | ![Markdown in Solarized-light Theme in Notepad++][screen_solarized_light] |
+| Solarized :new: | Solarized-light :new: |
 
 Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v7.6.1 x86 (Windows 10 x64)
+Tested: Notepad++ v7.6.2 Yellow Vest Edition 32-bit (Windows 10 64-bit)
+![Notepad++ Yellow Vest logo](https://notepad-plus-plus.org/assets/images/logo_lwc_def_gillet-jaune_sanstxt.png "Notepad++ Yellow Vest logo")
+
+> "Our civilization is being sacrificed to the opportunity for a very small number of people to continue making enormous amounts of money."
+> -- <cite>[Greta Thunberg at UN COP 24](https://www.youtube.com/watch?v=VFkQSGyeCWg)</cite>
 
 ## Step Zero: Pick Your Side
 
@@ -46,6 +52,8 @@ Difference between "modern" and "classic" builds:
 	| Zenburn | [userDefinedLang-markdown.zenburn.modern.xml][zenburn_modern_xml] | [userDefinedLang-markdown.zenburn.classic.xml][zenburn_classic_xml] |
 	| Blackboard | [userDefinedLang-markdown.blackboard.modern.xml][blackboard_modern_xml] | [userDefinedLang-markdown.blackboard.classic.xml][blackboard_classic_xml] |
 	| Deep Black | [userDefinedLang-markdown.deep-black.modern.xml][deep_black_modern_xml] | [userDefinedLang-markdown.deep-black.classic.xml][deep_black_classic_xml] |
+	| Solarized :new: | [userDefinedLang-markdown.solarized.modern.xml][solarized_modern_xml] | [userDefinedLang-markdown.solarized.classic.xml][solarized_classic_xml] |
+	| Solarized-light :new: | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_modern_xml] | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_classic_xml] |
 
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
@@ -96,6 +104,8 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [screen_zenburn]: theme-zenburn/markdown-plus-plus-zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
 [screen_blackboard]: theme-blackboard/markdown-plus-plus-blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
 [screen_deep_black]: theme-deep-black/markdown-plus-plus-deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
+[screen_solarized]: theme-solarized/markdown-plus-plus-solarized-screenshot.png "Markdown in Solarized Theme of Notepad++"
+[screen_solarized_light]: theme-solarized-light/markdown-plus-plus-solarized-light-screenshot.png "Markdown in Solarized-light Theme of Notepad++"
 
 [default_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.modern.xml
 [default_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.classic.xml
@@ -105,6 +115,10 @@ See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
 [blackboard_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.classic.xml
 [deep_black_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.modern.xml
 [deep_black_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.classic.xml
+[solarized_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized/userDefinedLang-markdown.solarized.modern.xml
+[solarized_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized/userDefinedLang-markdown.solarized.classic.xml
+[solarized_light_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.modern.xml
+[solarized_light_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.classic.xml
 
 [this_repo]: https://github.com/Edditoria/markdown-plus-plus
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
