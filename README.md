@@ -19,12 +19,11 @@ If you are a Notepad++ and Markdown user, this is made for you.
 | ![Markdown in Solarized Theme of Notepad++][screen_solarized] | ![Markdown in Solarized-light Theme in Notepad++][screen_solarized_light] |
 | Solarized :new: | Solarized-light :new: |
 
-Supports file extensions: `.markdown` and `.md`  
-Tested: Notepad++ v7.6.2 Yellow Vest Edition 32-bit (Windows 10 64-bit)
+Supports file extensions: `.markdown` and `.md`<br>
+Tested: Notepad++ v7.6.2 Yellow Vest Edition 32-bit (Windows 10 64-bit)<br>
 ![Notepad++ Yellow Vest logo](https://notepad-plus-plus.org/assets/images/logo_lwc_def_gillet-jaune_sanstxt.png "Notepad++ Yellow Vest logo")
 
-> "Our civilization is being sacrificed to the opportunity for a very small number of people to continue making enormous amounts of money."
-> -- <cite>[Greta Thunberg at UN COP 24](https://www.youtube.com/watch?v=VFkQSGyeCWg)</cite>
+> "Our civilization is being sacrificed to the opportunity for a very small number of people to continue making enormous amounts of money." -- <cite>[Greta Thunberg at UN COP 24](https://www.youtube.com/watch?v=VFkQSGyeCWg)</cite>
 
 ## Step Zero: Pick Your Side
 
@@ -97,7 +96,7 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2019.
 
-See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
+See the [LICENSE](LICENSE.txt) file for license rights and limitations (MIT).
 
 
 [screen_default]: theme-default/markdown-plus-plus-default-screenshot.png "Markdown in Default Theme of Notepad++"
