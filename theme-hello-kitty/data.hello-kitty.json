@@ -1,0 +1,30 @@
+{
+	"themeName": "Hello Kitty",
+	"default": {
+		"fgColor": "000000",
+		"bgColor": "FFB0FF",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": ""
+	},
+	"emphasis": {
+		"fgColor": "0000FF"
+	},
+	"orderedList": {
+		"fgColor": "FF0000"
+	},
+	"unorderedList": {
+		"fgColor": "000000"
+	},
+	"code": {
+		"fgColor": "000080"
+	},
+	"link": {
+		"fgColor": "000000"
+	},
+	"comment": {
+		"fgColor": "008000"
+	}
+}
