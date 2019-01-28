@@ -1,0 +1,30 @@
+{
+	"themeName": "Ruby Blue",
+	"default": {
+		"fgColor": "FFFFFF",
+		"bgColor": "112435",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "7BD827"
+	},
+	"orderedList": {
+		"fgColor": "FF00FF"
+	},
+	"unorderedList": {
+		"fgColor": "7BD827"
+	},
+	"code": {
+		"fgColor": "FFFF80"
+	},
+	"link": {
+		"fgColor": "FF0000"
+	},
+	"comment": {
+		"fgColor": "3A8BDA"
+	}
+}

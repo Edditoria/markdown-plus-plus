@@ -1,0 +1,30 @@
+{
+	"themeName": "vim Dark Blue",
+	"default": {
+		"fgColor": "FFFFFF",
+		"bgColor": "000040",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "0000FF"
+	},
+	"orderedList": {
+		"fgColor": "FFFFFF"
+	},
+	"unorderedList": {
+		"fgColor": "FFFFFF"
+	},
+	"code": {
+		"fgColor": "000080"
+	},
+	"link": {
+		"fgColor": "FFFFFF"
+	},
+	"comment": {
+		"fgColor": "80A0FF"
+	}
+}

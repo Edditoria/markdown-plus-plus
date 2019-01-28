@@ -53,6 +53,18 @@ Difference between "modern" and "classic" builds:
 	| Deep Black | [userDefinedLang-markdown.deep-black.modern.xml][deep_black_modern_xml] | [userDefinedLang-markdown.deep-black.classic.xml][deep_black_classic_xml] |
 	| Solarized :new: | [userDefinedLang-markdown.solarized.modern.xml][solarized_modern_xml] | [userDefinedLang-markdown.solarized.classic.xml][solarized_classic_xml] |
 	| Solarized-light :new: | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_modern_xml] | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_classic_xml] |
+	| Bespin | [userDefinedLang-markdown.bespin.classic.xml][bespin_modern_xml] | [userDefinedLang-markdown.bespin.classic.xml][bespin_classic_xml] |
+	| Choco | [userDefinedLang-markdown.choco.classic.xml][choco_modern_xml] | [userDefinedLang-markdown.choco.classic.xml][choco_classic_xml] |
+	| Hello Kitty | [userDefinedLang-markdown.hello-kitty.classic.xml][hello-kitty_modern_xml] | [userDefinedLang-markdown.hello-kitty.classic.xml][hello-kitty_classic_xml] |
+	| Mono Industrial | [userDefinedLang-markdown.mono-industrial.classic.xml][mono-industrial_modern_xml] | [userDefinedLang-markdown.mono-industrial.classic.xml][mono-industrial_classic_xml] |
+	| Monokai | [userDefinedLang-markdown.monokai.classic.xml][monokai_modern_xml] | [userDefinedLang-markdown.monokai.classic.xml][monokai_classic_xml] |
+	| Obsidian | [userDefinedLang-markdown.obsidian.classic.xml][obsidian_modern_xml] | [userDefinedLang-markdown.obsidian.classic.xml][obsidian_classic_xml] |
+	| Plastic Code Wrap | [userDefinedLang-markdown.plastic-code-wrap.classic.xml][plastic-code-wrap_modern_xml] | [userDefinedLang-markdown.plastic-code-wrap.classic.xml][plastic-code-wrap_classic_xml] |
+	| Ruby Blue | [userDefinedLang-markdown.ruby-blue.classic.xml][ruby-blue_modern_xml] | [userDefinedLang-markdown.ruby-blue.classic.xml][ruby-blue_classic_xml] |
+	| Twilight | [userDefinedLang-markdown.twilight.classic.xml][twilight_modern_xml] | [userDefinedLang-markdown.twilight.classic.xml][twilight_classic_xml] |
+	| Vibrant Ink | [userDefinedLang-markdown.vibrant-ink.classic.xml][vibrant-ink_modern_xml] | [userDefinedLang-markdown.vibrant-ink.classic.xml][vibrant-ink_classic_xml] |
+	| vim Dark Blue | [userDefinedLang-markdown.vim-dark-blue.classic.xml][vim-dark-blue_modern_xml] | [userDefinedLang-markdown.vim-dark-blue.classic.xml][vim-dark-blue_classic_xml] |
+
 
 2. In Notepad++ menu, click `Language` and select `Define your language...` .
 3. In User Defined Language windows, click `Import` then open the xml file.
@@ -118,6 +130,30 @@ See the [LICENSE](LICENSE.txt) file for license rights and limitations (MIT).
 [solarized_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized/userDefinedLang-markdown.solarized.classic.xml
 [solarized_light_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.modern.xml
 [solarized_light_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.classic.xml
+[bespin_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-bespin/userDefinedLang-markdown.bespin.modern.xml
+[bespin_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-bespin/userDefinedLang-markdown.bespin.classic.xml
+[choco_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-choco/userDefinedLang-markdown.choco.modern.xml
+[choco_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-choco/userDefinedLang-markdown.choco.classic.xml
+[hello-kitty_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-hello-kitty/userDefinedLang-markdown.hello-kitty.modern.xml
+[hello-kitty_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-hello-kitty/userDefinedLang-markdown.hello-kitty.classic.xml
+[mono-industrial_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-mono-industrial/userDefinedLang-markdown.mono-industrial.modern.xml
+[mono-industrial_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-mono-industrial/userDefinedLang-markdown.mono-industrial.classic.xml
+[monokai_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-monokai/userDefinedLang-markdown.monokai.modern.xml
+[monokai_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-monokai/userDefinedLang-markdown.monokai.classic.xml
+[obsidian_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-obsidian/userDefinedLang-markdown.obsidian.modern.xml
+[obsidian_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-obsidian/userDefinedLang-markdown.obsidian.classic.xml
+[plastic-code-wrap_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-plastic-code-wrap/userDefinedLang-markdown.plastic-code-wrap.modern.xml
+[plastic-code-wrap_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-plastic-code-wrap/userDefinedLang-markdown.plastic-code-wrap.classic.xml
+[ruby-blue_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-ruby-blue/userDefinedLang-markdown.ruby-blue.modern.xml
+[ruby-blue_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-ruby-blue/userDefinedLang-markdown.ruby-blue.classic.xml
+[solarized-light_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.modern.xml
+[solarized-light_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.classic.xml
+[twilight_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-twilight/userDefinedLang-markdown.twilight.modern.xml
+[twilight_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-twilight/userDefinedLang-markdown.twilight.classic.xml
+[vibrant-ink_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-vibrant-ink/userDefinedLang-markdown.vibrant-ink.modern.xml
+[vibrant-ink_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-vibrant-ink/userDefinedLang-markdown.vibrant-ink.classic.xml
+[vim-dark-blue_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-vim-dark-blue/userDefinedLang-markdown.vim-dark-blue.modern.xml
+[vim-dark-blue_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-vim-dark-blue/userDefinedLang-markdown.vim-dark-blue.classic.xml
 
 [this_repo]: https://github.com/Edditoria/markdown-plus-plus
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn

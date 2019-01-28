@@ -1,0 +1,30 @@
+{
+	"themeName": "Monokai",
+	"default": {
+		"fgColor": "F8F8F2",
+		"bgColor": "272822",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "F92672"
+	},
+	"orderedList": {
+		"fgColor": "AE81FF"
+	},
+	"unorderedList": {
+		"fgColor": "F8F8F2"
+	},
+	"code": {
+		"fgColor": "F92672"
+	},
+	"link": {
+		"fgColor": "F92672"
+	},
+	"comment": {
+		"fgColor": "75715E"
+	}
+}

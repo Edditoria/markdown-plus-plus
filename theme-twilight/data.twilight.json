@@ -1,0 +1,30 @@
+{
+	"themeName": "Twilight",
+	"default": {
+		"fgColor": "F8F8F8",
+		"bgColor": "141414",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "9B703F"
+	},
+	"orderedList": {
+		"fgColor": "CF6A4C"
+	},
+	"unorderedList": {
+		"fgColor": "F8F8F8"
+	},
+	"code": {
+		"fgColor": "CDA869"
+	},
+	"link": {
+		"fgColor": "9B703F"
+	},
+	"comment": {
+		"fgColor": "5F5A60"
+	}
+}

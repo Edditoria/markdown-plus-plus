@@ -1,0 +1,30 @@
+{
+	"themeName": "Mono Industrial",
+	"default": {
+		"fgColor": "FFFFFF",
+		"bgColor": "222C28",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "A65EFF"
+	},
+	"orderedList": {
+		"fgColor": "E98800"
+	},
+	"unorderedList": {
+		"fgColor": "FFFFFF"
+	},
+	"code": {
+		"fgColor": "A8B3AB"
+	},
+	"link": {
+		"fgColor": "A65EFF"
+	},
+	"comment": {
+		"fgColor": "666C68"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"themeName": "Obsidian",
+	"default": {
+		"fgColor": "E0E2E4",
+		"bgColor": "293134",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "8CBBAD"
+	},
+	"orderedList": {
+		"fgColor": "FFCD22"
+	},
+	"unorderedList": {
+		"fgColor": "E8E2B7"
+	},
+	"code": {
+		"fgColor": "93C763"
+	},
+	"link": {
+		"fgColor": "8CBBAD"
+	},
+	"comment": {
+		"fgColor": "66747B"
+	}
+}
