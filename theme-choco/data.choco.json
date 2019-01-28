@@ -1,0 +1,30 @@
+{
+	"themeName": "Choco",
+	"default": {
+		"fgColor": "C3BE98",
+		"bgColor": "1A0F0B",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "6D4C2F"
+	},
+	"orderedList": {
+		"fgColor": "DA5659"
+	},
+	"unorderedList": {
+		"fgColor": "C3BE98"
+	},
+	"code": {
+		"fgColor": "B3935C"
+	},
+	"link": {
+		"fgColor": "6D4C2F"
+	},
+	"comment": {
+		"fgColor": "679D47"
+	}
+}
