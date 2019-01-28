@@ -1,0 +1,30 @@
+{
+	"themeName": "Vibrant Ink",
+	"default": {
+		"fgColor": "FFFFFF",
+		"bgColor": "000000",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "FF6600"
+	},
+	"orderedList": {
+		"fgColor": "99CC99"
+	},
+	"unorderedList": {
+		"fgColor": "999966"
+	},
+	"code": {
+		"fgColor": "FFCC00"
+	},
+	"link": {
+		"fgColor": "FFFFFF"
+	},
+	"comment": {
+		"fgColor": "9933CC"
+	}
+}
