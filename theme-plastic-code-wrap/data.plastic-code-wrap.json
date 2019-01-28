@@ -1,0 +1,30 @@
+{
+	"themeName": "Plastic Code Wrap",
+	"default": {
+		"fgColor": "F8F8F8",
+		"bgColor": "0B161D",
+		"extraHighlight": false,
+		"transparentBg": false
+	},
+	"header": {
+		"fgColor": "FF8040"
+	},
+	"emphasis": {
+		"fgColor": "EFE900"
+	},
+	"orderedList": {
+		"fgColor": "FF3A83"
+	},
+	"unorderedList": {
+		"fgColor": "F8F8F8"
+	},
+	"code": {
+		"fgColor": "FFAA00"
+	},
+	"link": {
+		"fgColor": "EFE900"
+	},
+	"comment": {
+		"fgColor": "1E9AE0"
+	}
+}
