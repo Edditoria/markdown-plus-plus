@@ -32,7 +32,7 @@
             <Keywords name="Keywords6">** __</Keywords>
             <Keywords name="Keywords7">* _</Keywords>
             <Keywords name="Keywords8"></Keywords>
-            <Keywords name="Delimiters">00![ 00[ 01\ 02] 02] 03``` 03` 03~~~ 04\ 05``` 05((EOL `)) 05~~~ 06*** 07\ 08((EOL ***)) 09** 10\ 11((EOL **)) 12* 13\ 14((EOL *)) 15** 16\ 17((EOL **)) 18* 19\ 20((EOL *)) 21 22 23</Keywords>
+            <Keywords name="Delimiters">00![ 00[ 01\ 02] 02] 03``` 03` 03~~~ 04\ 05``` 05((EOL `)) 05~~~ 06*** 06___ 07\ 08((EOL ***)) 08((EOL ___)) 09** 09__ 10\ 11((EOL **)) 11((EOL __)) 12* 12_ 13\ 14((EOL *)) 14((EOL _)) 15** 15__ 16\ 17((EOL **)) 17((EOL __)) 18* 18_ 19\ 20((EOL *)) 20((EOL _)) 21 22 23</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="FFFFFF" bgColor="000000" fontName="" fontStyle="0" nesting="0" />
