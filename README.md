@@ -92,11 +92,15 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 :beer: Thank you so much! :pray:
 
-## License
+## Copyright and License
 
-Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2019.
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2020.
 
-See the [LICENSE](LICENSE.txt) file for license rights and limitations (MIT).
+Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
+
+As human-readable summary (but not a substitute for the license):
+
+You can use it, share it, modify the codes and distribute your work for private and commercial uses. If you like, please share your work with me. :pizza:
 
 
 [screen_default]: theme-default/markdown-plus-plus-default-screenshot.png "Markdown in Default Theme of Notepad++"
