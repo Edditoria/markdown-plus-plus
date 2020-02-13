@@ -1,0 +1,53 @@
+{
+  "name": "markdown-plus-plus",
+  "version": "3.0.0",
+  "description": "Markdown syntax highlighting for Notepad++, by customized UDL file (user defined language)",
+  "license": "MIT",
+  "private": true,
+  "main": "build.js",
+  "directories": {
+    "bin": "./bin",
+    "doc": "docs",
+    "test": "test"
+  },
+  "files": [
+    "/bin/**/*",
+    "/build/**/*",
+    "/config/**/*",
+    "/udl/**/*",
+    "build.js",
+    "package.json",
+    "LICENSE.txt",
+    "README.md"
+  ],
+  "engines": {
+    "//node": "Minimum version to use Promises and require()",
+    "node": ">=0.12.0",
+    "//npm": "Minimum version to use npx",
+    "npm": ">=5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edditoria <edditoria@gmail.com>",
+  "homepage": "https://github.com/Edditoria/markdown-plus-plus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edditoria/markdown-plus-plus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Edditoria/markdown-plus-plus/issues"
+  },
+  "keywords": [
+    "notepad-plus-plus",
+    "udl",
+    "markdown",
+    "syntax-highlighting",
+    "notepadplusplus",
+    "npp"
+  ],
+  "dependencies": {
+    "handlebars": "^4.7.3"
+  },
+  "devDependencies": {}
+}
