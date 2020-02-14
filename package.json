@@ -4,7 +4,7 @@
   "description": "Markdown syntax highlighting for Notepad++, by customized UDL file (user defined language)",
   "license": "MIT",
   "private": true,
-  "main": "build.js",
+  "main": "build/build.js",
   "directories": {
     "bin": "./bin",
     "doc": "docs",
@@ -15,7 +15,6 @@
     "/build/**/*",
     "/config/**/*",
     "/udl/**/*",
-    "build.js",
     "package.json",
     "LICENSE.txt",
     "README.md"
@@ -27,6 +26,7 @@
     "npm": ">=5.2.0"
   },
   "scripts": {
+    "build": "node ./build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edditoria <edditoria@gmail.com>",
