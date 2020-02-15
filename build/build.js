@@ -9,22 +9,33 @@
 
 var fs = require('fs');
 var Handlebars = require('handlebars');
+var path = require('path');
 
-/* @type { string } - Default template file with path */
-var templateFile = './build/template.hbs.xml';
+/**
+ * @typedef {Object} Paths
+ * @description Collection of paths for this npm package
+ * @property {string} package - Root directory of this npm package
+ * @property {string} template - File path of Handlebars template
+ */
+/** @type {Paths} paths */
+var paths = {
+	package: path.resolve(__dirname, '../'),
+	template: path.resolve(__dirname, 'template.hbs.xml')
+};
 
-/* @function template - Create a hbs template function. Requires templateFile to run. */
+/**
+ * Create a function of Handlebars-template. Requires paths object to run.
+ * @function template
+ */
 var template = Handlebars.compile(
 	// Read template file synchronously
 	// Making it a string is required by Handlebars
-	fs.readFileSync(templateFile).toString()
+	fs.readFileSync(paths.template).toString()
 );
 
 /**
  * Render Handlebars template in Node 4 or above. Requires template() to run
- * @param {Object} files
- * @param {string} files.data - Full path for fs.readfile to read a config file
- * @param {string} files.output - Full path for fs.writeFile to write a udl.xml file
+ * @param {Files} files - The {@link Files} object for Handlebars rendering
  */
 var render = function (files) {
 	/* @function readFile - Read the config file asynchronously */
@@ -49,15 +60,22 @@ var render = function (files) {
 };
 
 /**
- * Create a Files object
- * @param {string} themeName
- * @return {Object} - Paths of Handlebars data source and expected output
+ * @typedef {Object} Files
+ * @description Full paths of config data, expected output UDL files and etc.
+ * @property {string} data - Full path of config data
+ * @property {string} output - Full path of expected UDL file
  */
-var createFilesObj = function (themeName) {
+/**
+ * Create a Files object in format of {@link Files}
+ * @param {string} themeName - In format of dash-lower-case-theme-name
+ * @param {Paths} paths - The {@link Paths} object for Handlebars rendering
+ * @return {Files}
+ */
+var createFilesObj = function (themeName, paths) {
 	return {
-		data: './config/markdown.' + themeName + '.config.json',
-		output: './udl/markdown.' + themeName + '.udl.xml'
+		data: paths.package + '/config/markdown.' + themeName + '.config.json',
+		output: paths.package + '/udl/markdown.' + themeName + '.udl.xml'
 	};
 };
 
-render(createFilesObj('default'));
+render(createFilesObj('default', paths));
