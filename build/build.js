@@ -33,6 +33,81 @@ var paths = {
 };
 
 /**
+ * Get file list in a directory.
+ * Similar to `dir /w` in command prompt and `ls` in bash.
+ * Expect program quit with error if it does not find the directory.
+ * @param {string} dir - Directory.
+ * @return {string[]} - An array as a list of filenames.
+ */
+var getFileList = function(dir) {
+	return fs.readdirSync(dir);
+};
+
+/**
+ * Check whether a config filename is in proper format.
+ * @param {string} filename - Expected format: 'markdown.theme-name.config.json'.
+ * @return {boolean}
+ */
+var isThemeNameFormat = function(filename) {
+	return /^(markdown\.)\S+(\.config\.json)$/.test(filename);
+};
+
+/**
+ * Get theme name from a config filename, assuming the filename is in proper format.
+ * @param {string} filename.
+ * @return {string} - Expected format: 'hyphen-lowercase-theme-name'.
+ */
+var getThemeName = function(filename) {
+	var reHead = /^(markdown\.)/;
+	var reTail = /(\.config\.json)$/;
+	return filename.replace(reHead, '').replace(reTail, '');
+};
+
+/**
+ * Create filename of a UDL file base on a theme name.
+ * @param {string} themeName - Expected format: 'hyphen-lowercase-theme-name'.
+ * @return {string} - E.g. 'markdown.theme-name.udl.xml'.
+ */
+var createUdlFilename = function(themeName) {
+	return 'markdown.' + themeName + '.udl.xml';
+};
+
+/**
+ * @typedef {Array} fileListData
+ * @description A list (array) of file object to be rendered by Handlebars {@link render}-ing.
+ * @property {Array<Files>} - Each object in the array contains information of {@link Files}.
+ */
+/**
+ * Create {@link fileListData} according to the files in config directory.
+ * @param {sting} configPath - Path of config directory.
+ * @return {fileListData} - A series of {@link Files} objects fit for Handlebars {@link render}-ing.
+ */
+var createFileListData = function(configPath) {
+	/* @type {string[]} Create an array of config files (Default in <config/>). */
+	var configFileList = getFileList(configPath);
+	var fileListData = [];
+	var filename, themeName, udlFilename;
+	// Loop the config files
+	for (var i = 0; i < configFileList.length; i++) {
+		filename = configFileList[i];
+		// Expect all filenames are in format of 'markdown.[theme-name].config.json'.
+		if (!!isThemeNameFormat(filename)) {
+			themeName = getThemeName(filename);
+			udlFilename = createUdlFilename(themeName);
+			// Create a {@link Files} object and append it to {@link fileListData} array.
+			fileListData.push({
+				config: paths.config + '/' + filename,
+				udl: paths.udl + '/' + udlFilename,
+				themeName: themeName
+			});
+		} else {
+			// throw error; //todo
+		}
+	}
+	return fileListData;
+};
+
+/**
  * Create a function of Handlebars template.
  * @param {string} templatePath - Full path of template file.
  * @return {Object} - A function of Handlebars template.
@@ -78,20 +153,17 @@ var render = function(files, template) {
 	});
 };
 
-/**
- * Create a Files object in format of {@link Files}
- * @param {string} themeName - In format of dash-lower-case-theme-name
- * @param {Paths} paths - The {@link Paths} object for Handlebars rendering
- * @return {Files}
- */
-var createFilesObj = function(themeName, paths) {
-	return {
-		config: paths.config + '/markdown.' + themeName + '.config.json',
-		udl: paths.udl + '/markdown.' + themeName + '.udl.xml',
-		themeName: themeName
-	};
+var main = function(fileListData, templatePath) {
+	/* @function template - Create a template function required by Handlebars. */
+	var template = createTemplate(templatePath);
+	// Put the {@link Files} objects to {@link render} using the {@link template} above.
+	for (var i = 0; i < fileListData.length; i++) {
+		console.log(fileListData[i]);
+		// Render the files asynchronously.
+		// render(fileListData[i], template);
+	}
 };
+// module.exports = function(fileListData, templatePath) {}; //todo
 
-var template = createTemplate(paths.template);
-var defaultFiles = createFilesObj('default', paths);
-render(defaultFiles, template);
+var fileListData = createFileListData(paths.config);
+main(fileListData, paths.template);
