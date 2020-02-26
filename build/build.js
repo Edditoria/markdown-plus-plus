@@ -3,7 +3,7 @@
  * This project is open source on:
  * [Source]{@link https://github.com/Edditoria/markdown-plus-plus}.
  * Code released under the MIT license:
- * [License]{@link https://github.com/Edditoria/validid/blob/master/LICENSE.txt}
+ * [License]{@link https://github.com/Edditoria/validid/blob/master/LICENSE.txt}.
  *
  * @file Build script for markdown-plus-plus.
  * @auther Edditoria
@@ -31,6 +31,12 @@ var paths = {
 	udl: packagePath + '/udl',
 	template: packagePath + '/build/template.hbs.xml'
 };
+
+
+/*
+ * File Operations
+ * ===============
+ */
 
 /**
  * Get file list in a directory.
@@ -101,11 +107,19 @@ var createFileListData = function(configPath) {
 				themeName: themeName
 			});
 		} else {
-			// throw error; //todo
+			// Important: Should not write any file into the file system.
+			var configError = 'One or more config file(s) does not named correctly. Expected pattern: markdown.[theme-name].config.json';
+			throw new Error(configError);
 		}
 	}
 	return fileListData;
 };
+
+
+/*
+ * Handlebars Rendering
+ * ====================
+ */
 
 /**
  * Create a function of Handlebars template.
@@ -122,22 +136,23 @@ var createTemplate = function(templatePath) {
 
 /**
  * @typedef {Object} Files
- * @description Full paths of config data, expected output UDL files and etc.
- * @property {string} config - Full path of config file
- * @property {string} udl - Full path of expected UDL file
- * @property {string} themeName - In format of dash-lower-case-theme-name
+ * @description A single "Files" object contains information as a source for {@link render} process using Handlebars.
+ * @property {string} config - Full path of config file.
+ * @property {string} udl - Full path of expected UDL file.
+ * @property {string} themeName - In format of dash-lower-case-theme-name.
  */
 /**
  * Render and write all files using Handlebars template.
  * @param {Files} files - The {@link Files} object for Handlebars rendering.
+ * @param {template} - The template as a function passed by {@link createTemplate}.
  */
 var render = function(files, template) {
-	/* @function readFile - Read the config file asynchronously */
+	/* @function readFile - Read the config file asynchronously. */
 	fs.readFile(files.config, 'utf8', function(dataError, data) {
 		if (!dataError) {
 			var dataObj = JSON.parse(data);
 			var output = template(dataObj);
-			/* @function writeFile - Write the file asynchronously */
+			/* @function writeFile - Write the file asynchronously. */
 			fs.writeFile(files.udl, output, function(writeError) {
 				if (!writeError) {
 					console.log('[' + files.themeName + '] UDL file is created successfully');
@@ -153,14 +168,24 @@ var render = function(files, template) {
 	});
 };
 
+
+/*
+ * Main Operations
+ * ===============
+ */
+
+/**
+ * Build the UDL XML files according to the config files using Handlebars rendering.
+ * @param {fileListData} fileListData - An array containing {@link Files} objects.
+ * @param {string} templatePath - Full path of the template file in Handlebars format.
+ */
 var main = function(fileListData, templatePath) {
 	/* @function template - Create a template function required by Handlebars. */
 	var template = createTemplate(templatePath);
 	// Put the {@link Files} objects to {@link render} using the {@link template} above.
 	for (var i = 0; i < fileListData.length; i++) {
-		console.log(fileListData[i]);
 		// Render the files asynchronously.
-		// render(fileListData[i], template);
+		render(fileListData[i], template);
 	}
 };
 // module.exports = function(fileListData, templatePath) {}; //todo
