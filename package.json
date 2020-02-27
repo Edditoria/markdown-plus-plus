@@ -4,7 +4,10 @@
   "description": "Markdown syntax highlighting for Notepad++, by customized UDL file (user defined language)",
   "license": "MIT",
   "private": true,
-  "main": "build/build.js",
+  "main": "bin/mpp.js",
+  "bin": {
+    "mpp": "./bin/mpp.js"
+  },
   "directories": {
     "bin": "./bin",
     "doc": "docs",
@@ -27,6 +30,7 @@
   },
   "scripts": {
     "build": "node ./build/build.js",
+    "mpp": "node ./bin/mpp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Edditoria <edditoria@gmail.com>",
