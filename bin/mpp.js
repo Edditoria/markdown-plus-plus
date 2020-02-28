@@ -15,12 +15,82 @@
 var fs = require('fs');
 var path = require('path');
 
+/*
+Expected usage:
+```cmd
+npx markdown-plus-plus [options]    # In UDL folder of Notepad++
+mpp [options]                       # After install this package globally
+npm run mpp -- [options]            # Develop in package directory
+````
+*/
+/* @type {Array<string>} - Usage messages to print */
+var usageMsg = [
+	'Build UML XML file(s) for Notepad++ in current working directory.',
+	'',
+	'Usage: npx markdown-plus-plus [theme-name...] [--all] [-f | --force]',
+	'',
+	'Options:',
+	'theme-name       Build UDL file(s) for specified theme(s)',
+	'                 You can give multiple theme names',
+	'                 e.g. npx markdown-plus-plus solarized zenburn deep-black',
+	'-f, --force      Force to overwrite any file that already exists in directory',
+	'-l, --list       List bundled themes in this package',
+	'-v, --version    Print current version of this package',
+	'-h, --help       Print usage',
+	'',
+	'Examples:',
+	'npx markdown-plus-plus               Build all UDL files without overwrite',
+	'npx markdown-plus-plus zenburn       Build Zenburn UDL file without overwrite',
+	'npx markdown-plus-plus zenburn -f    Build Zenburn UDL file and overwrite',
+	''
+];
+
+/* @type {string} - Version of this npm package. */
+var version = process.env.npm_package_version;
 /* @type {Array<string>} - Arguments from node. */
 var args = process.argv.slice(2);
 /* @type {string} - Current working directory. */
 var cwd = process.cwd();
 /* @type {string} - Root directory of this NPM package. */
 var packagePath = path.resolve(__dirname, '../');
+/* @type {string} - Path for <udl/> in this package. */
+var udlPath = packagePath + '/udl';
+
+/*
+ * Parse arguments passed from user command input.
+ * @param {Array<string>} args - Arguments from Node's `process.argv.slice(2)`.
+ * @param {Array<string>} buildinThemes - Basically the theme names in <config/>.
+ */
+var parseArgs = function(args, buildinThemes) {
+	var options = {
+		themeNames: [],
+		force: false
+	};
+	// Loop the arguments.
+	var arg;
+	for (var i = 0; i < args.length; i++) {
+		arg = args[i];
+		if (arg === '-l' || arg === '--list') {
+			console.log(buildinThemes.join('\n'));
+			break;
+		}
+		if (arg === '-v' || arg === '--version') {
+			console.log(version);
+			break;
+		}
+		if (arg === '-h' || arg === '--help') {
+			console.log(usageMsg.join('\n'));
+			break;
+		}
+		if (arg === '-f' || arg === '--force') {
+			console.log('Warning! In force mode, any existing file(s) will be overwritten.\n');
+			options.force = true;
+		} else {
+			options.themeNames.push(arg);
+		}
+	}
+	return options;
+};
 
 /**
  * Get file list in a directory.
@@ -42,6 +112,20 @@ var getThemeName = function(filename) {
 	var reHead = /^(markdown\.)/;
 	var reTail = /(\.udl\.xml)$/;
 	return filename.replace(reHead, '').replace(reTail, '');
+};
+
+/**
+ * Get a list of theme names in a directory.
+ * Theme names are stripped from filename of the built-in UDL files in <udl/>.
+ * @param {Array<string>} - A list of theme names, e.g. ['default', 'zenburn'].
+ */
+var getThemeList = function(dir) {
+	var files = getFileList(dir);
+	var themeList = [];
+	for (var i = 0; i < files.length; i++) {
+		themeList.push(getThemeName(files[i]));
+	}
+	return themeList;
 };
 
 /**
@@ -89,4 +173,9 @@ var main = function(args) {
 	}
 };
 
-main(args);
+/* @type {Array} - A list of theme names found in <udl/>. */
+var buildinThemes = getThemeList(udlPath);
+/* @type {Object} - Parse args into options object. */
+var options = parseArgs(args, buildinThemes);
+console.log(options);
+// main(options);
