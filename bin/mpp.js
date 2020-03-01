@@ -190,22 +190,26 @@ var copyFile = function(src, dest) {
 
 /**
  * Build UDL XML file(s) in current working directory.
- * @param {Array} args - This array is produced by Node's `process.argv`.
+ * Normally the file list should be checked and they are available in <udl/>.
+ * @param {Object} options - User options originally from command line.
+ * @param {BuildinUdls} - Will use it when need to build all built-in files.
  */
-var main = function(args) {
-	/* @type {string[]} - A list of filenames in <udl/> in this package. */
-	var fileList = getFileList(packagePath + '/udl');
+var main = function(options, buildinUdls) {
+	var isForce = options.isForce;
+	var isBuildAll = options.themeList.length === 0;
+	var themeList = isBuildAll ? buildinUdls.themeList : options.themeList;
+	var fileList = isBuildAll ? buildinUdls.fileList : options.fileList;
 	// Loop the file list.
 	var filename, src, dest, themeName, isExist;
 	for (var i = 0; i < fileList.length; i++) {
 		filename = fileList[i];
 		src = packagePath + '/udl/' + filename;
 		dest = cwd + '/' + filename;
-		themeName = getThemeName(filename);
+		themeName = themeList[i];
 		// Synchronously check whether file exists.
 		isExist = fs.existsSync(dest);
-		// Jump to next iteration if file already exists.
-		if (isExist) {
+		// Jump to next iteration if file already exists and not in force mode.
+		if (isExist && !isForce) {
 			console.log('[' + themeName + '] Warning: File already exists. Have skipped this one.');
 			continue; // Jump to next iteration.
 		}
@@ -218,5 +222,6 @@ var main = function(args) {
 var buildinUdls = createBuildinUdls(udlPath);
 /* @type {Object} - Parse args into options object. */
 var options = parseArgs(args, buildinUdls);
-console.log(options);
-// main(options);
+if (options.shouldContinue) {
+	main(options, buildinUdls);
+}
