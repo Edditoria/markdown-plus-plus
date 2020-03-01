@@ -58,37 +58,51 @@ var udlPath = packagePath + '/udl';
 
 /*
  * Parse arguments passed from user command input.
+ * "-f" can only be passed at first or last argument.
+ * "-l/-h/-v" can only be passed at first argument.
  * @param {Array<string>} args - Arguments from Node's `process.argv.slice(2)`.
  * @param {Array<string>} buildinThemes - Basically the theme names in <config/>.
+ * @return {Object} - The parsed object passing to build steps.
  */
 var parseArgs = function(args, buildinThemes) {
 	var options = {
 		themeNames: [],
-		force: false
+		shouldContinue: false,
+		isForce: false
 	};
-	// Loop the arguments.
+	// Parse the first argument. Quit asap if user put a proper flag.
+	var firstArg = args[0];
+	switch (firstArg) {
+		case '-l': case '--list':
+			console.log(buildinThemes.join('\n'));
+			return options;
+		case '-v': case '--version':
+			console.log(version);
+			return options;
+		case '-h': case '--help':
+			console.log(usageMsg.join('\n'));
+			return options;
+	}
+	// Loop all arguments. Match the theme names, otherwise the program should quits.
 	var arg;
 	for (var i = 0; i < args.length; i++) {
 		arg = args[i];
-		if (arg === '-l' || arg === '--list') {
-			console.log(buildinThemes.join('\n'));
-			break;
-		}
-		if (arg === '-v' || arg === '--version') {
-			console.log(version);
-			break;
-		}
-		if (arg === '-h' || arg === '--help') {
-			console.log(usageMsg.join('\n'));
-			break;
-		}
 		if (arg === '-f' || arg === '--force') {
-			console.log('Warning! In force mode, any existing file(s) will be overwritten.\n');
-			options.force = true;
-		} else {
+			if (i === 0 || i === args.length - 1) {
+				console.log('Warning! In force mode, any existing file(s) will be overwritten.\n');
+				options.isForce = true;
+			} else {
+				console.log('arg[' + i + ']: You pass the \"' + arg + '\" flag in wrong position. Quit for safety.');
+				return options;
+			}
+		} else if (buildinThemes.indexOf(arg) >= 0) {
 			options.themeNames.push(arg);
+		} else {
+			console.log('arg[' + i + ']: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
+			return options;
 		}
 	}
+	options.shouldContinue = true;
 	return options;
 };
 
