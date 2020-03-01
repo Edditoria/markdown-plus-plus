@@ -61,12 +61,13 @@ var udlPath = packagePath + '/udl';
  * "-f" can only be passed at first or last argument.
  * "-l/-h/-v" can only be passed at first argument.
  * @param {Array<string>} args - Arguments from Node's `process.argv.slice(2)`.
- * @param {Array<string>} buildinThemes - Basically the theme names in <config/>.
+ * @param {buildinUdls} buildinUdls - Basically the theme names and filenames in <udl/>.
  * @return {Object} - The parsed object passing to build steps.
  */
-var parseArgs = function(args, buildinThemes) {
+var parseArgs = function(args, buildinUdls) {
 	var options = {
-		themeNames: [],
+		themeList: [],
+		fileList: [],
 		shouldContinue: false,
 		isForce: false
 	};
@@ -74,7 +75,7 @@ var parseArgs = function(args, buildinThemes) {
 	var firstArg = args[0];
 	switch (firstArg) {
 		case '-l': case '--list':
-			console.log(buildinThemes.join('\n'));
+			console.log(buildinUdls.themeList.join('\n'));
 			return options;
 		case '-v': case '--version':
 			console.log(version);
@@ -84,7 +85,7 @@ var parseArgs = function(args, buildinThemes) {
 			return options;
 	}
 	// Loop all arguments. Match the theme names, otherwise the program should quits.
-	var arg;
+	var arg, indexOfTheme;
 	for (var i = 0; i < args.length; i++) {
 		arg = args[i];
 		if (arg === '-f' || arg === '--force') {
@@ -95,8 +96,10 @@ var parseArgs = function(args, buildinThemes) {
 				console.log('arg[' + i + ']: You pass the \"' + arg + '\" flag in wrong position. Quit for safety.');
 				return options;
 			}
-		} else if (buildinThemes.indexOf(arg) >= 0) {
-			options.themeNames.push(arg);
+		} else if (buildinUdls.themeList.indexOf(arg) >= 0) {
+			options.themeList.push(arg);
+			indexOfTheme = buildinUdls.themeList.indexOf(arg);
+			options.fileList.push(buildinUdls.fileList[indexOfTheme]);
 		} else {
 			console.log('arg[' + i + ']: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
 			return options;
@@ -140,6 +143,30 @@ var getThemeList = function(dir) {
 		themeList.push(getThemeName(files[i]));
 	}
 	return themeList;
+};
+
+/**
+ * @typedef {Object} BuildinUdls
+ * @description An object that contains a list of theme names and a list of their filenames.
+ * @property {Array<string>} themeList - A list of theme names corresponding to the file list.
+ * @property {Array<string>} fileList - A list of filenames in <udl/> of this package.
+ */
+/**
+ * Create a special object that contains information of files in <udl/>.
+ * This approach could avoid some wired theme names, e.g. '__proto__'
+ * @param {udlPath} - The path of <udl/>.
+ * @return {BuildinUdls}
+ */
+var createBuildinUdls = function(udlPath) {
+	var fileList = getFileList(udlPath);
+	var themeList = [];
+	var filename, themeName;
+	for (var i = 0; i < fileList.length; i++) {
+		filename = fileList[i];
+		themeName = getThemeName(filename);
+		themeList.push(themeName);
+	}
+	return { themeList: themeList, fileList: fileList };
 };
 
 /**
@@ -187,9 +214,9 @@ var main = function(args) {
 	}
 };
 
-/* @type {Array} - A list of theme names found in <udl/>. */
-var buildinThemes = getThemeList(udlPath);
+/* @type {BuildinUdls} - Create a special object that contains theme list and file list. */
+var buildinUdls = createBuildinUdls(udlPath);
 /* @type {Object} - Parse args into options object. */
-var options = parseArgs(args, buildinThemes);
+var options = parseArgs(args, buildinUdls);
 console.log(options);
 // main(options);
