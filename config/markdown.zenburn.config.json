@@ -26,5 +26,8 @@
 	},
 	"comment": {
 		"fgColor": "7F9F7F"
+	},
+	"flags": {
+		"asteriskUnorderedList": false
 	}
 }
