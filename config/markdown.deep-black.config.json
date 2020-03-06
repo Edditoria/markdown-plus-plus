@@ -3,8 +3,7 @@
 	"default": {
 		"fgColor": "FFFFFF",
 		"bgColor": "000000",
-		"extraHighlight": false,
-		"transparentBg": false
+		"extraHighlight": false
 	},
 	"header": {
 		"fgColor": "FF6600"
@@ -28,6 +27,7 @@
 		"fgColor": "00FF00"
 	},
 	"flags": {
+		"transparentBg": false,
 		"asteriskUnorderedList": false
 	}
 }
