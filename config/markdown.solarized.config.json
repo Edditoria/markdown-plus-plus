@@ -2,8 +2,7 @@
 	"themeName": "Solarized",
 	"default": {
 		"fgColor": "839496",
-		"bgColor": "002B36",
-		"extraHighlight": false
+		"bgColor": "002B36"
 	},
 	"header": {
 		"fgColor": "CB4B16"
@@ -25,6 +24,9 @@
 	},
 	"comment": {
 		"fgColor": "586E75"
+	},
+	"goodies": {
+		"hex": false
 	},
 	"flags": {
 		"transparentBg": false,

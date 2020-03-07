@@ -2,8 +2,7 @@
 	"themeName": "Default",
 	"default": {
 		"fgColor": "333333",
-		"bgColor": "FFFFFF",
-		"extraHighlight": false
+		"bgColor": "FFFFFF"
 	},
 	"header": {
 		"fgColor": "FF8000"
@@ -25,6 +24,9 @@
 	},
 	"comment": {
 		"fgColor": "808080"
+	},
+	"goodies": {
+		"hex": false
 	},
 	"flags": {
 		"transparentBg": false,

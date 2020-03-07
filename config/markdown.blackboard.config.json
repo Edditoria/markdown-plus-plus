@@ -2,8 +2,7 @@
 	"themeName": "Blackboard",
 	"default": {
 		"fgColor": "F8F8F8",
-		"bgColor": "0C1021",
-		"extraHighlight": false
+		"bgColor": "0C1021"
 	},
 	"header": {
 		"fgColor": "FF6400"
@@ -25,6 +24,9 @@
 	},
 	"comment": {
 		"fgColor": "AEAEAE"
+	},
+	"goodies": {
+		"hex": false
 	},
 	"flags": {
 		"transparentBg": false,

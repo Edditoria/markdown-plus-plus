@@ -2,8 +2,7 @@
 	"themeName": "Deep Black",
 	"default": {
 		"fgColor": "FFFFFF",
-		"bgColor": "000000",
-		"extraHighlight": false
+		"bgColor": "000000"
 	},
 	"header": {
 		"fgColor": "FF6600"
@@ -25,6 +24,9 @@
 	},
 	"comment": {
 		"fgColor": "00FF00"
+	},
+	"goodies": {
+		"hex": false
 	},
 	"flags": {
 		"transparentBg": false,
