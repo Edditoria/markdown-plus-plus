@@ -7,7 +7,7 @@
  * Code released under the MIT license:
  * [License]{@link https://github.com/Edditoria/validid/blob/master/LICENSE.txt}.
  *
- * @file Build UML XML file(s) in current working directory.
+ * @file Fetch UML XML file(s) for Notepad++ in current working directory.
  * @auther Edditoria
  * @license MIT
  */
@@ -25,12 +25,12 @@ npm run mpp -- [options]            # Develop in package directory
 */
 /* @type {Array<string>} - Usage messages to print */
 var usageMsg = [
-	'Build UML XML file(s) for Notepad++ in current working directory.',
+	'Fetch UML XML file(s) for Notepad++ in current working directory.',
 	'',
-	'Usage: npx markdown-plus-plus [theme-name...] [--all] [-f | --force]',
+	'Usage: npx markdown-plus-plus [theme-name...] [-f | --force]',
 	'',
 	'Options:',
-	'theme-name       Build UDL file(s) for specified theme(s)',
+	'theme-name       Fetch UDL file(s) for specified theme(s)',
 	'                 You can give multiple theme names',
 	'                 e.g. npx markdown-plus-plus solarized zenburn deep-black',
 	'-f, --force      Force to overwrite any file that already exists in directory',
@@ -39,9 +39,9 @@ var usageMsg = [
 	'-h, --help       Print usage',
 	'',
 	'Examples:',
-	'npx markdown-plus-plus               Build all UDL files without overwrite',
-	'npx markdown-plus-plus zenburn       Build Zenburn UDL file without overwrite',
-	'npx markdown-plus-plus zenburn -f    Build Zenburn UDL file and overwrite',
+	'npx markdown-plus-plus               Fetch all UDL files without overwrite',
+	'npx markdown-plus-plus zenburn       Fetch Zenburn UDL file without overwrite',
+	'npx markdown-plus-plus zenburn -f    Fetch Zenburn UDL file and overwrite',
 	''
 ];
 
@@ -51,20 +51,20 @@ var version = process.env.npm_package_version;
 var args = process.argv.slice(2);
 /* @type {string} - Current working directory. */
 var cwd = process.cwd();
-/* @type {string} - Root directory of this NPM package. */
+/* @type {string} - Root directory of this npm package. */
 var packagePath = path.resolve(__dirname, '../');
 /* @type {string} - Path for <udl/> in this package. */
 var udlPath = packagePath + '/udl';
 
-/*
+/**
  * Parse arguments passed from user command input.
  * "-f" can only be passed at first or last argument.
  * "-l/-h/-v" can only be passed at first argument.
  * @param {Array<string>} args - Arguments from Node's `process.argv.slice(2)`.
- * @param {buildinUdls} buildinUdls - Basically the theme names and filenames in <udl/>.
- * @return {Object} - The parsed object passing to build steps.
+ * @param {bundledUdls} bundledUdls - Basically the theme names and filenames in <udl/>.
+ * @return {Object} - The parsed object passing to fetch steps.
  */
-var parseArgs = function(args, buildinUdls) {
+var parseArgs = function(args, bundledUdls) {
 	var options = {
 		themeList: [],
 		fileList: [],
@@ -75,7 +75,7 @@ var parseArgs = function(args, buildinUdls) {
 	var firstArg = args[0];
 	switch (firstArg) {
 		case '-l': case '--list':
-			console.log(buildinUdls.themeList.join('\n'));
+			console.log(bundledUdls.themeList.join('\n'));
 			return options;
 		case '-v': case '--version':
 			console.log(version);
@@ -96,10 +96,10 @@ var parseArgs = function(args, buildinUdls) {
 				console.log('arg[' + i + ']: You pass the \"' + arg + '\" flag in wrong position. Quit for safety.');
 				return options;
 			}
-		} else if (buildinUdls.themeList.indexOf(arg) >= 0) {
+		} else if (bundledUdls.themeList.indexOf(arg) >= 0) {
 			options.themeList.push(arg);
-			indexOfTheme = buildinUdls.themeList.indexOf(arg);
-			options.fileList.push(buildinUdls.fileList[indexOfTheme]);
+			indexOfTheme = bundledUdls.themeList.indexOf(arg);
+			options.fileList.push(bundledUdls.fileList[indexOfTheme]);
 		} else {
 			console.log('arg[' + i + ']: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
 			return options;
@@ -114,7 +114,7 @@ var parseArgs = function(args, buildinUdls) {
  * Similar to `dir /w` in command prompt and `ls` in bash.
  * Expect program quit with error if it does not find the directory.
  * @param {string} dir - Path of a directory.
- * @return {string[]} - An array as a list of filenames.
+ * @return {Array<string>} - An array as a list of filenames.
  */
 var getFileList = function(dir) {
 	return fs.readdirSync(dir);
@@ -123,7 +123,7 @@ var getFileList = function(dir) {
 /**
  * Get theme name from a UDL XML filename, assuming the filename is in proper format.
  * @param {string} filename - Expected format: 'markdown.hyphen-lowercase-theme-name.udl.xml'.
- * @return {string}
+ * @return {string} - Usually 'hyphen-lowercase-theme-name'.
  */
 var getThemeName = function(filename) {
 	var reHead = /^(markdown\.)/;
@@ -146,7 +146,7 @@ var getThemeList = function(dir) {
 };
 
 /**
- * @typedef {Object} BuildinUdls
+ * @typedef {Object} BundledUdls
  * @description An object that contains a list of theme names and a list of their filenames.
  * @property {Array<string>} themeList - A list of theme names corresponding to the file list.
  * @property {Array<string>} fileList - A list of filenames in <udl/> of this package.
@@ -155,9 +155,9 @@ var getThemeList = function(dir) {
  * Create a special object that contains information of files in <udl/>.
  * This approach could avoid some wired theme names, e.g. '__proto__'
  * @param {udlPath} - The path of <udl/>.
- * @return {BuildinUdls}
+ * @return {BundledUdls}
  */
-var createBuildinUdls = function(udlPath) {
+var createBundledUdls = function(udlPath) {
 	var fileList = getFileList(udlPath);
 	var themeList = [];
 	var filename, themeName;
@@ -173,7 +173,7 @@ var createBuildinUdls = function(udlPath) {
  * Copy file from source to destination using `fs.createReadSteam()`.
  * This function will overwritten any files that already exists.
  * This function is created because `fs.copyFile()` requires Node v8.5+.
- * This NPM package targets to serve under Node v4+.
+ * This npm package targets to serve under Node v4+.
  * @param {string} src - Path of source directory.
  * @param {string} dest - Path of destination directory.
  */
@@ -189,16 +189,16 @@ var copyFile = function(src, dest) {
 };
 
 /**
- * Build UDL XML file(s) in current working directory.
+ * Fetch UDL XML file(s) in current working directory.
  * Normally the file list should be checked and they are available in <udl/>.
  * @param {Object} options - User options originally from command line.
- * @param {BuildinUdls} - Will use it when need to build all built-in files.
+ * @param {BundledUdls} - Will use it when need to fetch all bundled UDL files.
  */
-var main = function(options, buildinUdls) {
+var main = function(options, bundledUdls) {
 	var isForce = options.isForce;
-	var isBuildAll = options.themeList.length === 0;
-	var themeList = isBuildAll ? buildinUdls.themeList : options.themeList;
-	var fileList = isBuildAll ? buildinUdls.fileList : options.fileList;
+	var isFetchAll = options.themeList.length === 0;
+	var themeList = isFetchAll ? bundledUdls.themeList : options.themeList;
+	var fileList = isFetchAll ? bundledUdls.fileList : options.fileList;
 	// Loop the file list.
 	var filename, src, dest, themeName, isExist;
 	for (var i = 0; i < fileList.length; i++) {
@@ -218,10 +218,10 @@ var main = function(options, buildinUdls) {
 	}
 };
 
-/* @type {BuildinUdls} - Create a special object that contains theme list and file list. */
-var buildinUdls = createBuildinUdls(udlPath);
+/* @type {BundledUdls} - Create a special object that contains theme list and file list. */
+var bundledUdls = createBundledUdls(udlPath);
 /* @type {Object} - Parse args into options object. */
-var options = parseArgs(args, buildinUdls);
+var options = parseArgs(args, bundledUdls);
 if (options.shouldContinue) {
-	main(options, buildinUdls);
+	main(options, bundledUdls);
 }
