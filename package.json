@@ -6,7 +6,8 @@
   "private": true,
   "main": "bin/mpp.js",
   "bin": {
-    "mpp": "./bin/mpp.js"
+    "mpp": "./bin/mpp.js",
+    "markdown-plus-plus": "./bin/markdown-plus-plus.js"
   },
   "directories": {
     "bin": "./bin",
@@ -29,7 +30,9 @@
     "npm": ">=5.2.0"
   },
   "scripts": {
+    "//build": "Build UDL files in <udl/> using config files in <config/>",
     "build": "node ./build/build.js",
+    "//mpp": "Build UML XML file(s) in current working directory",
     "mpp": "node ./bin/mpp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

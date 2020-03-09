@@ -5,7 +5,7 @@
  * Code released under the MIT license:
  * [License]{@link https://github.com/Edditoria/validid/blob/master/LICENSE.txt}.
  *
- * @file Build script for markdown-plus-plus.
+ * @file Build UDL files in <udl/> using config files in <config/>.
  * @auther Edditoria
  * @license MIT
  */
@@ -42,7 +42,7 @@ var paths = {
  * Get file list in a directory.
  * Similar to `dir /w` in command prompt and `ls` in bash.
  * Expect program quit with error if it does not find the directory.
- * @param {string} dir - Directory.
+ * @param {string} dir - Path of a directory.
  * @return {string[]} - An array as a list of filenames.
  */
 var getFileList = function(dir) {
@@ -54,14 +54,14 @@ var getFileList = function(dir) {
  * @param {string} filename - Expected format: 'markdown.theme-name.config.json'.
  * @return {boolean}
  */
-var isThemeNameFormat = function(filename) {
+var isItThemeNameFormat = function(filename) {
 	return /^(markdown\.)\S+(\.config\.json)$/.test(filename);
 };
 
 /**
  * Get theme name from a config filename, assuming the filename is in proper format.
- * @param {string} filename.
- * @return {string} - Expected format: 'hyphen-lowercase-theme-name'.
+ * @param {string} filename - Expected format: 'markdown.hyphen-lowercase-theme-name.config.json'.
+ * @return {string}
  */
 var getThemeName = function(filename) {
 	var reHead = /^(markdown\.)/;
@@ -97,7 +97,7 @@ var createFileListData = function(configPath) {
 	for (var i = 0; i < configFileList.length; i++) {
 		filename = configFileList[i];
 		// Expect all filenames are in format of 'markdown.[theme-name].config.json'.
-		if (!!isThemeNameFormat(filename)) {
+		if (!!isItThemeNameFormat(filename)) {
 			themeName = getThemeName(filename);
 			udlFilename = createUdlFilename(themeName);
 			// Create a {@link Files} object and append it to {@link fileListData} array.
