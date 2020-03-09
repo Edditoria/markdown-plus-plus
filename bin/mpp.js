@@ -132,20 +132,6 @@ var getThemeName = function(filename) {
 };
 
 /**
- * Get a list of theme names in a directory.
- * Theme names are stripped from filename of the built-in UDL files in <udl/>.
- * @param {Array<string>} - A list of theme names, e.g. ['default', 'zenburn'].
- */
-var getThemeList = function(dir) {
-	var files = getFileList(dir);
-	var themeList = [];
-	for (var i = 0; i < files.length; i++) {
-		themeList.push(getThemeName(files[i]));
-	}
-	return themeList;
-};
-
-/**
  * @typedef {Object} BundledUdls
  * @description An object that contains a list of theme names and a list of their filenames.
  * @property {Array<string>} themeList - A list of theme names corresponding to the file list.
