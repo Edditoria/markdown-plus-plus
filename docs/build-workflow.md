@@ -1,51 +1,121 @@
-# Build Script for Developers
+# Build Workflow for Markdown-plus-plus
 
-From v1.1, a build script is provided for your convenience. It will follow the naming convention, and requires `bash` and `mustache.js` to run.
+In v3, this repo is maintained as a npm package ([What is npm?][what_is_npm]). It mainly utilize Node API `fs` to read/write files, and easy-to-use template engine [Handlebars.js][handlebars] (Enhanced version of [Mustache.js][mustache]).
 
-When you run at the first time:
+This document focus on the build workflow. In addition, you will understand more about the configs available for this package.
 
-```shell
-# Check if mustache.js is able to run in current bash
-mustache -v
+## Prepare for Your Environment
 
-# Check if the script works
-source build.sh --help
+1. Make sure Notepad++, Git and Node.js are available in your machine. Open command prompt (`cmd.exe`) in Windows, then run:
+
+	```cmd
+	git --version
+	node -v
+	```
+
+	(screenshot for the above commands)
+
+	If it cannot return version numbers, install the missing package:
+
+	- [Node.js Windows Installer (.msi)][download_node]. Recommend 64-bit latest LTS version.
+	- [Git for Windows][download_git].
+	- For GUI application for Git, I recommend [Fork Git client][fork_website].
+
+1. Fork this repo:
+
+	(screenshot of this repo on github.com)
+
+1. Clone and install markdown-plus-plus:
+
+	```cmd
+	:: Go to your development directory, example:
+	cd %UserProfile%\dev
+
+	:: Clone to your local machine
+	:: Replace my username with yours
+	git clone https://github.com/Edditoria/markdown-plus-plus.git
+
+	:: Install dependencies in your project directory
+	cd markdown-plus-plus
+	npm install
+	```
+
+	(screeshot for the result)
+
+You only need to run the above commands once.
+
+## Understand The Build Scripts
+
+In simple words, the `<build/build.js>` does the following things:
+
+- Reads the config files in `<config/>` folder,
+- use Handlebars.js library to render `<build/template.hbs.xml>` file, then
+- writes UDL files in `<udl/>` folder.
+
+Importantly, naming conversion follows the below rules:
+
+- Config files are named `<markdown.[theme-name].config.json>`.
+- UDL (output) files are named `<markdown.[theme-name].udl.xml>`. They are generated automatically.
+- For theme name, I recommend naming it in lower-case English or number characters, and separating the words by hyphen. Optionally, you also can add more information for your needs, for example, `<markdown.magic-theme_by-your-name_v3.1.config.json>`.
+
+(screeshot for the folders)
+
+**In most situations, you only need to edit the config files in `<config/>`.** You don't need to dig deep in build scripts, unless you want to change the build process, or fix things.
+
+## Understand the Config and Options
+
+To change highlighting behaviors, you need to edit the config files.
+
+Open `<*.config.json>` file(s) in `<config/>` folder using Notepad++. As you see, the context in the file has to be valid json data.
+
+| Option | Descriptions |
+| ------ | ------------ |
+| `themeName` | The theme name that will be displayed in Notepad++ menu under "Language". |
+| `goodies.hex` | Highlight HEX value. It is not a Markdown syntax but eye candy. |
+| `flags.transparentBg` | By default, each text has background color set in `default.bgColor`. You can take out the background color by switching this option to `true`. However, some text or style may not display clearly on your screen. :warning: **Use it with caution** |
+| `flags.asteriskUnorderedList` | By default, you cannot use asterisk-style bullet points (`* a \<li\> bullet point`). By switching this option to `true`, you can write in this markdown style. However, there will be a side effect: `*multiple em words*` will only parse the first word because it will screw up unordered list in some situations. :warning: **Use it with caution** |
+| (Others) | All of them are [standard markdown][fireball_markdown_website] syntax suggested by Daring Fireball. |
+
+## Finally || Anytime You Feel Good
+
+Run the build script when you want some outputs:
+
+```cmd
+:: Build UDLs in <udl/>
+npm run build
+
+:: Copy file(s) to serve Notepad++ (May vary to your system environment)
+set npp_udl=%AppData%\Notepad++\userDefineLangs
+dir udl /w
+copy udl\markdown.zenburn.udl.xml %npp_udl%
 ```
 
-![A Build Script To Help You Build Color Scheme][build_screen_1]
+Remember to include the word "run"! `npm build` is totally different thing in npm.
 
-Build workflow:
+(screeshot for the result)
 
-1. Build a new color scheme: `source build.sh [new-name]` (no space, e.g. awesome-dark)
-1. The script will create a new json file in a new folder:
+Now, the UDL files are ready for you to import to Notepad++. Congratulation! :tada: :tada:
 
-	![Build script demo step 2][build_screen_2]
+(screeshot of Notepad++)
 
-1. In the json file:
-	- Change the name according to the theme, e.g. "Awesome Dark"
-	- This name will be parsed into definition name in 2 XML files:
-		- "Markdown (Awesome Dark)" for modern build
-		- "Markdown [Awesome Dark]" for classic build
-	- Add your prefered colors in the empty strings, e.g. "FFFFFF"
+## Other Notable Commands
 
-	![Build script demo step 3][build_screen_3]
+```
+:: See the difference of a file, e.g. an output file after build
+git diff udl/markdown.zenburn.udl.xml
 
-1. Build XML files using the same command: `source build.sh [new-name]`
+:: Discard all changes to latest commit
+git checkout -- .
 
-	> tips: Press :arrow_up: to show your previous command.
-
-1. It builds 2 XML files in root directory of this repo.
-
-	![Build script demo step 4][build_screen_4]
-
-1. Import the XML files in Notepad++ for testing. It's cool, right?
-
-	> tips: Since the old XML is not overwritten, you can import and compare two files in NPP.
-
-1. Move the XML files into the corresponding theme folder. Done!
+:: Make sure you are pushing/pulling the correct remote
+git remote -v
+```
 
 
-[build_screen_1]: images/markdown-plus-plus-build-screenshot-1.png "A Build Script To Help You Build Color Scheme"
-[build_screen_2]: images/markdown-plus-plus-build-screenshot-2.png "Build script demo step 2"
-[build_screen_3]: images/markdown-plus-plus-build-screenshot-3.png "Build script demo step 3"
-[build_screen_4]: images/markdown-plus-plus-build-screenshot-4.png "Build script demo step 4"
+[handlebars]: https://handlebarsjs.com/
+[mustache]: https://mustache.github.io/
+[what_is_npm]: https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/
+[download_node]: https://nodejs.org/en/download/
+[download_git]: https://git-scm.com/downloads
+[fork_website]: https://git-fork.com/
+[fireball_markdown_website]: https://daringfireball.net/projects/markdown/

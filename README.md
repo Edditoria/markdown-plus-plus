@@ -2,11 +2,22 @@
 
 Writing docs in Markdown is common today, but Notepad++ doesn't provide syntax highlighting for Markdown by default. That's why this repo exists.
 
-This repo `markdown-plus-plus` is a **collection of User Defined Language XML files for Markdown syntax highlighting in Notepad++**. You download a file that matches your favorite theme, import in Notepad++, and then you are good to go.
+This repo "markdown-plus-plus" is a **collection of User Defined Language XML files for Markdown syntax highlighting in Notepad++**. You download this package. Import a file that matches your favorite theme, and then you are good to go.
 
 Thanks for encouragements and comments. This repo is not only for myself anymore. It's for everyone.
 
 If you are a Notepad++ and Markdown user, this is made for you.
+
+## Key Changes from v2 to v3 :new:
+
+- Markdown-plus-plus is a npm package now. You can fetch the UDL files in command line directly, `npx markdown-plus-plus --help`.
+- Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
+- In v2, there are 2 builds for every themes: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points](https://github.com/Edditoria/markdown-plus-plus/tree/ref/end-of-v2#step-zero-pick-your-side), becomes an option in v3.
+- Better file structure:
+	- You can find all UDL files in one single folder called `<udl/>`.
+	- You can modify the config files in another folder called `<config/>`.
+	- Filename for UDLs follows the pattern: `<markdown.[theme-name].udl.xml>`.
+	- Filename for configs follows this pattern: `<markdown.[theme-name].config.json>`
 
 ## Screenshot
 
@@ -17,47 +28,38 @@ If you are a Notepad++ and Markdown user, this is made for you.
 | ![Markdown in Blackboard Theme of Notepad++][screen_blackboard] | ![Markdown in Deep Black Theme of Notepad++][screen_deep_black] |
 | Blackboard | Deep Black |
 | ![Markdown in Solarized Theme of Notepad++][screen_solarized] | ![Markdown in Solarized-light Theme in Notepad++][screen_solarized_light] |
-| Solarized :new: | Solarized-light :new: |
+| Solarized | Solarized-light |
 
 Supports file extensions: `.markdown` and `.md`<br>
-Tested: Notepad++ v7.6.2 Yellow Vest Edition 32-bit (Windows 10 64-bit)<br>
-![Notepad++ Yellow Vest logo](https://notepad-plus-plus.org/assets/images/logo_lwc_def_gillet-jaune_sanstxt.png "Notepad++ Yellow Vest logo")
-
-> "Our civilization is being sacrificed to the opportunity for a very small number of people to continue making enormous amounts of money." -- <cite>[Greta Thunberg at UN COP 24](https://www.youtube.com/watch?v=VFkQSGyeCWg)</cite>
-
-## Step Zero: Pick Your Side
-
-In this latest release, there are 2 types of builds:
-
-- **modern** build: The new build having better highlighting; restriction(s) on how you write Markdown.
-- **classic** build: Long living in this repo since day 1 (v1.x); no restriction.
-
-Difference between "modern" and "classic" builds:
-
-|   | modern build | classic build |
-|---|---|---|
-| comes from | formerly `beta` branch | formerly `master` branch |
-| \*multiple em words\* | parse ALL words | only parse the first word |
-| \* asterisk-style bullet points | not support (use \- or \+ instead) | fully support |
-| preview | ![modern build preview](docs/images/test-modern.png) | ![classic build preview](docs/images/test-modern-md-using-classic-UDL.png) |
+Tested: Notepad++ v7.8.4 32-bit (on Windows 10 64-bit)<br>
 
 ## Usage
 
-1. Choose one of the following Markdown language definition files. You can directly download using "save as":
+### Node.js
 
-	| Theme | modern | classic |
-	|-------|:------:|:-------:|
-	| Default | [userDefinedLang-markdown.default.modern.xml][default_modern_xml] | [userDefinedLang-markdown.default.classic.xml][default_classic_xml] |
-	| Zenburn | [userDefinedLang-markdown.zenburn.modern.xml][zenburn_modern_xml] | [userDefinedLang-markdown.zenburn.classic.xml][zenburn_classic_xml] |
-	| Blackboard | [userDefinedLang-markdown.blackboard.modern.xml][blackboard_modern_xml] | [userDefinedLang-markdown.blackboard.classic.xml][blackboard_classic_xml] |
-	| Deep Black | [userDefinedLang-markdown.deep-black.modern.xml][deep_black_modern_xml] | [userDefinedLang-markdown.deep-black.classic.xml][deep_black_classic_xml] |
-	| Solarized :new: | [userDefinedLang-markdown.solarized.modern.xml][solarized_modern_xml] | [userDefinedLang-markdown.solarized.classic.xml][solarized_classic_xml] |
-	| Solarized-light :new: | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_modern_xml] | [userDefinedLang-markdown.solarized-light.classic.xml][solarized_light_classic_xml] |
+If you had installed Node.js in your system, you can use `npx` command to get UDL file(s):
 
-2. In Notepad++ menu, click `Language` and select `Define your language...` .
-3. In User Defined Language windows, click `Import` then open the xml file.
-4. Restart Notepad++.
-5. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file]
+```cmd
+:: Check whether you have Node.js installed
+node -v
+
+:: Go to UDL folder of Notepad++
+cd %AppData%\Notepad++\userDefineLangs
+
+:: Example: Download Zenburn UDL file
+npx markdown-plus-plus zenburn
+
+:: Read help for details
+npx markdown-plus-plus --help
+```
+
+### Download Manually
+
+1. Download the source code in [latest release page][latest_release]. It should be a zip file.
+1. Open the zip file and go to `<udl/>` folder.
+1. Copy a XML file of your favorite theme, and paste in `<userDeineLangs>` folder of Notepad++.
+1. Restart Notepad++.
+1. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file].
 
 **Enjoy!!**
 
@@ -65,24 +67,37 @@ Difference between "modern" and "classic" builds:
 
 Need your input to solve the following problems:
 
-- `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`
-- In modern build, you can not use the asterisk-style bullet points (`* a bullet point`)
-- In classic build, `*em text*` only parse the first word because it will screw up unorder list
+- `_em text_`, `__strong text__` and `___em strong text___` only parse the first word because it will screw up some URL contains `example__url`.
+- Cannot use asterisk-style bullet points (`* a \<li\> bullet point`). Instead, please write in `- a bullet point` or `+ a bullet point`.
+- Improve documentation. My English sucks. (\*´ｰ`\*)
 
-## Build Script for Developers
+## Build Your Own UDL Files
 
-From v1.1, a build script is provided for your convenience. For details, please read the document: [build-workflow.md](docs/build-workflow.md)
+The best way to build your own UDL file is to fuck this repo. You need to install Node.js in your system.
 
-## Options :new:
+```cmd
+:: In your dev folder
+git clone https://github.com/Edditoria/markdown-plus-plus.git
+cd markdown-plus-plus
+npm install
 
-In v2.1.0, the build script adds supports of extra stuff besides Markdown:
+:: Play around. Finally, run the build script
+npm run build
+```
 
-- **"extraHighlight":** Will highlight HEX value. It is not a Markdown syntax but eye candy.
-- **"transparentBg":** In original theme, each text has background of a specific color. `"transparentBg": true` will take out the background color. Good for customized theme.
+For details, please read the document: [build-workflow.md](docs/build-workflow.md)
 
-You can change their value in json files. Then run the build script to produce the XML file you need.
+## Options
 
-As usual, you need npm to run the build script. Feel free to contact me if you need help.
+Options are reviewed in v3. In **each** config file in the config folder, you can find these options:
+
+| Option | Descriptions |
+| ------ | ------------ |
+| `goodies.hex` | Highlight HEX value. |
+| `flags.transparentBg` | Make the text background being transparent. :warning: **Use it with caution** |
+| `flags.asteriskUnorderedList` | Enable the markdown style of asterisk-style bullet points (`* a \<li\> bullet point`). :warning: **Use it with caution** |
+
+For details, please read the document: [build-workflow.md](docs/build-workflow.md)
 
 ## Contribution
 
@@ -103,27 +118,15 @@ As human-readable summary (but not a substitute for the license):
 You can use it, share it, modify the codes and distribute your work for private and commercial uses. If you like, please share your work with me. :pizza:
 
 
-[screen_default]: theme-default/markdown-plus-plus-default-screenshot.png "Markdown in Default Theme of Notepad++"
-[screen_zenburn]: theme-zenburn/markdown-plus-plus-zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
-[screen_blackboard]: theme-blackboard/markdown-plus-plus-blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
-[screen_deep_black]: theme-deep-black/markdown-plus-plus-deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
-[screen_solarized]: theme-solarized/markdown-plus-plus-solarized-screenshot.png "Markdown in Solarized Theme of Notepad++"
-[screen_solarized_light]: theme-solarized-light/markdown-plus-plus-solarized-light-screenshot.png "Markdown in Solarized-light Theme of Notepad++"
-
-[default_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.modern.xml
-[default_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-default/userDefinedLang-markdown.default.classic.xml
-[zenburn_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-zenburn/userDefinedLang-markdown.zenburn.modern.xml
-[zenburn_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-zenburn/userDefinedLang-markdown.zenburn.classic.xml
-[blackboard_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.modern.xml
-[blackboard_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-blackboard/userDefinedLang-markdown.blackboard.classic.xml
-[deep_black_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.modern.xml
-[deep_black_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-deep-black/userDefinedLang-markdown.deep-black.classic.xml
-[solarized_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized/userDefinedLang-markdown.solarized.modern.xml
-[solarized_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized/userDefinedLang-markdown.solarized.classic.xml
-[solarized_light_modern_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.modern.xml
-[solarized_light_classic_xml]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/theme-solarized-light/userDefinedLang-markdown.solarized-light.classic.xml
+[screen_default]: docs/images/themes/default-screenshot.png "Markdown in Default Theme of Notepad++"
+[screen_zenburn]: docs/images/themes/zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_blackboard]: docs/images/themes/blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
+[screen_deep_black]: docs/images/themes/deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
+[screen_solarized]: docs/images/themes/solarized-screenshot.png "Markdown in Solarized Theme of Notepad++"
+[screen_solarized_light]: docs/images/themes/solarized-light-screenshot.png "Markdown in Solarized-light Theme of Notepad++"
 
 [this_repo]: https://github.com/Edditoria/markdown-plus-plus
+[latest_release]: https://github.com/Edditoria/markdown-plus-plus/releases/latest
 [coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
 [thomsmits]: https://github.com/thomsmits/markdown_npp
 [thomsmits_npp]: https://github.com/thomsmits/markdown_npp
