@@ -13,17 +13,17 @@ This document focus on the build workflow. In addition, you will understand more
 	node -v
 	```
 
-	(screenshot for the above commands)
+	![Build script screenshot 1: Check system environment][build_screen_1]
 
 	If it cannot return version numbers, install the missing package:
 
 	- [Node.js Windows Installer (.msi)][download_node]. Recommend 64-bit latest LTS version.
 	- [Git for Windows][download_git].
-	- For GUI application for Git, I recommend [Fork Git client][fork_website].
+	- If you want a GUI application for Git, I recommend [Fork Git client][fork_website].
 
 1. Fork this repo:
 
-	(screenshot of this repo on github.com)
+	![Build script screenshot 2: Fork this repository][build_screen_2]
 
 1. Clone and install markdown-plus-plus:
 
@@ -40,7 +40,7 @@ This document focus on the build workflow. In addition, you will understand more
 	npm install
 	```
 
-	(screeshot for the result)
+	![Build script screenshot 3: Results of git-clone and npm-install][build_screen_3]
 
 You only need to run the above commands once.
 
@@ -58,7 +58,7 @@ Importantly, naming conversion follows the below rules:
 - UDL (output) files are named `<markdown.[theme-name].udl.xml>`. They are generated automatically.
 - For theme name, I recommend naming it in lower-case English or number characters, and separating the words by hyphen. Optionally, you also can add more information for your needs, for example, `<markdown.magic-theme_by-your-name_v3.1.config.json>`.
 
-(screeshot for the folders)
+![Build script screenshot 4: Understand the file structure in Notepad\+\+][build_screen_4]
 
 **In most situations, you only need to edit the config files in `<config/>`.** You don't need to dig deep in build scripts, unless you want to change the build process, or fix things.
 
@@ -83,20 +83,22 @@ Run the build script when you want some outputs:
 ```cmd
 :: Build UDLs in <udl/>
 npm run build
+```
 
+Remember to include the word "run"! `npm build` is totally different thing in npm.
+
+![Build script screenshot 5: Results of running npm run build][build_screen_5]
+
+Now, the UDL files are ready for you to import to Notepad++. Congratulation! :tada: :tada:
+
+```cmd
 :: Copy file(s) to serve Notepad++ (May vary to your system environment)
 set npp_udl=%AppData%\Notepad++\userDefineLangs
 dir udl /w
 copy udl\markdown.zenburn.udl.xml %npp_udl%
 ```
 
-Remember to include the word "run"! `npm build` is totally different thing in npm.
-
-(screeshot for the result)
-
-Now, the UDL files are ready for you to import to Notepad++. Congratulation! :tada: :tada:
-
-(screeshot of Notepad++)
+![Build script screenshot 6: Copy UDL file to serve Notepad\+\+][build_screen_6]
 
 ## Other Notable Commands
 
@@ -111,6 +113,7 @@ git checkout -- .
 git remote -v
 ```
 
+Experience and enjoy. Happy coding! :pizza:
 
 [handlebars]: https://handlebarsjs.com/
 [mustache]: https://mustache.github.io/
@@ -119,3 +122,10 @@ git remote -v
 [download_git]: https://git-scm.com/downloads
 [fork_website]: https://git-fork.com/
 [fireball_markdown_website]: https://daringfireball.net/projects/markdown/
+
+[build_screen_1]: images/build/screenshot-1.png
+[build_screen_2]: images/build/screenshot-2.png
+[build_screen_3]: images/build/screenshot-3.png
+[build_screen_4]: images/build/screenshot-4.png
+[build_screen_5]: images/build/screenshot-5.png
+[build_screen_6]: images/build/screenshot-6.png
