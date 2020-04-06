@@ -73,7 +73,7 @@ Need your input to solve the following problems:
 
 ## Build Your Own UDL Files
 
-The best way to build your own UDL file is to fuck this repo. You need to install Node.js in your system.
+The best way to build your own UDL file is to fork this repo. You need to install Node.js in your system.
 
 ```cmd
 :: In your dev folder
