@@ -57,7 +57,7 @@ npx markdown-plus-plus --help
 
 1. Download the source code in [latest release page][latest_release]. It should be a zip file.
 1. Open the zip file and go to `<udl/>` folder.
-1. Copy a XML file of your favorite theme, and paste in `<userDeineLangs>` folder of Notepad++.
+1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs>` folder of Notepad++.
 1. Restart Notepad++.
 1. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file].
 
@@ -73,7 +73,7 @@ Need your input to solve the following problems:
 
 ## Build Your Own UDL Files
 
-The best way to build your own UDL file is to fuck this repo. You need to install Node.js in your system.
+The best way to build your own UDL file is to fork this repo. You need to install Node.js in your system.
 
 ```cmd
 :: In your dev folder
