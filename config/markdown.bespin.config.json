@@ -1,0 +1,35 @@
+{
+	"themeName": "Bespin",
+	"default": {
+		"fgColor": "BDAE9D",
+		"bgColor": "2A211C"
+	},
+	"header": {
+		"fgColor": "FFAA00"
+	},
+	"emphasis": {
+		"fgColor": "F6F080"
+	},
+	"orderedList": {
+		"fgColor": "FFB454"
+	},
+	"unorderedList": {
+		"fgColor": "FFB454"
+	},
+	"code": {
+		"fgColor": "55E439"
+	},
+	"link": {
+		"fgColor": "1E9AE0"
+	},
+	"comment": {
+		"fgColor": "666666"
+	},
+	"goodies": {
+		"hex": false
+	},
+	"flags": {
+		"transparentBg": false,
+		"asteriskUnorderedList": false
+	}
+}
