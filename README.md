@@ -25,13 +25,15 @@ If you are a Notepad++ and Markdown user, this is made for you.
 |:----:|:------:|
 | ![Markdown in Default Theme of Notepad++][screen_default] | ![Markdown in Zenburn Theme of Notepad++][screen_zenburn] |
 | Default | Zenburn |
-| ![Markdown in Blackboard Theme of Notepad++][screen_blackboard] | ![Markdown in Deep Black Theme of Notepad++][screen_deep_black] |
-| Blackboard | Deep Black |
+| ![Markdown in Bespin Theme of Notepad++][screen_bespin] | ![Markdown in Blackboard Theme of Notepad++][screen_blackboard] |
+| Bespin | Blackboard |
+| ![Markdown in Deep Black Theme of Notepad++][screen_deep_black] | ![Markdown in Obsidian Theme of Notepad++][screen_obsidian] |
+| Deep Black | Obsidian |
 | ![Markdown in Solarized Theme of Notepad++][screen_solarized] | ![Markdown in Solarized-light Theme in Notepad++][screen_solarized_light] |
 | Solarized | Solarized-light |
 
 Supports file extensions: `.markdown` and `.md`<br>
-Tested: Notepad++ v7.8.4 32-bit (on Windows 10 64-bit)<br>
+Tested: Notepad++ v7.8.4 32-bit (on Windows 10 64-bit)
 
 ## Usage
 
@@ -120,8 +122,10 @@ You can use it, share it, modify the codes and distribute your work for private 
 
 [screen_default]: docs/images/themes/default-screenshot.png "Markdown in Default Theme of Notepad++"
 [screen_zenburn]: docs/images/themes/zenburn-screenshot.png "Markdown in Zenburn Theme of Notepad++"
+[screen_bespin]: docs/images/themes/bespin-screenshot.png "Markdown in Bespin Theme of Notepad++"
 [screen_blackboard]: docs/images/themes/blackboard-screenshot.png "Markdown in Blackboard Theme of Notepad++"
 [screen_deep_black]: docs/images/themes/deep-black-screenshot.png "Markdown in Deep Black Theme of Notepad++"
+[screen_obsidian]: docs/images/themes/obsidian-screenshot.png "Markdown in Obsidian Theme of Notepad++"
 [screen_solarized]: docs/images/themes/solarized-screenshot.png "Markdown in Solarized Theme of Notepad++"
 [screen_solarized_light]: docs/images/themes/solarized-light-screenshot.png "Markdown in Solarized-light Theme of Notepad++"
 
