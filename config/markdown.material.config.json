@@ -1,0 +1,35 @@
+{
+	"themeName": "Material",
+	"default": {
+		"fgColor": "EEFFFF",
+		"bgColor": "263238"
+	},
+	"header": {
+		"fgColor": "C3E88D"
+	},
+	"emphasis": {
+		"fgColor": "F07178"
+	},
+	"orderedList": {
+		"fgColor": "89DDFF"
+	},
+	"unorderedList": {
+		"fgColor": "82AAFF"
+	},
+	"code": {
+		"fgColor": "C792EA"
+	},
+	"link": {
+		"fgColor": "F78C6C"
+	},
+	"comment": {
+		"fgColor": "546E7A"
+	},
+	"goodies": {
+		"hex": false
+	},
+	"flags": {
+		"transparentBg": false,
+		"asteriskUnorderedList": false
+	}
+}
