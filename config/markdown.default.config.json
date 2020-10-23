@@ -25,6 +25,9 @@
 	"comment": {
 		"fgColor": "808080"
 	},
+	"gfm": {
+		"table": true
+	},
 	"goodies": {
 		"hex": false
 	},
