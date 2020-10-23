@@ -31,9 +31,11 @@ If you are a Notepad++ and Markdown user, this is made for you.
 | Deep Black | Obsidian |
 | ![Markdown in Solarized Theme of Notepad++][screen_solarized] | ![Markdown in Solarized-light Theme in Notepad++][screen_solarized_light] |
 | Solarized | Solarized-light |
+| ![Markdown in Twilight Theme of Notepad++][screen_twilight] | ![Markdown in Material Theme in Notepad++][screen_material] |
+| Twilight | Material |
 
 Supports file extensions: `.markdown` and `.md`<br>
-Tested: Notepad++ v7.8.4 32-bit (on Windows 10 64-bit)
+Tested: Notepad++ v7.9 64-bit (on Windows 10)
 
 ## Usage
 
@@ -128,6 +130,8 @@ You can use it, share it, modify the codes and distribute your work for private 
 [screen_obsidian]: docs/images/themes/obsidian-screenshot.png "Markdown in Obsidian Theme of Notepad++"
 [screen_solarized]: docs/images/themes/solarized-screenshot.png "Markdown in Solarized Theme of Notepad++"
 [screen_solarized_light]: docs/images/themes/solarized-light-screenshot.png "Markdown in Solarized-light Theme of Notepad++"
+[screen_twilight]: docs/images/themes/twilight-screenshot.png "Markdown in Twilight Theme of Notepad++"
+[screen_material]: docs/images/themes/material-screenshot.png "Markdown in Material Theme of Notepad++"
 
 [this_repo]: https://github.com/Edditoria/markdown-plus-plus
 [latest_release]: https://github.com/Edditoria/markdown-plus-plus/releases/latest

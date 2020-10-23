@@ -71,6 +71,7 @@ Open `<*.config.json>` file(s) in `<config/>` folder using Notepad++. As you see
 | Option | Descriptions |
 | ------ | ------------ |
 | `themeName` | The theme name that will be displayed in Notepad++ menu under "Language". |
+| `gfm.table` | HTML table in GitHub Flavored Markdown. This is what you see in this table. |
 | `goodies.hex` | Highlight HEX value. It is not a Markdown syntax but eye candy. |
 | `flags.transparentBg` | By default, each text has background color set in `default.bgColor`. You can take out the background color by switching this option to `true`. However, some text or style may not display clearly on your screen. :warning: **Use it with caution** |
 | `flags.asteriskUnorderedList` | By default, you cannot use asterisk-style bullet points (`* a \<li\> bullet point`). By switching this option to `true`, you can write in this markdown style. However, there will be a side effect: `*multiple em words*` will only parse the first word because it will screw up unordered list in some situations. :warning: **Use it with caution** |
