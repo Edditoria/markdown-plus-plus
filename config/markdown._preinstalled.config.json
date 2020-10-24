@@ -1,0 +1,38 @@
+{
+	"themeName": "preinstalled",
+	"default": {
+		"fgColor": "333333",
+		"bgColor": "FFFFFF"
+	},
+	"header": {
+		"fgColor": "FF8000"
+	},
+	"emphasis": {
+		"fgColor": "000080"
+	},
+	"orderedList": {
+		"fgColor": "0080FF"
+	},
+	"unorderedList": {
+		"fgColor": "8080FF"
+	},
+	"code": {
+		"fgColor": "008000"
+	},
+	"link": {
+		"fgColor": "8000FF"
+	},
+	"comment": {
+		"fgColor": "808080"
+	},
+	"gfm": {
+		"table": true
+	},
+	"goodies": {
+		"hex": false
+	},
+	"flags": {
+		"transparentBg": false,
+		"asteriskUnorderedList": false
+	}
+}
