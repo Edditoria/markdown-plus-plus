@@ -7,7 +7,7 @@
  * Code released under the MIT license:
  * [License]{@link https://github.com/Edditoria/validid/blob/master/LICENSE.txt}.
  *
- * @file Fetch UML XML file(s) for Notepad++ in current working directory.
+ * @file Fetch UDL XML file(s) for Notepad++ in current working directory.
  * @auther Edditoria
  * @license MIT
  */
@@ -26,7 +26,7 @@ npm run mpp -- [options]            # Develop in package directory
 */
 /* @type {Array<string>} - Usage messages to print */
 var usageMsg = [
-	'Fetch UML XML file(s) for Notepad++ in current working directory.',
+	'Fetch UDL XML file(s) for Notepad++ in current working directory.',
 	'',
 	'Usage: npx markdown-plus-plus [theme-name...] [-f | --force]',
 	'',
