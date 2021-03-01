@@ -113,7 +113,7 @@ For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Copyright and License
 
-Copyright for portions of [this repository][this_repo] are held by Thomas Smits, 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria, 2012-2020.
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits since 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria since 2012.
 
 Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
