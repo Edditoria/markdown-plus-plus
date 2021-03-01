@@ -14,6 +14,7 @@
 
 var fs = require('fs');
 var path = require('path');
+var packageJson = require('../package.json');
 
 /*
 Expected usage:
@@ -46,7 +47,7 @@ var usageMsg = [
 ];
 
 /* @type {string} - Version of this npm package. */
-var version = process.env.npm_package_version;
+var version = packageJson.version;
 /* @type {Array<string>} - Arguments from node. */
 var args = process.argv.slice(2);
 /* @type {string} - Current working directory. */
