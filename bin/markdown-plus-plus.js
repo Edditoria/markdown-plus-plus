@@ -24,27 +24,38 @@ mpp [options]                       # After install this package globally
 npm run mpp -- [options]            # Develop in package directory
 ````
 */
-/* @type {Array<string>} - Usage messages to print */
-var usageMsg = [
-	'Fetch UDL XML file(s) for Notepad++ in current working directory.',
-	'',
-	'Usage: npx markdown-plus-plus [theme-name...] [-f | --force]',
-	'',
-	'Options:',
-	'theme-name       Fetch UDL file(s) for specified theme(s)',
-	'                 You can give multiple theme names',
-	'                 e.g. npx markdown-plus-plus solarized zenburn deep-black',
-	'-f, --force      Force to overwrite any file that already exists in directory',
-	'-l, --list       List bundled themes in this package',
-	'-v, --version    Print current version of this package',
-	'-h, --help       Print usage',
-	'',
-	'Examples:',
-	'npx markdown-plus-plus               Fetch all UDL files without overwrite',
-	'npx markdown-plus-plus zenburn       Fetch Zenburn UDL file without overwrite',
-	'npx markdown-plus-plus zenburn -f    Fetch Zenburn UDL file and overwrite',
-	''
-];
+
+/**
+ * Create usage message to print.
+ * @param {bundledUdls} bundledUdls - The theme names and filenames in <udl/>.
+ * @return {string} - The usage message with line breaks.
+ */
+var createUsageMsg = function(bundledUdls) {
+	var usageMsg = [
+		'Fetch UDL XML file(s) for Notepad++ in current working directory.',
+		'',
+		'Usage: npx markdown-plus-plus [theme-name...] [-f | --force]',
+		'',
+		'Options:',
+		'theme-name       Fetch UDL file(s) for specified theme(s)',
+		'                 You can give multiple theme names',
+		'                 e.g. npx markdown-plus-plus solarized zenburn deep-black',
+		'-f, --force      Force to overwrite any file that already exists in directory',
+		'-l, --list       List bundled themes in this package',
+		'-v, --version    Print current version of this package',
+		'-h, --help       Print usage',
+		'',
+		'Available themes:',
+		bundledUdls.themeList.join(', '),
+		'',
+		'Examples:',
+		'npx markdown-plus-plus               Fetch all UDL files without overwrite',
+		'npx markdown-plus-plus zenburn       Fetch Zenburn UDL file without overwrite',
+		'npx markdown-plus-plus zenburn -f    Fetch Zenburn UDL file and overwrite',
+		''
+	];
+	return usageMsg.join('\n');
+};
 
 /* @type {string} - Version of this npm package. */
 var version = packageJson.version;
@@ -82,7 +93,7 @@ var parseArgs = function(args, bundledUdls) {
 			console.log(version);
 			return options;
 		case '-h': case '--help':
-			console.log(usageMsg.join('\n'));
+			console.log(createUsageMsg(bundledUdls));
 			return options;
 	}
 	// Loop all arguments. Match the theme names, otherwise the program should quits.
