@@ -31,6 +31,7 @@ npm run mpp -- [options]            # Develop in package directory
  * @return {string} - The usage message with line breaks.
  */
 var createUsageMsg = function(bundledUdls) {
+	var themeList = joinWithLineBreak(bundledUdls.themeList, 5);
 	var usageMsg = [
 		'Fetch UDL XML file(s) for Notepad++ in current working directory.',
 		'',
@@ -46,7 +47,7 @@ var createUsageMsg = function(bundledUdls) {
 		'-h, --help       Print usage',
 		'',
 		'Available themes:',
-		bundledUdls.themeList.join(', '),
+		themeList,
 		'',
 		'Examples:',
 		'npx markdown-plus-plus               Fetch all UDL files without overwrite',
@@ -67,6 +68,30 @@ var cwd = process.cwd();
 var packagePath = path.resolve(__dirname, '../');
 /* @type {string} - Path for <udl/> in this package. */
 var udlPath = packagePath + '/udl';
+
+/**
+ * Utility function to join an array with line break per x items.
+ * @param {Array<string>} input - A simple list of strings.
+ * @param {number} numEachLine - Max number item per line.
+ * @return {string} - e.g. 'some, items,\neach, line'.
+ */
+var joinWithLineBreak = function(input, numEachLine) {
+	var output = '';
+	var nextBreakIndex = numEachLine - 1;
+	var len = input.length;
+	var finalIndex = len - 1;
+	for (var i = 0; i < len; i++) {
+		if (i === finalIndex) {
+			output += input[i];
+		} else if (i === nextBreakIndex) {
+			nextBreakIndex += numEachLine;
+			output += input[i] + ',\n';
+		} else {
+			output += input[i] + ', ';
+		}
+	}
+	return output;
+};
 
 /**
  * Parse arguments passed from user command input.
