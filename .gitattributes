@@ -1,10 +1,36 @@
+# note: Remember to update .editorconfig for new changes
+
 * text=auto
 
-*.xml text eol=crlf
-*.ps1 text eol=crlf
+# this repo
 
+*.xml text eol=crlf
+
+# general
+
+*.js text eol=lf
 *.json text eol=lf
 *.md text eol=lf
+
+# system-specific
+
 *.sh text eol=lf
+*.bash text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# images
 
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# exclude files from exporting
+
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
