@@ -122,6 +122,32 @@ var createFileListData = function(configPath) {
  */
 
 /**
+ * Parse input to protocols being used in UDL.
+ * @param {string|string[]} input
+ * @return {string}
+ */
+var parseExtraProtocols = function(input) {
+	if (typeof input === 'undefined' || input === '' || input === null) {
+		return '';
+	}
+	// Break into an array
+	if (typeof input === 'string') {
+		input = input.split(',');
+	}
+	// For each item, trim whitespace,
+	//    then parse to two formats.
+	var output = [];
+	var item;
+	for (var i = 0, l = input.length; i < l; i++) {
+		item = input[i].replace(/^\s+|\s+$/g, '');
+		output.push(item);
+		output.push('(' + item);
+	}
+	return output.join(' ') + ' ';
+}
+Handlebars.registerHelper('parseExtraProtocols', parseExtraProtocols);
+
+/**
  * Create a function of Handlebars template.
  * @param {string} templatePath - Full path of template file.
  * @return {Object} - A function of Handlebars template.
