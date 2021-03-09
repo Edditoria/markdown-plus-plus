@@ -29,7 +29,8 @@
 		"table": true
 	},
 	"goodies": {
-		"hex": false
+		"highlightHex": false,
+		"extraProtocols": "ftp://, ftps://"
 	},
 	"flags": {
 		"transparentBg": false,
