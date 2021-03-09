@@ -22,8 +22,21 @@ https://github.com/Edditoria/markdown-plus-plus/blob/master/LICENSE.txt
         <KeywordLists>
             <Keywords name="Comments">00# 01 02((EOL)) 03&lt;!-- 04--&gt;</Keywords>
             <Keywords name="Numbers, prefix1"></Keywords>
-            <Keywords name="Numbers, prefix2">{{#if goodies.hex}}0x{{/if}}</Keywords>
-            <Keywords name="Numbers, extras1">{{#if goodies.hex}}A B C D E F{{/if}}</Keywords>
+            <Keywords name="Numbers, prefix2">
+                {{~#if goodies.hex~}}
+                    {{~log "[depreciated] goodies.hex will be deperciated in v4. Please use goodies.hightlightHex instead." level="warn"~}}
+                    0x
+                {{~else if goodies.highlightHex~}}
+                    0x
+                {{~/if~}}
+            </Keywords>
+            <Keywords name="Numbers, extras1">
+                {{~#if goodies.hex~}}
+                    A B C D E F
+                {{~else if goodies.highlightHex~}}
+                    A B C D E F
+                {{~/if~}}
+            </Keywords>
             <Keywords name="Numbers, extras2"></Keywords>
             <Keywords name="Numbers, suffix1">.</Keywords>
             <Keywords name="Numbers, suffix2">.</Keywords>
