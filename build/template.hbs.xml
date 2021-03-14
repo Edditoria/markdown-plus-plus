@@ -65,10 +65,23 @@ https://github.com/Edditoria/markdown-plus-plus/blob/master/LICENSE.txt
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="{{default.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="COMMENTS" fgColor="{{comment.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="2" nesting="0" />
-            <WordsStyle name="LINE COMMENTS" fgColor="{{header.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="
+                {{~#if header~}}
+                    {{~log "[depreciated] header.* will be depreciated in v4. Please use heading.* instead." level="warn"~}}
+                    {{header.fgColor}}
+                {{~else~}}
+                    {{heading.fgColor}}
+                {{~/if~}}
+                " bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="NUMBERS" fgColor="{{orderedList.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS1" fgColor="{{link.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS2" fgColor="{{header.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="
+                {{~#if header~}}
+                    {{header.fgColor}}
+                {{~else~}}
+                    {{heading.fgColor}}
+                {{~/if~}}
+                " bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS3" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="3" nesting="0" />
             <WordsStyle name="KEYWORDS4" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS5" fgColor="{{emphasis.fgColor}}" bgColor="{{default.bgColor}}" {{#if flags.transparentBg}}colorStyle="1" {{/if}}fontName="" fontStyle="2" nesting="0" />
