@@ -46,11 +46,11 @@ You only need to run the above commands once.
 
 ## Understand The Build Scripts
 
-In simple words, the `<build/build.js>` does the following things:
+In simple words, the `<build\build.js>` does the following things:
 
-- Reads the config files in `<config/>` folder,
-- use Handlebars.js library to render `<build/template.hbs.xml>` file, then
-- writes UDL files in `<udl/>` folder.
+- Reads the config files in `<config\>` folder,
+- use Handlebars.js library to render `<build\template.hbs.xml>` file, then
+- writes UDL files in `<udl\>` folder.
 
 Importantly, naming conversion follows the below rules:
 
@@ -60,13 +60,13 @@ Importantly, naming conversion follows the below rules:
 
 ![Build script screenshot 4: Understand the file structure in Notepad\+\+][build_screen_4]
 
-**In most situations, you only need to edit the config files in `<config/>`.** You don't need to dig deep in build scripts, unless you want to change the build process, or fix things.
+**In most situations, you only need to edit the config files in `<config\>`.** You don't need to dig deep in build scripts, unless you want to change the build process, or fix things.
 
 ## Understand the Config and Options
 
 To change highlighting behaviors, you need to edit the config files.
 
-Open `<*.config.json>` file(s) in `<config/>` folder using Notepad++. As you see, the context in the file has to be valid json data.
+Open `<*.config.json>` file(s) in `<config\>` folder using Notepad++. As you see, the context in the file has to be valid json data.
 
 | Option | Descriptions |
 | ------ | ------------ |
@@ -82,7 +82,7 @@ Open `<*.config.json>` file(s) in `<config/>` folder using Notepad++. As you see
 Run the build script when you want some outputs:
 
 ```cmd
-:: Build UDLs in <udl/>
+:: Build UDLs in <udl\>
 npm run build
 ```
 
@@ -105,7 +105,7 @@ copy udl\markdown.zenburn.udl.xml %npp_udl%
 
 ```
 :: See the difference of a file, e.g. an output file after build
-git diff udl/markdown.zenburn.udl.xml
+git diff udl\markdown.zenburn.udl.xml
 
 :: Discard all changes to latest commit
 git checkout -- .

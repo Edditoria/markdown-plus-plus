@@ -14,8 +14,8 @@ If you are a Notepad++ and Markdown user, this is made for you.
 - Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
 - In v2, there are 2 builds for every themes: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points](https://github.com/Edditoria/markdown-plus-plus/tree/ref/end-of-v2#step-zero-pick-your-side), becomes an option in v3.
 - Better file structure:
-	- You can find all UDL files in one single folder called `<udl/>`.
-	- You can modify the config files in another folder called `<config/>`.
+	- You can find all UDL files in one single folder called `<udl\>`.
+	- You can modify the config files in another folder called `<config\>`.
 	- Filename for UDLs follows the pattern: `<markdown.[theme-name].udl.xml>`.
 	- Filename for configs follows this pattern: `<markdown.[theme-name].config.json>`
 
@@ -60,8 +60,8 @@ npx markdown-plus-plus --help
 ### Download Manually
 
 1. Download the source code in [latest release page][latest_release]. It should be a zip file.
-1. Open the zip file and go to `<udl/>` folder.
-1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs/>` folder of Notepad++. The directory is *usually* `<%AppData%\Notepad++\userDefineLangs\>`.
+1. Open the zip file and go to `<udl\>` folder.
+1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs\>` folder of Notepad++. The directory is *usually* `<%AppData%\Notepad++\userDefineLangs\>`.
 1. Restart Notepad++.
 1. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file].
 
