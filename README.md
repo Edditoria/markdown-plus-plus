@@ -47,7 +47,7 @@ If you had installed Node.js in your system, you can use `npx` command to get UD
 :: Check whether you have Node.js installed
 node -v
 
-:: Go to UDL folder of Notepad++
+:: Go to UDL folder of Notepad++. Usually...
 cd %AppData%\Notepad++\userDefineLangs
 
 :: Example: Download Zenburn UDL file
@@ -61,7 +61,7 @@ npx markdown-plus-plus --help
 
 1. Download the source code in [latest release page][latest_release]. It should be a zip file.
 1. Open the zip file and go to `<udl/>` folder.
-1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs/>` folder of Notepad++.
+1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs/>` folder of Notepad++. The directory is *usually* `<%AppData%\Notepad++\userDefineLangs\>`.
 1. Restart Notepad++.
 1. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file].
 
