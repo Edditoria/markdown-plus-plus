@@ -93,11 +93,11 @@ For details, please read the document: [build-workflow.md](docs/build-workflow.m
 
 ## Options
 
-Options are reviewed in v3. In **each** config file in the config folder, you can find these options:
+Options are reviewed in v3. In **each** config file in the config folder, you can adjust for your own build. Here are some examples:
 
 | Option | Descriptions |
 | ------ | ------------ |
-| `goodies.hex` | Highlight HEX value. |
+| `goodies.highlightHex` | Highlight HEX value. |
 | `flags.transparentBg` | Make the text background being transparent. :warning: **Use it with caution** |
 | `flags.asteriskUnorderedList` | Enable the markdown style of asterisk-style bullet points (`* a \<li\> bullet point`). :warning: **Use it with caution** |
 
