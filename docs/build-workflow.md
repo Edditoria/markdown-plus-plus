@@ -116,12 +116,12 @@ git remote -v
 
 Experience and enjoy. Happy coding! :pizza:
 
-[handlebars]: https://handlebarsjs.com/
-[mustache]: https://mustache.github.io/
 [what_is_npm]: https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/
+[handlebars]: https://handlebarsjs.com
+[mustache]: https://mustache.github.io
 [download_node]: https://nodejs.org/en/download/
 [download_git]: https://git-scm.com/downloads
-[fork_website]: https://git-fork.com/
+[fork_website]: https://git-fork.com
 [fireball_markdown_website]: https://daringfireball.net/projects/markdown/
 
 [build_screen_1]: images/build/screenshot-1.png

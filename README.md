@@ -6,13 +6,13 @@ This repo "markdown-plus-plus" is a **collection of User Defined Language XML fi
 
 Thanks for encouragements and comments. This repo is not only for myself anymore. It's for everyone.
 
-If you are a Notepad++ and Markdown user, this is made for you.
+If you are a [Notepad++][npp_site] and Markdown user, this is made for you.
 
 ## Key Changes from v2 to v3 :new:
 
 - Markdown-plus-plus is a npm package now. You can fetch the UDL files in command line directly, `npx markdown-plus-plus --help`.
 - Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
-- In v2, there are 2 builds for every themes: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points](https://github.com/Edditoria/markdown-plus-plus/tree/ref/end-of-v2#step-zero-pick-your-side), becomes an option in v3.
+- In v2, there are 2 builds for every themes: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points][end_of_v2], becomes an option in v3.
 - Better file structure:
 	- You can find all UDL files in one single folder called `<udl\>`.
 	- You can modify the config files in another folder called `<config\>`.
@@ -63,7 +63,7 @@ npx markdown-plus-plus --help
 1. Open the zip file and go to `<udl\>` folder.
 1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs\>` folder of Notepad++. The directory is *usually* `<%AppData%\Notepad++\userDefineLangs\>`.
 1. Restart Notepad++.
-1. Open and test with a Markdown file e.g. [test.classic.md][test_classic_file].
+1. Open and test with a Markdown file e.g. [test/at-a-glance.md](test/at-a-glance.md).
 
 **Enjoy!!**
 
@@ -107,13 +107,13 @@ For details, please read the document: [build-workflow.md](docs/build-workflow.m
 
 *tl;tr* For pull request, please do check **Allow edits from maintainers**, and merge from **your new branch** into **my master branch**; Or, propose a file change in Github directly; Or, hit me a message via issue page or my social contacts.
 
-For details, please kindly read [CONTRIBUTING.md](CONTRIBUTING.md).
+For details, please kindly read [CONTRIBUTING.md](https://github.com/Edditoria/.github/blob/main/CONTRIBUTING.md).
 
 :beer: Thank you so much! :pray:
 
 ## Copyright and License
 
-Copyright for portions of [this repository][this_repo] are held by Thomas Smits since 2010 as part of [his repository][thomsmits_npp]. All other copyright are held by Edditoria since 2012.
+Copyright for portions of [this repository][this_repo] are held by Thomas Smits since 2010 as part of [his repository][thomsmits_repo]. All other copyright are held by Edditoria since 2012.
 
 Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
@@ -133,9 +133,8 @@ You can use it, share it, modify the codes and distribute your work for private 
 [screen_twilight]: docs/images/themes/twilight-screenshot.png "Markdown in Twilight Theme of Notepad++"
 [screen_material]: docs/images/themes/material-screenshot.png "Markdown in Material Theme of Notepad++"
 
-[this_repo]: https://github.com/Edditoria/markdown-plus-plus
+[npp_site]: https://notepad-plus-plus.org
+[end_of_v2]: https://github.com/Edditoria/markdown-plus-plus/tree/checkpoint/end-of-v2#step-zero-pick-your-side
 [latest_release]: https://github.com/Edditoria/markdown-plus-plus/releases/latest
-[coffeescript]: https://github.com/Edditoria/coffeescript_npp_zenburn
-[thomsmits]: https://github.com/thomsmits/markdown_npp
-[thomsmits_npp]: https://github.com/thomsmits/markdown_npp
-[test_classic_file]: https://raw.githubusercontent.com/Edditoria/markdown-plus-plus/master/test/test.classic.md
+[this_repo]: https://github.com/Edditoria/markdown-plus-plus
+[thomsmits_repo]: https://github.com/thomsmits/markdown_npp
