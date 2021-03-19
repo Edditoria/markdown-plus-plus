@@ -8,18 +8,18 @@ Thanks for encouragements and comments. This repo is not only for myself anymore
 
 Love Notepad++? Need to write docs in Markdown? This repo is made for you.
 
-## Key Changes from v2 to v3 :new:
+## Key Changes from v2 to v3
 
 - Markdown-plus-plus is a npm package now. You can fetch the UDL files in command line directly, `npx markdown-plus-plus --help`.
 - Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
-- In v2, there are 2 builds for every themes: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points][end_of_v2], becomes an option in v3.
+- In v2, there are 2 builds for every theme: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points][end_of_v2], becomes an option in v3.
 - Better file structure:
 	- You can find all UDL files in one single folder called `<udl\>`.
 	- You can modify the config files in another folder called `<config\>`.
 	- Filename for UDLs follows the pattern: `<markdown.[theme-name].udl.xml>`.
 	- Filename for configs follows this pattern: `<markdown.[theme-name].config.json>`
 
-## Screenshot
+## Screenshots
 
 | Your | Taste! |
 |:----:|:------:|
@@ -106,7 +106,7 @@ For details, please read the document: [build-workflow.md](docs/build-workflow.m
 
 ## Contribution
 
-*tl;tr* For pull request, please do check **Allow edits from maintainers**, and merge from **your new branch** into **my master branch**; Or, propose a file change in Github directly; Or, hit me a message via issue page or my social contacts.
+*tl;tr* For pull request, please merge from **your new branch** into **my master branch** (recommend **enabling "Allow edits from maintainers"**); Or, propose a file change in Github directly; Or, hit me a message via issue page or my social contacts.
 
 For details, please kindly read [CONTRIBUTING.md](https://github.com/Edditoria/.github/blob/main/CONTRIBUTING.md).
 
@@ -120,7 +120,7 @@ Code released under the [MIT License](LICENSE.txt). Docs released under [Creativ
 
 As human-readable summary (but not a substitute for the license):
 
-You can use it, share it, modify the codes and distribute your work for private and commercial uses. If you like, please share your work with me. :pizza:
+You can use it, share it, modify the code and distribute your work for private and commercial uses. If you like, please share your work with me. :pizza:
 
 
 [screen_default]: docs/images/themes/default-screenshot.png "Markdown in Default Theme of Notepad++"

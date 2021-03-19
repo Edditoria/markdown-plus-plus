@@ -1,12 +1,12 @@
 # Build Workflow for Markdown-plus-plus
 
-In v3, this repo is maintained as a npm package ([What is npm?][what_is_npm]). It mainly utilize Node API `fs` to read/write files, and easy-to-use template engine [Handlebars.js][handlebars] (Enhanced version of [Mustache.js][mustache]).
+In v3, this repo is maintained as a npm package ([What is npm?][what_is_npm]). It mainly utilizes Node API `fs` to read/write files, and easy-to-use template engine [Handlebars.js][handlebars] (Enhanced version of [Mustache.js][mustache]).
 
-This document focus on the build workflow. In addition, you will understand more about the configs available for this package.
+This document focuses on the build workflow. In addition, you will understand more about the configs available for this package.
 
 ## Prepare for Your Environment
 
-1. Make sure Notepad++, Git and Node.js are available in your machine. Open command prompt (`cmd.exe`) in Windows, then run:
+1. Make sure Notepad++, Git and Node.js are available in your machine. Open command prompt (`cmd.exe`) on Windows, then run:
 
 	```cmd
 	git --version
