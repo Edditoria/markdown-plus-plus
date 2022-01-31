@@ -61,7 +61,7 @@ npx markdown-plus-plus --help
 
 1. Download the source code in [latest release page][latest_release]. It should be a zip file.
 1. Open the zip file and go to `<udl\>` folder.
-1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs\>` folder of Notepad++. The directory is *usually* `<%AppData%\Notepad++\userDefineLangs\>`.
+1. Copy a XML file of your favorite theme, and paste in `<userDefineLangs\>` folder of Notepad++. The directory is *usually* `<%AppData%\Roaming\Notepad++\userDefineLangs\>`.
 1. Restart Notepad++.
 1. Open and test with a Markdown file e.g. [test/at-a-glance.md](test/at-a-glance.md).
 
