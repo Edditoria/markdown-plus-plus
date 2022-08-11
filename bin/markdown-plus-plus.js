@@ -12,6 +12,7 @@
  * @license MIT
  */
 
+/***/
 var fs = require('fs');
 var path = require('path');
 var packageJson = require('../package.json');
@@ -27,7 +28,7 @@ npm run mpp -- [options]            # Develop in package directory
 
 /**
  * Create usage message to print.
- * @param {bundledUdls} bundledUdls - The theme names and filenames in <udl/>.
+ * @param {BundledUdls} bundledUdls - The theme names and filenames in <udl/>.
  * @return {string} - The usage message with line breaks.
  */
 var createUsageMsg = function(bundledUdls) {
@@ -58,15 +59,15 @@ var createUsageMsg = function(bundledUdls) {
 	return usageMsg.join('\n');
 };
 
-/* @type {string} - Version of this npm package. */
+/** @type {string} - Version of this npm package. */
 var version = packageJson.version;
-/* @type {Array<string>} - Arguments from node. */
+/** @type {Array<string>} - Arguments from node. */
 var args = process.argv.slice(2);
-/* @type {string} - Current working directory. */
+/** @type {string} - Current working directory. */
 var cwd = process.cwd();
-/* @type {string} - Root directory of this npm package. */
+/** @type {string} - Root directory of this npm package. */
 var packagePath = path.resolve(__dirname, '../');
-/* @type {string} - Path for <udl/> in this package. */
+/** @type {string} - Path for <udl/> in this package. */
 var udlPath = packagePath + '/udl';
 
 /**
@@ -98,7 +99,7 @@ var joinWithLineBreak = function(input, numEachLine) {
  * "-f" can only be passed at first or last argument.
  * "-l/-h/-v" can only be passed at first argument.
  * @param {Array<string>} args - Arguments from Node's `process.argv.slice(2)`.
- * @param {bundledUdls} bundledUdls - Basically the theme names and filenames in <udl/>.
+ * @param {BundledUdls} bundledUdls - Basically the theme names and filenames in <udl/>.
  * @return {Object} - The parsed object passing to fetch steps.
  */
 var parseArgs = function(args, bundledUdls) {
@@ -121,7 +122,7 @@ var parseArgs = function(args, bundledUdls) {
 			console.log(createUsageMsg(bundledUdls));
 			return options;
 	}
-	// Loop all arguments. Match the theme names, otherwise the program should quits.
+	// Loop all arguments. Match the theme names, otherwise the program should quit.
 	var arg, indexOfTheme;
 	for (var i = 0; i < args.length; i++) {
 		arg = args[i];
@@ -169,8 +170,8 @@ var getThemeName = function(filename) {
 };
 
 /**
+ * An object that contains a list of theme names and a list of their filenames.
  * @typedef {Object} BundledUdls
- * @description An object that contains a list of theme names and a list of their filenames.
  * @property {Array<string>} themeList - A list of theme names corresponding to the file list.
  * @property {Array<string>} fileList - A list of filenames in <udl/> of this package.
  */
@@ -215,7 +216,7 @@ var copyFile = function(src, dest) {
  * Fetch UDL XML file(s) in current working directory.
  * Normally the file list should be checked and they are available in <udl/>.
  * @param {Object} options - User options originally from command line.
- * @param {BundledUdls} - Will use it when need to fetch all bundled UDL files.
+ * @param {BundledUdls} bundledUdls - Will use it when need to fetch all bundled UDL files.
  */
 var main = function(options, bundledUdls) {
 	var isForce = options.isForce;
@@ -241,9 +242,9 @@ var main = function(options, bundledUdls) {
 	}
 };
 
-/* @type {BundledUdls} - Create a special object that contains theme list and file list. */
+/** @type {BundledUdls} - Create a special object that contains theme list and file list. */
 var bundledUdls = createBundledUdls(udlPath);
-/* @type {Object} - Parse args into options object. */
+/** @type {Object} - Parse args into options object. */
 var options = parseArgs(args, bundledUdls);
 if (options.shouldContinue) {
 	main(options, bundledUdls);

@@ -10,6 +10,7 @@
  * @license MIT
  */
 
+/***/
 var fs = require('fs');
 var Handlebars = require('handlebars');
 var path = require('path');
@@ -17,14 +18,14 @@ var path = require('path');
 var packagePath = path.resolve(__dirname, '../');
 
 /**
+ * Collection of paths for this npm package.
  * @typedef {Object} Paths
- * @description Collection of paths for this npm package.
  * @property {string} package - Root directory of this npm package.
  * @property {string} config - Directory for config files.
  * @property {string} udl - Directory for expected UDL XML files.
  * @property {string} template - File path of Handlebars template.
  */
-/** @type {Paths} paths */
+/** @type {Paths} */
 var paths = {
 	package: packagePath,
 	config: packagePath + '/config',
@@ -79,8 +80,8 @@ var createUdlFilename = function(themeName) {
 };
 
 /**
+ * A list (array) of file object to be rendered by Handlebars {@link render}-ing.
  * @typedef {Array} fileListData
- * @description A list (array) of file object to be rendered by Handlebars {@link render}-ing.
  * @property {Array<Files>} - Each object in the array contains information of {@link Files}.
  */
 /**
@@ -89,7 +90,7 @@ var createUdlFilename = function(themeName) {
  * @return {fileListData} - A series of {@link Files} objects fit for Handlebars {@link render}-ing.
  */
 var createFileListData = function(configPath) {
-	/* @type {string[]} Create an array of config files (Default in <config/>). */
+	/** @type {string[]} Create an array of config files (Default in <config/>). */
 	var configFileList = getFileList(configPath);
 	var fileListData = [];
 	var filename, themeName, udlFilename;
@@ -161,8 +162,8 @@ var createTemplate = function(templatePath) {
 };
 
 /**
+ * A single "Files" object contains information as a source for {@link render} process using Handlebars.
  * @typedef {Object} Files
- * @description A single "Files" object contains information as a source for {@link render} process using Handlebars.
  * @property {string} config - Full path of config file.
  * @property {string} udl - Full path of expected UDL file.
  * @property {string} themeName - In format of dash-lower-case-theme-name.
