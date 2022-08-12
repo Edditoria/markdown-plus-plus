@@ -73,17 +73,20 @@ var getThemeName = function(filename) {
 /**
  * Create filename of a UDL file base on a theme name.
  * @param {string} themeName - Expected format: 'hyphen-lowercase-theme-name'.
+ * @param {boolean} isDark - `true` to create filename for dark mode.
  * @return {string} - E.g. 'markdown.theme-name.udl.xml'.
  */
-var createUdlFilename = function(themeName) {
-	return 'markdown.' + themeName + '.udl.xml';
+var createUdlFilename = function(themeName, isDark) {
+	var suffix = isDark === true ? '.dark.udl.xml' : '.udl.xml';
+	return 'markdown.' + themeName + suffix;
 };
 
 /**
  * An object contains information for Handlebars {@link render}-ing.
  * @typedef {Object} RenderRequest
  * @property {string} config - Full path of config file.
- * @property {string} udl - Full path of expected UDL file.
+ * @property {string} udl - Full path of expected UDL file in light mode.
+ * @property {string} udlDark - Full path of expected UDL file in dark mode.
  * @property {string} themeName - In format of dash-lower-case-theme-name.
  */
 /**
@@ -102,11 +105,13 @@ var createRenderRequestList = function(configPath) {
 		// Expect all filenames are in format of 'markdown.[theme-name].config.json'.
 		if (!!isItThemeNameFormat(filename)) {
 			themeName = getThemeName(filename);
-			udlFilename = createUdlFilename(themeName);
+			udlFilename = createUdlFilename(themeName, false);
+			udlFilenameDark = createUdlFilename(themeName, true);
 			// Create a {@link RenderRequest} object and append to the array.
 			renderRequestList.push({
 				config: paths.config + '/' + filename,
 				udl: paths.udl + '/' + udlFilename,
+				udlDark: paths.udl + '/' + udlFilenameDark,
 				themeName: themeName
 			});
 		} else {
