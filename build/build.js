@@ -80,19 +80,21 @@ var createUdlFilename = function(themeName) {
 };
 
 /**
- * A list (array) of file object to be rendered by Handlebars {@link render}-ing.
- * @typedef {Array} fileListData
- * @property {Array<Files>} - Each object in the array contains information of {@link Files}.
+ * An object contains information for Handlebars {@link render}-ing.
+ * @typedef {Object} RenderRequest
+ * @property {string} config - Full path of config file.
+ * @property {string} udl - Full path of expected UDL file.
+ * @property {string} themeName - In format of dash-lower-case-theme-name.
  */
 /**
- * Create {@link fileListData} according to the files in config directory.
+ * Create a list of {@link RenderRequest} according to the files in config directory.
  * @param {sting} configPath - Path of config directory.
- * @return {fileListData} - A series of {@link Files} objects fit for Handlebars {@link render}-ing.
+ * @return {RenderRequest[]} - A list of {@link RenderRequest} for Handlebars {@link render}-ing.
  */
-var createFileListData = function(configPath) {
+var createRenderRequestList = function(configPath) {
 	/** @type {string[]} Create an array of config files (Default in <config/>). */
 	var configFileList = getFileList(configPath);
-	var fileListData = [];
+	var renderRequestList = [];
 	var filename, themeName, udlFilename;
 	// Loop the config files
 	for (var i = 0; i < configFileList.length; i++) {
@@ -101,8 +103,8 @@ var createFileListData = function(configPath) {
 		if (!!isItThemeNameFormat(filename)) {
 			themeName = getThemeName(filename);
 			udlFilename = createUdlFilename(themeName);
-			// Create a {@link Files} object and append it to {@link fileListData} array.
-			fileListData.push({
+			// Create a {@link RenderRequest} object and append to the array.
+			renderRequestList.push({
 				config: paths.config + '/' + filename,
 				udl: paths.udl + '/' + udlFilename,
 				themeName: themeName
@@ -113,7 +115,7 @@ var createFileListData = function(configPath) {
 			throw new Error(configError);
 		}
 	}
-	return fileListData;
+	return renderRequestList;
 };
 
 
@@ -162,34 +164,27 @@ var createTemplate = function(templatePath) {
 };
 
 /**
- * A single "Files" object contains information as a source for {@link render} process using Handlebars.
- * @typedef {Object} Files
- * @property {string} config - Full path of config file.
- * @property {string} udl - Full path of expected UDL file.
- * @property {string} themeName - In format of dash-lower-case-theme-name.
- */
-/**
  * Render and write all files using Handlebars template.
- * @param {Files} files - The {@link Files} object for Handlebars rendering.
+ * @param {RenderRequest} renderRequest
  * @param {template} - The template as a function passed by {@link createTemplate}.
  */
-var render = function(files, template) {
+var render = function(renderRequest, template) {
 	/* @function readFile - Read the config file asynchronously. */
-	fs.readFile(files.config, 'utf8', function(dataError, data) {
+	fs.readFile(renderRequest.config, 'utf8', function(dataError, data) {
 		if (!dataError) {
 			var dataObj = JSON.parse(data);
 			var output = template(dataObj);
 			/* @function writeFile - Write the file asynchronously. */
-			fs.writeFile(files.udl, output, function(writeError) {
+			fs.writeFile(renderRequest.udl, output, function(writeError) {
 				if (!writeError) {
-					console.log('[' + files.themeName + '] UDL file is created successfully');
+					console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
 				} else {
-					console.log('[' + files.themeName + '] Error in saving UDL file');
+					console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
 					throw writeError;
 				}
 			});
 		} else {
-			console.log('[' + files.themeName + '] Error in loading config data');
+			console.log('[' + renderRequest.themeName + '] Error in loading config data');
 			throw dataError;
 		}
 	});
@@ -203,19 +198,19 @@ var render = function(files, template) {
 
 /**
  * Build the UDL XML files according to the config files using Handlebars rendering.
- * @param {fileListData} fileListData - An array containing {@link Files} objects.
+ * @param {RenderRequest[]} renderRequestList
  * @param {string} templatePath - Full path of the template file in Handlebars format.
  */
-var main = function(fileListData, templatePath) {
+var main = function(renderRequestList, templatePath) {
 	/* @function template - Create a template function required by Handlebars. */
 	var template = createTemplate(templatePath);
-	// Put the {@link Files} objects to {@link render} using the {@link template} above.
-	for (var i = 0; i < fileListData.length; i++) {
+	/* Put the {@link RenderRequest} objects to {@link render} using the {@link template} above. */
+	for (var i = 0; i < renderRequestList.length; i++) {
 		// Render the files asynchronously.
-		render(fileListData[i], template);
+		render(renderRequestList[i], template);
 	}
 };
-// module.exports = function(fileListData, templatePath) {}; //todo
+// module.exports = function(renderRequestList, templatePath) {}; //todo
 
-var fileListData = createFileListData(paths.config);
-main(fileListData, paths.template);
+var renderRequestList = createRenderRequestList(paths.config);
+main(renderRequestList, paths.template);
