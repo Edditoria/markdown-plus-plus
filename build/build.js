@@ -170,12 +170,13 @@ var createTemplate = function(templatePath) {
 
 /**
  * Do fs.writeFile().
- * @param {RenderRequest} renderRequest - Suppose it is the `udl` from {@link RenderRequest}.
- * @param {string} output - Output from Handlebars.compile().
+ * @param {RenderRequest} renderRequest
+ * @param {string} outputLight - Output (light mode) from Handlebars.compile().
+ * @param {string} outputDark - Output (dark mode) from Handlebars.compile().
  * @throws Error in saving UDL file.
  */
-var writeUDLFiles = function(renderRequest, output) {
-	fs.writeFile(renderRequest.udl, output, function(writeError) {
+var writeUDLFiles = function(renderRequest, outputLight, outputDark) {
+	fs.writeFile(renderRequest.udl, outputLight, function(writeError) {
 		if (!writeError) {
 			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
 		} else {
@@ -183,7 +184,7 @@ var writeUDLFiles = function(renderRequest, output) {
 			throw writeError;
 		}
 	});
-	fs.writeFile(renderRequest.udlDark, output, function(writeError) {
+	fs.writeFile(renderRequest.udlDark, outputDark, function(writeError) {
 		if (!writeError) {
 			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
 		} else {
@@ -196,7 +197,7 @@ var writeUDLFiles = function(renderRequest, output) {
 /**
  * Render and write all files using Handlebars template, including light and dark mode.
  * @param {RenderRequest} renderRequest
- * @param {template} - The template as a function passed by {@link createTemplate}.
+ * @param {Object} template - The template as a function passed by {@link createTemplate}.
  */
 var render = function(renderRequest, template) {
 	/* Read one config file asynchronously. */
@@ -204,10 +205,12 @@ var render = function(renderRequest, template) {
 		if (!dataError) {
 			/** JSON object based on config file. */
 			var data = JSON.parse(dataStr);
-			/** Output from Handlebars.compile(). */
-			var output = template(data);
+			data.dark = false;
+			var outputLight = template(data);
+			data.dark = true;
+			var outputDark = template(data);
 			/** Write UDL XML files asynchronously. */
-			writeUDLFiles(renderRequest, output);
+			writeUDLFiles(renderRequest, outputLight, outputDark);
 		} else {
 			console.log('[' + renderRequest.themeName + '] Error in loading config data');
 			throw dataError;
