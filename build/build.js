@@ -169,25 +169,45 @@ var createTemplate = function(templatePath) {
 };
 
 /**
- * Render and write all files using Handlebars template.
+ * Do fs.writeFile().
+ * @param {RenderRequest} renderRequest - Suppose it is the `udl` from {@link RenderRequest}.
+ * @param {string} output - Output from Handlebars.compile().
+ * @throws Error in saving UDL file.
+ */
+var writeUDLFiles = function(renderRequest, output) {
+	fs.writeFile(renderRequest.udl, output, function(writeError) {
+		if (!writeError) {
+			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
+		} else {
+			console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
+			throw writeError;
+		}
+	});
+	fs.writeFile(renderRequest.udlDark, output, function(writeError) {
+		if (!writeError) {
+			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
+		} else {
+			console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
+			throw writeError;
+		}
+	});
+};
+
+/**
+ * Render and write all files using Handlebars template, including light and dark mode.
  * @param {RenderRequest} renderRequest
  * @param {template} - The template as a function passed by {@link createTemplate}.
  */
 var render = function(renderRequest, template) {
-	/* @function readFile - Read the config file asynchronously. */
-	fs.readFile(renderRequest.config, 'utf8', function(dataError, data) {
+	/* Read one config file asynchronously. */
+	fs.readFile(renderRequest.config, 'utf8', function(dataError, dataStr) {
 		if (!dataError) {
-			var dataObj = JSON.parse(data);
-			var output = template(dataObj);
-			/* @function writeFile - Write the file asynchronously. */
-			fs.writeFile(renderRequest.udl, output, function(writeError) {
-				if (!writeError) {
-					console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
-				} else {
-					console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
-					throw writeError;
-				}
-			});
+			/** JSON object based on config file. */
+			var data = JSON.parse(dataStr);
+			/** Output from Handlebars.compile(). */
+			var output = template(data);
+			/** Write UDL XML files asynchronously. */
+			writeUDLFiles(renderRequest, output);
 		} else {
 			console.log('[' + renderRequest.themeName + '] Error in loading config data');
 			throw dataError;
