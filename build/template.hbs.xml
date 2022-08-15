@@ -14,7 +14,7 @@ Copyright (c) Edditoria. Open source under the MIT license:
 https://github.com/Edditoria/markdown-plus-plus/blob/master/LICENSE.txt
 //-->
 <NotepadPlus>
-    <UserLang name="Markdown ({{themeName}})" ext="md markdown" udlVersion="2.1">
+    <UserLang name="Markdown ({{themeName}})" ext="md markdown" {{#if darkMode}}darkModeTheme="yes" {{/if}}udlVersion="2.1">
         <Settings>
             <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="2" decimalSeparator="0" />
             <Prefix Keywords1="yes" Keywords2="yes" Keywords3="yes" Keywords4="yes" Keywords5="yes" Keywords6="{{#unless flags.asteriskUnorderedList}}yes{{else}}no{{/unless}}" Keywords7="{{#unless flags.asteriskUnorderedList}}yes{{else}}no{{/unless}}" Keywords8="no" />

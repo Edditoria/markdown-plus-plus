@@ -205,9 +205,9 @@ var render = function(renderRequest, template) {
 		if (!dataError) {
 			/** JSON object based on config file. */
 			var data = JSON.parse(dataStr);
-			data.dark = false;
+			data.darkMode = false;
 			var outputLight = template(data);
-			data.dark = true;
+			data.darkMode = true;
 			var outputDark = template(data);
 			/** Write UDL XML files asynchronously. */
 			writeUDLFiles(renderRequest, outputLight, outputDark);
