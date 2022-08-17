@@ -177,20 +177,17 @@ var createTemplate = function(templatePath) {
  */
 var writeUDLFiles = function(renderRequest, outputLight, outputDark) {
 	fs.writeFile(renderRequest.udl, outputLight, function(writeError) {
-		if (!writeError) {
-			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
-		} else {
+		if (writeError) {
 			console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
 			throw writeError;
 		}
-	});
-	fs.writeFile(renderRequest.udlDark, outputDark, function(writeError) {
-		if (!writeError) {
-			console.log('[' + renderRequest.themeName + '] UDL file is created successfully');
-		} else {
-			console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
-			throw writeError;
-		}
+		fs.writeFile(renderRequest.udlDark, outputDark, function(writeError) {
+			if (writeError) {
+				console.log('[' + renderRequest.themeName + '] Error in saving UDL file');
+				throw writeError;
+			}
+			console.log('[' + renderRequest.themeName + '] UDL files are created successfully');
+		});
 	});
 };
 
