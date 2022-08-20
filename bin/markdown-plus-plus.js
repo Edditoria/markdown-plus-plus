@@ -27,6 +27,17 @@ npm run mpp -- [options]            # Develop in package directory
 */
 
 /**
+ * An object that contains lists of theme names and their filenames, by light and dark mode.
+ * @typedef {Object} BundledUdls
+ * @property {Object} light
+ * @property {Array<string>} light.themeList - A list of theme names corresponding to the file list.
+ * @property {Array<string>} light.fileList - A list of filenames in <udl/> of this package.
+ * @property {Object} dark
+ * @property {Array<string>} dark.themeList - A list of theme names corresponding to the file list.
+ * @property {Array<string>} dark.fileList - A list of filenames in <udl/> of this package.
+ */
+
+/**
  * Create usage message to print.
  * @param {BundledUdls} bundledUdls - The theme names and filenames in <udl/>.
  * @return {string} - The usage message with line breaks.
@@ -169,16 +180,6 @@ var getThemeName = function(filename) {
 	return filename.replace(reHead, '').replace(reTail, '');
 };
 
-/**
- * An object that contains lists of theme names and their filenames, by light and dark mode.
- * @typedef {Object} BundledUdls
- * @property {Object} light
- * @property {Array<string>} light.themeList - A list of theme names corresponding to the file list.
- * @property {Array<string>} light.fileList - A list of filenames in <udl/> of this package.
- * @property {Object} dark
- * @property {Array<string>} dark.themeList - A list of theme names corresponding to the file list.
- * @property {Array<string>} dark.fileList - A list of filenames in <udl/> of this package.
- */
 /**
  * Create a special object that contains information of files in <udl/>.
  * This approach could avoid some wired theme names, e.g. '__proto__'
