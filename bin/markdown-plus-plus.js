@@ -32,7 +32,7 @@ npm run mpp -- [options]            # Develop in package directory
  * @return {string} - The usage message with line breaks.
  */
 var createUsageMsg = function(bundledUdls) {
-	var themeList = joinWithLineBreak(bundledUdls.themeList, 5);
+	var themeList = joinWithLineBreak(bundledUdls.light.themeList, 5);
 	var usageMsg = [
 		'Fetch UDL XML file(s) for Notepad++ in current working directory.',
 		'',
@@ -113,7 +113,7 @@ var parseArgs = function(args, bundledUdls) {
 	var firstArg = args[0];
 	switch (firstArg) {
 		case '-l': case '--list':
-			console.log(bundledUdls.themeList.join('\n'));
+			console.log(bundledUdls.light.themeList.join('\n'));
 			return options;
 		case '-v': case '--version':
 			console.log(version);
@@ -134,10 +134,10 @@ var parseArgs = function(args, bundledUdls) {
 				console.log('arg[' + i + ']: You pass the \"' + arg + '\" flag in wrong position. Quit for safety.');
 				return options;
 			}
-		} else if (bundledUdls.themeList.indexOf(arg) >= 0) {
+		} else if (bundledUdls.light.themeList.indexOf(arg) >= 0) {
 			options.themeList.push(arg);
-			indexOfTheme = bundledUdls.themeList.indexOf(arg);
-			options.fileList.push(bundledUdls.fileList[indexOfTheme]);
+			indexOfTheme = bundledUdls.light.themeList.indexOf(arg);
+			options.fileList.push(bundledUdls.light.fileList[indexOfTheme]);
 		} else {
 			console.log('arg[' + i + ']: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
 			return options;
@@ -170,10 +170,14 @@ var getThemeName = function(filename) {
 };
 
 /**
- * An object that contains a list of theme names and a list of their filenames.
+ * An object that contains lists of theme names and their filenames, by light and dark mode.
  * @typedef {Object} BundledUdls
- * @property {Array<string>} themeList - A list of theme names corresponding to the file list.
- * @property {Array<string>} fileList - A list of filenames in <udl/> of this package.
+ * @property {Object} light
+ * @property {Array<string>} light.themeList - A list of theme names corresponding to the file list.
+ * @property {Array<string>} light.fileList - A list of filenames in <udl/> of this package.
+ * @property {Object} dark
+ * @property {Array<string>} dark.themeList - A list of theme names corresponding to the file list.
+ * @property {Array<string>} dark.fileList - A list of filenames in <udl/> of this package.
  */
 /**
  * Create a special object that contains information of files in <udl/>.
@@ -182,15 +186,25 @@ var getThemeName = function(filename) {
  * @return {BundledUdls}
  */
 var createBundledUdls = function(udlPath) {
-	var fileList = getFileList(udlPath);
-	var themeList = [];
+	var bundledFileList = getFileList(udlPath);
+	/** @type {BundledUdls} */
+	var output = {
+		light: { themeList: [], fileList: [] },
+		dark: { themeList: [], fileList: [] }
+	};
 	var filename, themeName;
-	for (var i = 0; i < fileList.length; i++) {
-		filename = fileList[i];
+	for (var i = 0; i < bundledFileList.length; i++) {
+		filename = bundledFileList[i];
 		themeName = getThemeName(filename);
-		themeList.push(themeName);
+		if (/\.dark$/.test(themeName)) {
+			output.dark.themeList.push(themeName);
+			output.dark.fileList.push(filename);
+		} else {
+			output.light.themeList.push(themeName);
+			output.light.fileList.push(filename);
+		}
 	}
-	return { themeList: themeList, fileList: fileList };
+	return output;
 };
 
 /**
@@ -221,8 +235,8 @@ var copyFile = function(src, dest) {
 var main = function(options, bundledUdls) {
 	var isForce = options.isForce;
 	var isFetchAll = options.themeList.length === 0;
-	var themeList = isFetchAll ? bundledUdls.themeList : options.themeList;
-	var fileList = isFetchAll ? bundledUdls.fileList : options.fileList;
+	var themeList = isFetchAll ? bundledUdls.light.themeList : options.themeList;
+	var fileList = isFetchAll ? bundledUdls.light.fileList : options.fileList;
 	// Loop the file list.
 	var filename, src, dest, themeName, isExist;
 	for (var i = 0; i < fileList.length; i++) {
