@@ -172,7 +172,7 @@ var getFileList = function(dir) {
 /**
  * Get theme name from a UDL XML filename, assuming the filename is in proper format.
  * @param {string} filename - Expected format: 'markdown.hyphen-lowercase-theme-name.udl.xml'.
- * @return {string} - Usually 'hyphen-lowercase-theme-name'.
+ * @return {string} - Usually 'hyphen-lowercase-theme-name(.dark)'.
  */
 var getThemeName = function(filename) {
 	var reHead = /^(markdown\.)/;
@@ -198,7 +198,7 @@ var createBundledUdls = function(udlPath) {
 		filename = bundledFileList[i];
 		themeName = getThemeName(filename);
 		if (/\.dark$/.test(themeName)) {
-			output.dark.themeList.push(themeName);
+			output.dark.themeList.push(themeName.replace(/(\.dark)$/, ''));
 			output.dark.fileList.push(filename);
 		} else {
 			output.light.themeList.push(themeName);
