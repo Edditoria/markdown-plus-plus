@@ -46,26 +46,28 @@ var createUsageMsg = function(bundledUdls) {
 	var themeList = joinWithLineBreak(bundledUdls.light.themeList, 5);
 	var usageMsg = [
 		'Fetch UDL XML file(s) for Notepad++ in current working directory.',
+		'Tips: Run `mpp` command if you `npm install -g markdown-plus-plus`.',
 		'',
-		'Usage: npx markdown-plus-plus [theme-name...] [-f | --force]',
+		'Usage:',
+		'  npx markdown-plus-plus [<theme-name>...] [--dark] [-f | --force]',
+		'  npx markdown-plus-plus (-l|--list | -v|--version | -h|--help)',
 		'',
 		'Options:',
-		'theme-name       Fetch UDL file(s) for specified theme(s)',
-		'                 You can give multiple theme names',
-		'                 e.g. npx markdown-plus-plus solarized zenburn deep-black',
-		'-f, --force      Force to overwrite any file that already exists in directory',
-		'-l, --list       List bundled themes in this package',
-		'-v, --version    Print current version of this package',
-		'-h, --help       Print usage',
+		'theme-name       Fetch UDL file(s) for specified theme(s).',
+		'--dark           Fetch Dark Mode version.',
+		'-f, --force      Force to overwrite file(s) that already exists.',
+		'-l, --list       List bundled themes.',
+		'-v, --version    Print current version.',
+		'-h, --help       Print help.',
 		'',
 		'Available themes:',
 		themeList,
 		'',
 		'Examples:',
-		'npx markdown-plus-plus               Fetch all UDL files without overwrite',
-		'npx markdown-plus-plus zenburn       Fetch Zenburn UDL file without overwrite',
-		'npx markdown-plus-plus zenburn -f    Fetch Zenburn UDL file and overwrite',
-		''
+		'npx markdown-plus-plus    Fetch all UDL files without overwrite.',
+		'mpp solarized             Fetch Zenburn UDL file without overwrite.',
+		'mpp solarized -f          Fetch Solarized UDL file and overwrite.',
+		'mpp solarized --dark      Fetch Zenburn UDL file in Dark Mode.'
 	];
 	return usageMsg.join('\n');
 };
