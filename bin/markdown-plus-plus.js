@@ -118,7 +118,8 @@ var parseArgs = function(args, bundledUdls) {
 		themeList: [],
 		fileList: [],
 		shouldContinue: false,
-		isForce: false
+		isForce: false,
+		isDark: false
 	};
 	// Parse the first argument. Quit asap if user put a proper flag.
 	var firstArg = args[0];
@@ -133,8 +134,9 @@ var parseArgs = function(args, bundledUdls) {
 			console.log(createUsageMsg(bundledUdls));
 			return options;
 	}
-	// Loop all arguments. Match the theme names, otherwise the program should quit.
+	// Loop all arguments. Parse for switch(es) first.
 	var arg, indexOfTheme;
+	var otherArgs = [];
 	for (var i = 0; i < args.length; i++) {
 		arg = args[i];
 		if (arg === '-f' || arg === '--force') {
@@ -145,15 +147,26 @@ var parseArgs = function(args, bundledUdls) {
 				console.log('arg[' + i + ']: You pass the \"' + arg + '\" flag in wrong position. Quit for safety.');
 				return options;
 			}
-		} else if (bundledUdls.light.themeList.indexOf(arg) >= 0) {
-			options.themeList.push(arg);
-			indexOfTheme = bundledUdls.light.themeList.indexOf(arg);
-			options.fileList.push(bundledUdls.light.fileList[indexOfTheme]);
+		} else if (arg === '--dark') {
+			options.isDark = true;
 		} else {
-			console.log('arg[' + i + ']: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
+			otherArgs.push(arg);
+		}
+	}
+	// Loop `otherArgs`. Match the theme names, otherwise the program should quit.
+	var themeMode = options.isDark ? 'dark' : 'light';
+	for (var i = 0; i < otherArgs.length; i++) {
+		arg = otherArgs[i];
+		if (bundledUdls[themeMode].themeList.indexOf(arg) >= 0) {
+			options.themeList.push(arg);
+			indexOfTheme = bundledUdls[themeMode].themeList.indexOf(arg);
+			options.fileList.push(bundledUdls[themeMode].fileList[indexOfTheme]);
+		} else {
+			console.log('arg: ' + 'Unsupported option \"' + arg + '\" or combination of options.');
 			return options;
 		}
 	}
+	// Finally:
 	options.shouldContinue = true;
 	return options;
 };
@@ -236,8 +249,9 @@ var copyFile = function(src, dest) {
 var main = function(options, bundledUdls) {
 	var isForce = options.isForce;
 	var isFetchAll = options.themeList.length === 0;
-	var themeList = isFetchAll ? bundledUdls.light.themeList : options.themeList;
-	var fileList = isFetchAll ? bundledUdls.light.fileList : options.fileList;
+	var themeMode = options.isDark ? 'dark' : 'light';
+	var themeList = isFetchAll ? bundledUdls[themeMode].themeList : options.themeList;
+	var fileList = isFetchAll ? bundledUdls[themeMode].fileList : options.fileList;
 	// Loop the file list.
 	var filename, src, dest, themeName, isExist;
 	for (var i = 0; i < fileList.length; i++) {
