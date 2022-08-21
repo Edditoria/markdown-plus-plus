@@ -8,17 +8,6 @@ Thanks for encouragements and comments. This repo is not only for myself anymore
 
 Love Notepad++? Need to write docs in Markdown? This repo is made for you.
 
-## Key Changes from v2 to v3
-
-- Markdown-plus-plus is a npm package now. You can fetch the UDL files in command line directly, `npx markdown-plus-plus --help`.
-- Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
-- In v2, there are 2 builds for every theme: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points][end_of_v2], becomes an option in v3.
-- Better file structure:
-	- You can find all UDL files in one single folder called `<udl\>`.
-	- You can modify the config files in another folder called `<config\>`.
-	- Filename for UDLs follows the pattern: `<markdown.[theme-name].udl.xml>`.
-	- Filename for configs follows this pattern: `<markdown.[theme-name].config.json>`
-
 ## Screenshots
 
 | Your | Taste! |
@@ -35,7 +24,7 @@ Love Notepad++? Need to write docs in Markdown? This repo is made for you.
 | Twilight | Material |
 
 Supports file extensions: `.markdown` and `.md`<br>
-Tested: Notepad++ v7.9 64-bit (on Windows 10)
+Tested: Notepad++ v8.4.4 64-bit on Windows 10
 
 ## Usage
 
@@ -50,11 +39,33 @@ node -v
 :: Go to UDL folder of Notepad++. Usually...
 cd %AppData%\Notepad++\userDefineLangs
 
-:: Example: Download Zenburn UDL file
-npx markdown-plus-plus zenburn
+:: Example: Download Solarized-light UDL file
+npx markdown-plus-plus solarized-light
+
+:: Example: Download Solarized UDL file for Dark Mode
+npx markdown-plus-plus solarized --dark
 
 :: Read help for details
 npx markdown-plus-plus --help
+```
+
+You can choose to install this package in your system:
+
+```cmd
+:: Enable `mpp` command instead of `npx markdown-plus-plus`...
+npm install --global markdown-plus-plus
+
+:: List all themes
+mpp --list
+
+:: Example: Download Solarized-light UDL file
+mpp solarized-light
+
+:: Example: Download Solarized UDL file for Dark Mode
+mpp solarized --dark
+
+:: Update this package
+npm update markdown-plus-plus
 ```
 
 ### Download Manually
@@ -66,6 +77,33 @@ npx markdown-plus-plus --help
 1. Open and test with a Markdown file e.g. [test/at-a-glance.md](test/at-a-glance.md).
 
 **Enjoy!!**
+
+## Dark Mode
+
+Notepad++ features Dark Mode with great UDL enhancements since v8.1.3. In short, you may want 2 files:
+
+```cmd
+:: Make sure you are running mpp v3.4+
+mpp --version
+
+:: Go to UDL folder of Notepad++. Usually...
+cd %AppData%\Notepad++\userDefineLangs
+
+:: Download Solarized UDL file
+mpp solarized
+
+:: Download Solarized UDL file for Dark Mode,
+:: even though you use the same theme
+mpp solarized --dark
+```
+
+NPP will pick up the correct file for dark mode. Here're some conventions in this package:
+
+|          | Normal | Dark Mode |
+| -------- | ------ | --------- |
+| Command  | `mpp <theme-name>` | `mpp <theme-name> --dark` |
+| Filename | `<markdown.theme-name.udl.xml>` | `<markdown.theme-name.dark.udl.xml>` |
+| UDL name | Theme Name (markdown) | Theme Name \[markdown\] |
 
 ## Limitations
 
@@ -103,6 +141,17 @@ Options are reviewed in v3. In **each** config file in the config folder, you ca
 | `flags.asteriskUnorderedList` | Enable the markdown style of asterisk-style bullet points (`* a \<li\> bullet point`). :warning: **Use it with caution** |
 
 For details, please read the document: [build-workflow.md](docs/build-workflow.md)
+
+## Key Changes from v2 to v3
+
+- Markdown-plus-plus is a npm package now. You can fetch the UDL files in command line directly, `npx markdown-plus-plus --help`.
+- Build system relies on Node.js. `git clone` then `npm install` to develop this repo. Less dependency hell.
+- In v2, there are 2 builds for every theme: Modern and classic. Now, there are only 1 build. The main difference in classic build, [asterisk-style bullet points][end_of_v2], becomes an option in v3.
+- Better file structure:
+	- You can find all UDL files in one single folder called `<udl\>`.
+	- You can modify the config files in another folder called `<config\>`.
+	- Filename for UDLs follows the pattern: `<markdown.[theme-name].udl.xml>`.
+	- Filename for configs follows this pattern: `<markdown.[theme-name].config.json>`
 
 ## Contribution
 
