@@ -152,7 +152,7 @@ var parseExtraProtocols = function(input) {
 		output.push('(' + item);
 	}
 	return output.join(' ') + ' ';
-}
+};
 
 /**
  * Create theme name in UDL file accroding to light mode or dark mode.
@@ -163,7 +163,7 @@ var createUdlName = function(options) {
 	var data = Handlebars.createFrame(options.data.root);
 	var suffix = data.darkMode === true ? '[' + data.themeName + ']' : '(' + data.themeName + ')';
 	return 'Markdown ' + suffix;
-}
+};
 
 Handlebars.registerHelper('parseExtraProtocols', parseExtraProtocols);
 Handlebars.registerHelper('createUdlName', createUdlName);
