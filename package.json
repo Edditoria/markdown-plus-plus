@@ -23,16 +23,16 @@
     "LICENSE.txt",
     "README.md"
   ],
+  "//engines.node": "Minimum version to run mpp and build (but >=14 for dev).",
+  "//engines.npm": "Minimum version to use npx.",
   "engines": {
-    "//node": "Minimum version to use Promises and require()",
-    "node": ">=0.12.0",
-    "//npm": "Minimum version to use npx",
+    "node": ">=4.0.0",
     "npm": ">=5.2.0"
   },
   "scripts": {
-    "//build": "Build UDL files in <udl/> using config files in <config/>",
+    "//build": "echo \"Build UDL files in <udl/> using config files in <config/>\"",
     "build": "node ./build/build.js",
-    "//mpp": "Build UML XML file(s) in current working directory",
+    "//mpp": "echo \"Build UML XML file(s) in current working directory\"",
     "mpp": "node ./bin/mpp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
