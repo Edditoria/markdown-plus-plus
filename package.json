@@ -1,6 +1,6 @@
 {
   "name": "markdown-plus-plus",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Markdown syntax highlighting for Notepad++, by customized UDL file (user defined language)",
   "license": "MIT",
   "private": true,
@@ -36,7 +36,7 @@
     "mpp": "node ./bin/mpp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Edditoria <edditoria@gmail.com>",
+  "author": "Edditoria <edditoria@pm.me>",
   "homepage": "https://github.com/Edditoria/markdown-plus-plus",
   "repository": {
     "type": "git",
