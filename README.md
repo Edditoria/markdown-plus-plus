@@ -114,6 +114,8 @@ Need your input to solve the following problems:
 - Improve documentations. My English sucks. (\*´ｰ\`\*)
 - The GFM's strikethrough `~~like this~~` is still missing. Will do it later.
 
+If Notepad++ doesn't redraw your current markdown file(s), please re-open the NPP application and/or re-open the markdown file. Upgrade NPP may help.
+
 ## Build Your Own UDL Files
 
 The best way to build your own UDL file is to fork this repo. You need to install Node.js in your system.
