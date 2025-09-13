@@ -19,6 +19,11 @@ indent_size=4
 [{*.js,*.json,*.md}]
 end_of_line=lf
 
+[mise.{toml,*.toml}]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
 [{*.sh,*.bash}]
 end_of_line=lf
 

@@ -1,0 +1,12 @@
+[settings]
+disable_tools = ["node"]
+experimental = true
+
+[tools]
+go = "1.20.14"
+
+[hooks]
+postinstall = [
+  "go install golang.org/x/tools/gopls@v0.15.3",
+  "go install github.com/go-delve/delve/cmd/dlv@v1.23.1",
+]

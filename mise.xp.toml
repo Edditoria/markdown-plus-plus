@@ -1,0 +1,5 @@
+[settings]
+disable_tools = ["node"]
+
+[tools]
+go = "1.10.8"
