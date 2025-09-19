@@ -1,0 +1,39 @@
+{
+  "themeName": "Dracula",
+  "default": {
+    "fgColor": "F8F8F2",
+    "bgColor": "282A36"
+  },
+  "heading": {
+    "fgColor": "FF5555"
+  },
+  "emphasis": {
+    "fgColor": "6272A4"
+  },
+  "orderedList": {
+    "fgColor": "50FA7B"
+  },
+  "unorderedList": {
+    "fgColor": "50FA7B"
+  },
+  "code": {
+    "fgColor": "F1FA8C"
+  },
+  "link": {
+    "fgColor": "8BE9FD"
+  },
+  "comment": {
+    "fgColor": "6272A4"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

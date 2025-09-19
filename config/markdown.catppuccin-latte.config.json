@@ -1,0 +1,39 @@
+{
+  "themeName": "Catppuccin Latte",
+  "default": {
+    "fgColor": "4C4F69",
+    "bgColor": "EFF1F5"
+  },
+  "heading": {
+    "fgColor": "D20F39"
+  },
+  "emphasis": {
+    "fgColor": "6C6F85"
+  },
+  "orderedList": {
+    "fgColor": "40A02B"
+  },
+  "unorderedList": {
+    "fgColor": "40A02B"
+  },
+  "code": {
+    "fgColor": "DF8E1D"
+  },
+  "link": {
+    "fgColor": "1E66F5"
+  },
+  "comment": {
+    "fgColor": "6C6F85"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

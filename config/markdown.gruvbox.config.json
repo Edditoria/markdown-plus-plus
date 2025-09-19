@@ -1,0 +1,39 @@
+{
+  "themeName": "Gruvbox",
+  "default": {
+    "fgColor": "EBDBB2",
+    "bgColor": "282828"
+  },
+  "heading": {
+    "fgColor": "FB4934"
+  },
+  "emphasis": {
+    "fgColor": "A89984"
+  },
+  "orderedList": {
+    "fgColor": "8EC07C"
+  },
+  "unorderedList": {
+    "fgColor": "8EC07C"
+  },
+  "code": {
+    "fgColor": "B8BB26"
+  },
+  "link": {
+    "fgColor": "83A598"
+  },
+  "comment": {
+    "fgColor": "928374"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

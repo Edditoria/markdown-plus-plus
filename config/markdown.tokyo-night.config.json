@@ -1,0 +1,39 @@
+{
+  "themeName": "Tokyo Night",
+  "default": {
+    "fgColor": "A9B1D6",
+    "bgColor": "1A1B26"
+  },
+  "heading": {
+    "fgColor": "F7768E"
+  },
+  "emphasis": {
+    "fgColor": "565F89"
+  },
+  "orderedList": {
+    "fgColor": "9ECE6A"
+  },
+  "unorderedList": {
+    "fgColor": "9ECE6A"
+  },
+  "code": {
+    "fgColor": "E0AF68"
+  },
+  "link": {
+    "fgColor": "7AA2F7"
+  },
+  "comment": {
+    "fgColor": "565F89"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

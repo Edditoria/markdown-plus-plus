@@ -1,0 +1,39 @@
+{
+  "themeName": "Nord",
+  "default": {
+    "fgColor": "D8DEE9",
+    "bgColor": "2E3440"
+  },
+  "heading": {
+    "fgColor": "BF616A"
+  },
+  "emphasis": {
+    "fgColor": "4C566A"
+  },
+  "orderedList": {
+    "fgColor": "A3BE8C"
+  },
+  "unorderedList": {
+    "fgColor": "A3BE8C"
+  },
+  "code": {
+    "fgColor": "EBCB8B"
+  },
+  "link": {
+    "fgColor": "5E81AC"
+  },
+  "comment": {
+    "fgColor": "616E88"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

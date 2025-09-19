@@ -1,0 +1,39 @@
+{
+  "themeName": "Cobalt2",
+  "default": {
+    "fgColor": "FFFFFF",
+    "bgColor": "193549"
+  },
+  "heading": {
+    "fgColor": "FF9D00"
+  },
+  "emphasis": {
+    "fgColor": "0088FF"
+  },
+  "orderedList": {
+    "fgColor": "3AD900"
+  },
+  "unorderedList": {
+    "fgColor": "3AD900"
+  },
+  "code": {
+    "fgColor": "FFEE80"
+  },
+  "link": {
+    "fgColor": "80FFBB"
+  },
+  "comment": {
+    "fgColor": "0088FF"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

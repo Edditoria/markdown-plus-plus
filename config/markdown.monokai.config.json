@@ -1,0 +1,39 @@
+{
+  "themeName": "Monokai",
+  "default": {
+    "fgColor": "F8F8F2",
+    "bgColor": "272822"
+  },
+  "heading": {
+    "fgColor": "F92672"
+  },
+  "emphasis": {
+    "fgColor": "75715E"
+  },
+  "orderedList": {
+    "fgColor": "A6E22E"
+  },
+  "unorderedList": {
+    "fgColor": "A6E22E"
+  },
+  "code": {
+    "fgColor": "E6DB74"
+  },
+  "link": {
+    "fgColor": "66D9EF"
+  },
+  "comment": {
+    "fgColor": "75715E"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}

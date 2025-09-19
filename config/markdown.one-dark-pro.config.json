@@ -1,0 +1,39 @@
+{
+  "themeName": "One-Dark-Pro",
+  "default": {
+    "fgColor": "ABB2BF",
+    "bgColor": "282C34"
+  },
+  "heading": {
+    "fgColor": "E06C75"
+  },
+  "emphasis": {
+    "fgColor": "5C6370"
+  },
+  "orderedList": {
+    "fgColor": "98C379"
+  },
+  "unorderedList": {
+    "fgColor": "98C379"
+  },
+  "code": {
+    "fgColor": "E5C07B"
+  },
+  "link": {
+    "fgColor": "61AFEF"
+  },
+  "comment": {
+    "fgColor": "5C6370"
+  },
+  "gfm": {
+    "table": true
+  },
+  "goodies": {
+    "highlightHex": false,
+    "extraProtocols": "ftp://, ftps://"
+  },
+  "flags": {
+    "transparentBg": false,
+    "asteriskUnorderedList": false
+  }
+}
